@@ -15,7 +15,13 @@ Commands::Commands(const nlohmann::json& config)
 	}
 }
 
-std::string Commands::Command::interpret(std::string hcmd, nlohmann::json& config)
+std::string Commands::interpret(nlohmann::json& jconfig, std::string hexcmd)
+{
+	Command* cmdPtr = cmds[hexcmd];
+	return cmdPtr->interpret(jconfig);
+}
+
+std::string Commands::Command::interpret(nlohmann::json& config)
 {
 	return std::string();
 }
@@ -24,15 +30,16 @@ Commands::Command::Command(bool strobe) :isstrobe(strobe) {}
 
 Commands::StrobeCommand::StrobeCommand(std::string ilogic) :interpretation(ilogic), Command(true) {}
 
-std::string Commands::StrobeCommand::interpret(std::string hcmd, nlohmann::json& config)
+std::string Commands::StrobeCommand::interpret(nlohmann::json& config)
 {
 	return interpretation;
 }
 
 Commands::RegCommand::RegCommand(bool isread, std::string name):isread(isread),registername(name), Command(false){}
 
-std::string Commands::RegCommand::interpret(std::string hcmd, nlohmann::json& config)
+std::string Commands::RegCommand::interpret(nlohmann::json& config)
 {
+	// TODO: adjust to new json layout
 	auto jsonptr = config.at("interpret");
 	if (jsonptr.at(registername).at("isfunc")) {
 		return interpretFunction(jsonptr.at(registername).at("func"));

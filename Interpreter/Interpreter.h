@@ -1,10 +1,13 @@
 #pragma once
 #include "Registers.h"
+#include <nlohmann/json.hpp>
 #include "Commands.h"
 #include <string>
+
 class Interpreter
 {
 private:
+	nlohmann::json jconfig;
 	Registers *registers;
 	Commands *commands;
 

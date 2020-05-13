@@ -275,7 +275,7 @@
     "cmd1": {
       "hex": "0x80",
       "isstrobe": true,
-      "logic": "Entered Sleep Mode"
+      "logic": "Entered Sleep Mode" 
     },
     "cmd2": {
       "hex": "0x90",
@@ -709,10 +709,40 @@
       "isfunc": false,
       "ibits": {
         "CELS": {
-          "iwith": ["CELS", "PWORS"],
+          "iwith": [ "CELS", "PWORS" ],
           "ipret": {
             "00": "dinge",
             "01": "andere dinge"
+          }
+        }
+      }
+    },
+    "ADC": {
+      "ibitsw": {
+        "AVSEL1": {
+          "isfunc": false,
+          "iwith": [ "AVSEL1", "AVEL0" ],
+          "ipret": {
+            "00": "Avg 8 times",
+            "01": "Avg 16 times",
+            "10": "Avg 32 Times",
+            "11": "Avg 64 Times"
+          }
+        },
+        "RADC": {
+          "isfunc": false,
+          "iwith": [ "RADC" ],
+          "ipret": {
+            "0": "reading ADC MVSEL",
+            "1": "reading ADC AVSEL"
+          }
+        },
+        "FSARS": {
+          "isfunc": false,
+          "iwith": [ "FSARS" ],
+          "ipret": {
+            "0": "4Mhz",
+            "1": "8Mhz"
           }
         }
       }
