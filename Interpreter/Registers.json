@@ -85,7 +85,7 @@
       "w": [ "NA", "NA", "GIO1S3", "GIO1S2", "GIO1S1", "GIO1S0", "GIO1I", "GIO1OE" ]
     },
     "Reg15": {
-      "name": "Clock",
+      "name": "CLOCK",
       "values": [ 0, 1, 0, 1, 1, 1, 1, 1 ],
       "r": [ "IFS", "CSC", "GRC3", "GRC2", "GRC1", "GRC0", "CGS", "XS" ],
       "w": [ "IFS", "CSC", "GRC3", "GRC2", "GRC1", "GRC0", "CGS", "XS" ]
@@ -273,21 +273,435 @@
   },
   "commands": {
     "cmd1": {
-      "hex": "0xA0",
+      "hex": "0x80",
       "isstrobe": true,
-      "logic": "sleep mode"
+      "logic": "Entered Sleep Mode"
     },
     "cmd2": {
-      "hex": "0x43",
-      "isstrobe": false,
-      "isread": false,
-      "regsitername": "INTS"
+      "hex": "0x90",
+      "isstrobe": true,
+      "logic": "Entered Idle Mode"
     },
     "cmd3": {
-      "hex": "0x55",
+      "hex": "0xA0",
+      "isstrobe": true,
+      "logic": "Entered Standby Mode"
+    },
+    "cmd4": {
+      "hex": "0xB0",
+      "isstrobe": true,
+      "logic": "Entered PLL Mode"
+    },
+    "cmd5": {
+      "hex": "0xD0",
+      "isstrobe": true,
+      "logic": "Entered TX Mode"
+    },
+    "cmd6": {
+      "hex": "0xE0",
+      "isstrobe": true,
+      "logic": "FIFO Write pointer reset"
+    },
+    "cmd7": {
+      "hex": "0xF0",
+      "isstrobe": true,
+      "logic": "FIFO Read pointer reset"
+    },
+    "cmd8": {
+      "hex": "0x40,",
       "isstrobe": false,
       "isread": true,
-      "regsitername": "INTS"
+      "registername": "MODE"
+    },
+    "cmd9": {
+      "hex": "0x00,",
+      "isstrobe": false,
+      "isread": false,
+      "registername": "MODE"
+    },
+    "cmd10": {
+      "hex": "0x41,",
+      "isstrobe": false,
+      "isread": true,
+      "registername": "MODEC"
+    },
+    "cmd11": {
+      "hex": "0x01,",
+      "isstrobe": false,
+      "isread": false,
+      "registername": "MODEC"
+    },
+    "cmd12": {
+      "hex": "0x42,",
+      "isstrobe": false,
+      "isread": true,
+      "registername": "CALC"
+    },
+    "cmd13": {
+      "hex": "0x02,",
+      "isstrobe": false,
+      "isread": false,
+      "registername": "CALC"
+    },
+    "cmd15": {
+      "hex": "0x03,",
+      "isstrobe": false,
+      "isread": false,
+      "registername": "FIFO1"
+    },
+    "cmd17": {
+      "hex": "0x04,",
+      "isstrobe": false,
+      "isread": false,
+      "registername": "FIFO2"
+    },
+    "cmd19": {
+      "hex": "0x05,",
+      "isstrobe": false,
+      "isread": false,
+      "registername": "FIFOD"
+    },
+    "cmd21": {
+      "hex": "0x06,",
+      "isstrobe": false,
+      "isread": false,
+      "registername": "IDD"
+    },
+    "cmd22": {
+      "hex": "0x47,",
+      "isstrobe": false,
+      "isread": true,
+      "registername": "RCOSC1"
+    },
+    "cmd23": {
+      "hex": "0x07,",
+      "isstrobe": false,
+      "isread": false,
+      "registername": "RCOSC1"
+    },
+    "cmd25": {
+      "hex": "0x08,",
+      "isstrobe": false,
+      "isread": false,
+      "registername": "RCOSC2"
+    },
+    "cmd27": {
+      "hex": "0x09,",
+      "isstrobe": false,
+      "isread": false,
+      "registername": "RCOSC3"
+    },
+    "cmd29": {
+      "hex": "0x0A,",
+      "isstrobe": false,
+      "isread": false,
+      "registername": "CKO"
+    },
+    "cmd31": {
+      "hex": "0x0B,",
+      "isstrobe": false,
+      "isread": false,
+      "registername": "GPIO1"
+    },
+    "cmd32": {
+      "hex": "0x4C,",
+      "isstrobe": false,
+      "isread": true,
+      "registername": "CLOCK"
+    },
+    "cmd33": {
+      "hex": "0x0C,",
+      "isstrobe": false,
+      "isread": false,
+      "registername": "CLOCK"
+    },
+    "cmd34": {
+      "hex": "0x4D,",
+      "isstrobe": false,
+      "isread": true,
+      "registername": "DR"
+    },
+    "cmd35": {
+      "hex": "0x0D,",
+      "isstrobe": false,
+      "isread": false,
+      "registername": "DR"
+    },
+    "cmd36": {
+      "hex": "0x4E,",
+      "isstrobe": false,
+      "isread": true,
+      "registername": "PLL1"
+    },
+    "cmd37": {
+      "hex": "0x0E,",
+      "isstrobe": false,
+      "isread": false,
+      "registername": "PLL1"
+    },
+    "cmd38": {
+      "hex": "0x4F,",
+      "isstrobe": false,
+      "isread": true,
+      "registername": "PLL2"
+    },
+    "cmd39": {
+      "hex": "0x0F,",
+      "isstrobe": false,
+      "isread": false,
+      "registername": "PLL2"
+    },
+    "cmd40": {
+      "hex": "0x50,",
+      "isstrobe": false,
+      "isread": true,
+      "registername": "PLL3"
+    },
+    "cmd41": {
+      "hex": "0x10,",
+      "isstrobe": false,
+      "isread": false,
+      "registername": "PLL3"
+    },
+    "cmd42": {
+      "hex": "0x51,",
+      "isstrobe": false,
+      "isread": true,
+      "registername": "PLL4"
+    },
+    "cmd43": {
+      "hex": "0x11,",
+      "isstrobe": false,
+      "isread": false,
+      "registername": "PLL4"
+    },
+    "cmd44": {
+      "hex": "0x52,",
+      "isstrobe": false,
+      "isread": true,
+      "registername": "PLL5"
+    },
+    "cmd45": {
+      "hex": "0x12,",
+      "isstrobe": false,
+      "isread": false,
+      "registername": "PLL5"
+    },
+    "cmd46": {
+      "hex": "0x53,",
+      "isstrobe": false,
+      "isread": true,
+      "registername": "CHG1"
+    },
+    "cmd47": {
+      "hex": "0x13,",
+      "isstrobe": false,
+      "isread": false,
+      "registername": "CHG1"
+    },
+    "cmd48": {
+      "hex": "0x54,",
+      "isstrobe": false,
+      "isread": true,
+      "registername": "CHG2"
+    },
+    "cmd49": {
+      "hex": "0x14,",
+      "isstrobe": false,
+      "isread": false,
+      "registername": "CHG2"
+    },
+    "cmd51": {
+      "hex": "0x15,",
+      "isstrobe": false,
+      "isread": false,
+      "registername": "TX1"
+    },
+    "cmd53": {
+      "hex": "0x16,",
+      "isstrobe": false,
+      "isread": false,
+      "registername": "TX2"
+    },
+    "cmd55": {
+      "hex": "0x17,",
+      "isstrobe": false,
+      "isread": false,
+      "registername": "DELAY1"
+    },
+    "cmd57": {
+      "hex": "0x18,",
+      "isstrobe": false,
+      "isread": false,
+      "registername": "DELAY2"
+    },
+    "cmd58": {
+      "hex": "0x59,",
+      "isstrobe": false,
+      "isread": true,
+      "registername": "ADC"
+    },
+    "cmd59": {
+      "hex": "0x19,",
+      "isstrobe": false,
+      "isread": false,
+      "registername": "ADC"
+    },
+    "cmd61": {
+      "hex": "0x1A,",
+      "isstrobe": false,
+      "isread": false,
+      "registername": "CODE1"
+    },
+    "cmd63": {
+      "hex": "0x1B,",
+      "isstrobe": false,
+      "isread": false,
+      "registername": "CODE2"
+    },
+    "cmd64": {
+      "hex": "0x5C,",
+      "isstrobe": false,
+      "isread": true,
+      "registername": "VOCC"
+    },
+    "cmd65": {
+      "hex": "0x1C,",
+      "isstrobe": false,
+      "isread": false,
+      "registername": "VOCC"
+    },
+    "cmd66": {
+      "hex": "0x5D,",
+      "isstrobe": false,
+      "isread": true,
+      "registername": "VCOBC1"
+    },
+    "cmd67": {
+      "hex": "0x1D,",
+      "isstrobe": false,
+      "isread": false,
+      "registername": "VCOBC1"
+    },
+    "cmd68": {
+      "hex": "0x5E,",
+      "isstrobe": false,
+      "isread": true,
+      "registername": "VCOBC2"
+    },
+    "cmd69": {
+      "hex": "0x1E,",
+      "isstrobe": false,
+      "isread": false,
+      "registername": "VCOBC2"
+    },
+    "cmd70": {
+      "hex": "0x5F,",
+      "isstrobe": false,
+      "isread": true,
+      "registername": "VCODC1"
+    },
+    "cmd71": {
+      "hex": "0x1F,",
+      "isstrobe": false,
+      "isread": false,
+      "registername": "VCODC1"
+    },
+    "cmd72": {
+      "hex": "0x60,",
+      "isstrobe": false,
+      "isread": true,
+      "registername": "VCODC2"
+    },
+    "cmd73": {
+      "hex": "0x20,",
+      "isstrobe": false,
+      "isread": false,
+      "registername": "VCODC2"
+    },
+    "cmd74": {
+      "hex": "0x61,",
+      "isstrobe": false,
+      "isread": true,
+      "registername": "VCODC3"
+    },
+    "cmd75": {
+      "hex": "0x21,",
+      "isstrobe": false,
+      "isread": false,
+      "registername": "VCODC3"
+    },
+    "cmd77": {
+      "hex": "0x22,",
+      "isstrobe": false,
+      "isread": false,
+      "registername": "VCOMD"
+    },
+    "cmd78": {
+      "hex": "0x63,",
+      "isstrobe": false,
+      "isread": true,
+      "registername": "BD"
+    },
+    "cmd79": {
+      "hex": "0x23,",
+      "isstrobe": false,
+      "isread": false,
+      "registername": "BD"
+    },
+    "cmd81": {
+      "hex": "0x24,",
+      "isstrobe": false,
+      "isread": false,
+      "registername": "TXT"
+    },
+    "cmd83": {
+      "hex": "0x25,",
+      "isstrobe": false,
+      "isread": false,
+      "registername": "CPC"
+    },
+    "cmd85": {
+      "hex": "0x26,",
+      "isstrobe": false,
+      "isread": false,
+      "registername": "XTLT"
+    },
+    "cmd87": {
+      "hex": "0x27,",
+      "isstrobe": false,
+      "isread": false,
+      "registername": "PLLT"
+    },
+    "cmd89": {
+      "hex": "0x28,",
+      "isstrobe": false,
+      "isread": false,
+      "registername": "VCOT"
+    },
+    "cmd91": {
+      "hex": "0x29,",
+      "isstrobe": false,
+      "isread": false,
+      "registername": "CHS"
+    },
+    "cmd93": {
+      "hex": "0x2A,",
+      "isstrobe": false,
+      "isread": false,
+      "registername": "VRB"
+    },
+    "cmd95": {
+      "hex": "0x2B,",
+      "isstrobe": false,
+      "isread": false,
+      "registername": "RTX"
+    },
+    "cmd97": {
+      "hex": "0x2C,",
+      "isstrobe": false,
+      "isread": false,
+      "registername": "INTS"
     }
   },
   "interpret": {
@@ -305,6 +719,7 @@
     },
     "ANDERS": {
       "isfunc": true,
-      "func" : "CELS + PWORS * INTS"
+      "func": "CELS + PWORS * INTS"
     }
+  }
 }
