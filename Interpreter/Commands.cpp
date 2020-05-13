@@ -1,6 +1,6 @@
 #include "Commands.h"
 
-Commands::Commands(nlohmann::json& config)
+Commands::Commands(const nlohmann::json& config)
 {
 	auto it = config.at("commands");
 	for (auto& command : it) {
