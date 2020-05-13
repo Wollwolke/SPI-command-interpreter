@@ -2,6 +2,7 @@
 #include <string>
 #include <map>
 #include <vector>
+#include <nlohmann/json.hpp>
 
 class Registers
 {
