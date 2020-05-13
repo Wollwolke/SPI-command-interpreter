@@ -2,7 +2,7 @@
 #include <nlohmann/json.hpp>
 #include <fstream>
 
-Interpreter::Interpreter(std::string confName))
+Interpreter::Interpreter(std::string confName)
 {
     std::ifstream file(confName);
     nlohmann::json jfile;

@@ -35,10 +35,10 @@ std::string Commands::RegCommand::interpret(std::string hcmd, nlohmann::json& co
 {
 	auto jsonptr = config.at("interpret");
 	if (jsonptr.at(registername).at("isfunc")) {
-		interpretFunction(jsonptr.at(registername).at("func"));
+		return interpretFunction(jsonptr.at(registername).at("func"));
 	}
 	else {
-		interpretBits(jsonptr.at(registername).at("bits"));
+		return interpretBits(jsonptr.at(registername).at("bits"));
 	}
 }
 
