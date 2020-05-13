@@ -7,7 +7,7 @@
 
 int main()
 {
-	auto registers = Registers();
+	/*auto registers = Registers();
 	registers.createRegisters("Registers.json");
 	std::ifstream file("A02_button_up.txt");
 
@@ -38,11 +38,11 @@ int main()
 				element = element + "0";
 			}
 		}
-		std::cout << line << "\n";
+		std::cout << line << "\n";*/
 		/*std::list<string> cmds;
 		while ((pos = line.find(" ")) != std::string::npos) {
 
 		}
 		if(list==empty)*/
-	}
+	//}
 }

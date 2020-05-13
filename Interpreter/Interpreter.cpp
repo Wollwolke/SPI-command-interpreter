@@ -10,6 +10,10 @@ Interpreter::Interpreter(std::string confName)
 
     auto jregisters = jfile.at("commands");
 
-    registers = Registers(jfile);
-    commands = Commands(jfile);
+    registers = new Registers(jfile);
+    commands = new Commands(jfile);
+}
+
+void Interpreter::interpretFile(std::string fName)
+{
 }
