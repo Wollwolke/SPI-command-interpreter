@@ -6,7 +6,7 @@
 class Commands
 {
 public:
-	Commands(nlohmann::json& config);
+	Commands(const nlohmann::json& config);
 protected:
 	class Command {
 		bool isstrobe;
