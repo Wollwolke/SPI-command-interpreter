@@ -2,15 +2,14 @@
 #include <nlohmann/json.hpp>
 #include <fstream>
 
-Interpreter::Interpreter(std::string confName) : registers(Registers())
+Interpreter::Interpreter(std::string confName))
 {
-    registers = Registers();
-    commands = Commands();
-
     std::ifstream file(confName);
     nlohmann::json jfile;
     file >> jfile;
 
-    auto jregisters = jfile.at("registers");
-    registers.createRegisters(jregisters);
+    auto jregisters = jfile.at("commands");
+
+    registers = Registers(jfile);
+    commands = Commands(jfile);
 }

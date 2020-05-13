@@ -2,7 +2,30 @@
 #include <iostream>
 #include <fstream>
 
-Registers::Registers() {}
+Registers::Registers(const nlohmann::json &jfile)
+{
+	auto jregisters = jfile.at("registers");
+	for (auto &element : jregisters)
+	{
+		//std::cout << i.value << "\n";
+		try
+		{
+			std::string name = element.at("name");
+			std::vector<int> values = element.at("values");
+			std::vector<std::string> write = element.at("w");
+			std::vector<std::string> read = element.at("r");
+			Register *newReg = new Register(write, read, values);
+
+			regMap.insert({name, newReg});
+			//std::cout << name << ++cnt << "\n";
+		}
+		catch (nlohmann::detail::out_of_range exe)
+		{
+			std::cout << "json wrong format";
+			break;
+		}
+	}
+}
 
 Registers::Register::Register(std::vector<std::string> wNames, std::vector<std::string> rNames, std::vector<int> dValues)
 {
@@ -29,30 +52,6 @@ int Registers::Register::readBit(std::string name)
 		return Values[NameIndices[name]];
 	}
 	return -1;
-}
-
-void Registers::createRegisters(nlohmann::json &jregisters)
-{
-	for (auto &element : jregisters)
-	{
-		//std::cout << i.value << "\n";
-		try
-		{
-			std::string name = element.at("name");
-			std::vector<int> values = element.at("values");
-			std::vector<std::string> write = element.at("w");
-			std::vector<std::string> read = element.at("r");
-			Register *newReg = new Register(write, read, values);
-
-			regMap.insert({name, newReg});
-			//std::cout << name << ++cnt << "\n";
-		}
-		catch (nlohmann::detail::out_of_range exe)
-		{
-			std::cout << "json wrong format";
-			break;
-		}
-	}
 }
 
 Registers::~Registers()

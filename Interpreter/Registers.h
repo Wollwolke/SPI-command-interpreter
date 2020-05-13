@@ -23,7 +23,6 @@ private:
 	std::map<std::string, Register *> regMap;
 
 public:
-	Registers();
-	void createRegisters(nlohmann::json &jregisters);
+	Registers(const nlohmann::json &jfile);
 	~Registers();
 };
