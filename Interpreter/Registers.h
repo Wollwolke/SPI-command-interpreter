@@ -7,7 +7,8 @@ class Registers
 {
 private:
 	static const int Registersize = 8;
-	class Register {
+	class Register
+	{
 	public:
 		std::map<std::string, uint8_t> NameIndices;
 		int Values[Registersize];
@@ -18,9 +19,10 @@ private:
 
 		int readBit(std::string name);
 	};
-	std::map<std::string, Register*> regMap;
+	std::map<std::string, Register *> regMap;
+
 public:
 	Registers();
-	void createRegisters(std::string fname);
+	void createRegisters(nlohmann::json &jregisters);
 	~Registers();
 };

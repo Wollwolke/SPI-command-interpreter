@@ -2,273 +2,273 @@
   "registers": {
     "Reg1": {
       "name": "ADC",
-      "values": [ 1, 0, 0, 0, 1, 1, 0, 0 ],
-      "r": [ "ADC7", "ADC6", "ADC5", "ADC4", "ADC3", "ADC2", "ADC1", "ADC0" ],
-      "w": [ "AVSEL1", "AVSEL0", "RADC", "FSARS", "MVSEL1", "MVSEL0", "XADS", "CDM" ]
+      "values": [1, 0, 0, 0, 1, 1, 0, 0],
+      "r": ["ADC7", "ADC6", "ADC5", "ADC4", "ADC3", "ADC2", "ADC1", "ADC0"],
+      "w": ["AVSEL1", "AVSEL0", "RADC", "FSARS", "MVSEL1", "MVSEL0", "XADS", "CDM"]
     },
     "Reg2": {
       "name": "DELAY2",
-      "values": [ 0, 1, 0, 0, 0, -1, 0, 0 ],
-      "r": [ "NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA" ],
-      "w": [ "WSEL2", "WSEL1", "WSEL0", "RGC1", "RGC0", "NA", "WOTS1", "WOTS0" ]
+      "values": [0, 1, 0, 0, 0, -1, 0, 0],
+      "r": ["NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA"],
+      "w": ["WSEL2", "WSEL1", "WSEL0", "RGC1", "RGC0", "NA", "WOTS1", "WOTS0"]
     },
     "Reg3": {
       "name": "MODE",
-      "values": [ -1, -1, -1, -1, -1, -1, -1, -1 ],
-      "r": [ "NA", "NA", "NA", "CER", "XER", "PLLER", "TRSR", "TRER" ],
-      "w": [ "RESETN", "RESETN", "RESETN", "RESETN", "RESETN", "RESETN", "RESETN", "RESETN" ]
+      "values": [-1, -1, -1, -1, -1, -1, -1, -1],
+      "r": ["NA", "NA", "NA", "CER", "XER", "PLLER", "TRSR", "TRER"],
+      "w": ["RESETN", "RESETN", "RESETN", "RESETN", "RESETN", "RESETN", "RESETN", "RESETN"]
     },
     "Reg4": {
       "name": "MODEC",
-      "values": [ 0, -1, -1, -1, 0, -1, 0, 0 ],
-      "r": [ "DDPC", "NA", "NA", "SPSS", "WOTE", "NA", "FMS", "ADCM" ],
-      "w": [ "DDPC", "NA", "NA", "SPSS", "WOTE", "NA", "FMS", "ADCM" ]
+      "values": [0, -1, -1, -1, 0, -1, 0, 0],
+      "r": ["DDPC", "NA", "NA", "SPSS", "WOTE", "NA", "FMS", "ADCM"],
+      "w": ["DDPC", "NA", "NA", "SPSS", "WOTE", "NA", "FMS", "ADCM"]
     },
     "Reg5": {
       "name": "CALC",
-      "values": [ -1, -1, -1, 0, 0, 0, -1, -1 ],
-      "r": [ "NA", "NA", "NA", "VCC", "VBC", "VDC", "NA", "NA" ],
-      "w": [ "NA", "NA", "NA", "VCC", "VBC", "VDC", "NA", "NA" ]
+      "values": [-1, -1, -1, 0, 0, 0, -1, -1],
+      "r": ["NA", "NA", "NA", "VCC", "VBC", "VDC", "NA", "NA"],
+      "w": ["NA", "NA", "NA", "VCC", "VBC", "VDC", "NA", "NA"]
     },
     "Reg6": {
       "name": "FIFO1",
-      "values": [ 0, 0, 1, 1, 1, 1, 1, 1 ],
-      "r": [ "NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA" ],
-      "w": [ "FEP7", "FEP6", "FEP5", "FEP4", "FEP3", "FEP2", "FEP1", "FEP0" ]
+      "values": [0, 0, 1, 1, 1, 1, 1, 1],
+      "r": ["NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA"],
+      "w": ["FEP7", "FEP6", "FEP5", "FEP4", "FEP3", "FEP2", "FEP1", "FEP0"]
     },
     "Reg7": {
       "name": "FIFO2",
-      "values": [ 0, 1, 0, 0, 0, 0, 0, 0 ],
-      "r": [ "NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA" ],
-      "w": [ "FPM1", "FPM0", "PSA5", "PSA4", "PSA3", "PSA2", "PSA1", "PSA0" ]
+      "values": [0, 1, 0, 0, 0, 0, 0, 0],
+      "r": ["NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA"],
+      "w": ["FPM1", "FPM0", "PSA5", "PSA4", "PSA3", "PSA2", "PSA1", "PSA0"]
     },
     "Reg8": {
       "name": "FIFOD",
-      "values": [ 0, 0, 0, 0, 0, 0, 0, 0 ],
-      "r": [ "NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA" ],
-      "w": [ "FIFO7", "FIFO6", "FIFO5", "FIFO4", "FIFO3", "FIFO2", "FIFO1", "FIFO0" ]
+      "values": [0, 0, 0, 0, 0, 0, 0, 0],
+      "r": ["NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA"],
+      "w": ["FIFO7", "FIFO6", "FIFO5", "FIFO4", "FIFO3", "FIFO2", "FIFO1", "FIFO0"]
     },
     "Reg9": {
       "name": "IDD",
-      "values": [ 0, 0, 0, 0, 0, 0, 0, 0 ],
-      "r": [ "NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA" ],
-      "w": [ "ID7", "ID6", "ID5", "ID4", "ID3", "ID2", "ID1", "ID0" ]
+      "values": [0, 0, 0, 0, 0, 0, 0, 0],
+      "r": ["NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA"],
+      "w": ["ID7", "ID6", "ID5", "ID4", "ID3", "ID2", "ID1", "ID0"]
     },
     "Reg10": {
       "name": "RCOSC1",
-      "values": [ 0, 0, 0, 0, 0, 0, 0, 0 ],
-      "r": [ "NA", "RCOC6", "RCOC5", "RCOC4", "RCOC3", "RCOC2", "RCOC1", "RCOC0" ],
-      "w": [ "WOT_SL7", "WOT_SL6", "WOT_SL5", "WOT_SL4", "WOT_SL3", "WOT_SL2", "WOT_SL1", "WOT_SL0" ]
+      "values": [0, 0, 0, 0, 0, 0, 0, 0],
+      "r": ["NA", "RCOC6", "RCOC5", "RCOC4", "RCOC3", "RCOC2", "RCOC1", "RCOC0"],
+      "w": ["WOT_SL7", "WOT_SL6", "WOT_SL5", "WOT_SL4", "WOT_SL3", "WOT_SL2", "WOT_SL1", "WOT_SL0"]
     },
     "Reg11": {
       "name": "RCOSC2",
-      "values": [ 0, 0, 0, 0, 0, 0, 0, 1 ],
-      "r": [ "NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA" ],
-      "w": [ "WOT_SL9", "WOT_SL8", "WOT_AC5", "WOT_AC4", "WOT_AC3", "WOT_AC2", "WOT_AC1", "WOT_AC0" ]
+      "values": [0, 0, 0, 0, 0, 0, 0, 1],
+      "r": ["NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA"],
+      "w": ["WOT_SL9", "WOT_SL8", "WOT_AC5", "WOT_AC4", "WOT_AC3", "WOT_AC2", "WOT_AC1", "WOT_AC0"]
     },
     "Reg12": {
       "name": "RCOSC3I",
-      "values": [ 0, 0, 0, 1, 1, 1, 0, 1 ],
-      "r": [ "NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA" ],
-      "w": [ "BBCKS1", "BBCKS0", "RCOT1", "RCOT0", "CALW", "RCOSC_E", "TSEL", "TWOT_E" ]
+      "values": [0, 0, 0, 1, 1, 1, 0, 1],
+      "r": ["NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA"],
+      "w": ["BBCKS1", "BBCKS0", "RCOT1", "RCOT0", "CALW", "RCOSC_E", "TSEL", "TWOT_E"]
     },
     "Reg13": {
       "name": "CKO",
-      "values": [ 1, 0, 1, 1, 0, 0, 1, 0 ],
-      "r": [ "NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA" ],
-      "w": [ "DDCKOE", "CKOS3", "CKOS2", "CKOS1", "CKOS0", "CKOI", "CKOE", "SCKI" ]
+      "values": [1, 0, 1, 1, 0, 0, 1, 0],
+      "r": ["NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA"],
+      "w": ["DDCKOE", "CKOS3", "CKOS2", "CKOS1", "CKOS0", "CKOI", "CKOE", "SCKI"]
     },
     "Reg14": {
       "name": "GPIO1",
-      "values": [ -1, -1, 0, 0, 0, 0, 0, 1 ],
-      "r": [ "NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA" ],
-      "w": [ "NA", "NA", "GIO1S3", "GIO1S2", "GIO1S1", "GIO1S0", "GIO1I", "GIO1OE" ]
+      "values": [-1, -1, 0, 0, 0, 0, 0, 1],
+      "r": ["NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA"],
+      "w": ["NA", "NA", "GIO1S3", "GIO1S2", "GIO1S1", "GIO1S0", "GIO1I", "GIO1OE"]
     },
     "Reg15": {
       "name": "CLOCK",
-      "values": [ 0, 1, 0, 1, 1, 1, 1, 1 ],
-      "r": [ "IFS", "CSC", "GRC3", "GRC2", "GRC1", "GRC0", "CGS", "XS" ],
-      "w": [ "IFS", "CSC", "GRC3", "GRC2", "GRC1", "GRC0", "CGS", "XS" ]
+      "values": [0, 1, 0, 1, 1, 1, 1, 1],
+      "r": ["IFS", "CSC", "GRC3", "GRC2", "GRC1", "GRC0", "CGS", "XS"],
+      "w": ["IFS", "CSC", "GRC3", "GRC2", "GRC1", "GRC0", "CGS", "XS"]
     },
     "Reg16": {
       "name": "DR",
-      "values": [ 0, 0, 0, 0, 0, 0, 0, 0 ],
-      "r": [ "SDR7", "SDR6", "SDR5", "SDR4", "SDR3", "SDR2", "SDR1", "SDR0" ],
-      "w": [ "SDR7", "SDR6", "SDR5", "SDR4", "SDR3", "SDR2", "SDR1", "SDR0" ]
+      "values": [0, 0, 0, 0, 0, 0, 0, 0],
+      "r": ["SDR7", "SDR6", "SDR5", "SDR4", "SDR3", "SDR2", "SDR1", "SDR0"],
+      "w": ["SDR7", "SDR6", "SDR5", "SDR4", "SDR3", "SDR2", "SDR1", "SDR0"]
     },
     "Reg17": {
       "name": "PLL1",
-      "values": [ 0, 0, 0, 0, 0, 0, 0, 0 ],
-      "r": [ "CHN7", "CHN6", "CHN5", "CHN4", "CHN3", "CHN2", "CHN1", "CHN0" ],
-      "w": [ "CHN7", "CHN6", "CHN5", "CHN4", "CHN3", "CHN2", "CHN1", "CHN0" ]
+      "values": [0, 0, 0, 0, 0, 0, 0, 0],
+      "r": ["CHN7", "CHN6", "CHN5", "CHN4", "CHN3", "CHN2", "CHN1", "CHN0"],
+      "w": ["CHN7", "CHN6", "CHN5", "CHN4", "CHN3", "CHN2", "CHN1", "CHN0"]
     },
     "Reg18": {
       "name": "PLL2",
-      "values": [ 0, 0, 1, 0, 1, 1, 1, 0 ],
-      "r": [ "DBL", "RRC1", "RRC0", "CHR3", "CHR2", "CHR1", "CHR0", "IP8" ],
-      "w": [ "DBL", "RRC1", "RRC0", "CHR3", "CHR2", "CHR1", "CHR0", "BIP8" ]
+      "values": [0, 0, 1, 0, 1, 1, 1, 0],
+      "r": ["DBL", "RRC1", "RRC0", "CHR3", "CHR2", "CHR1", "CHR0", "IP8"],
+      "w": ["DBL", "RRC1", "RRC0", "CHR3", "CHR2", "CHR1", "CHR0", "BIP8"]
     },
     "Reg19": {
       "name": "PLL3",
-      "values": [ 1, 0, 0, 1, 0, 1, 0, 0 ],
-      "r": [ "BIP7", "BIP6", "BIP5", "BIP4", "BIP3", "BIP2", "BIP1", "BIP0" ],
-      "w": [ "IP7", "IP6", "IP5", "IP4", "IP3", "IP2", "IP1", "IP0" ]
+      "values": [1, 0, 0, 1, 0, 1, 0, 0],
+      "r": ["BIP7", "BIP6", "BIP5", "BIP4", "BIP3", "BIP2", "BIP1", "BIP0"],
+      "w": ["IP7", "IP6", "IP5", "IP4", "IP3", "IP2", "IP1", "IP0"]
     },
     "Reg20": {
       "name": "PLL4",
-      "values": [ 0, 0, 0, 0, 0, 0, 0, 0 ],
-      "r": [ "FP15", "FP14", "FP13", "FP12", "FP11", "FP10", "FP9", "FP8" ],
-      "w": [ "BFP15", "BFP14", "BFP13", "BFP12", "BFP11", "BFP10", "BFP9", "BFP8" ]
+      "values": [0, 0, 0, 0, 0, 0, 0, 0],
+      "r": ["FP15", "FP14", "FP13", "FP12", "FP11", "FP10", "FP9", "FP8"],
+      "w": ["BFP15", "BFP14", "BFP13", "BFP12", "BFP11", "BFP10", "BFP9", "BFP8"]
     },
     "Reg21": {
       "name": "PLL5",
-      "values": [ 0, 0, 0, 0, 0, 1, 0, 0 ],
-      "r": [ "FP7", "FP6", "FP5", "FP4", "FP3", "FP2", "FP1", "FP0" ],
-      "w": [ "BFP7", "BFP6", "BFP5", "BFP4", "BFP3", "BFP2", "BFP1", "BFP0" ]
+      "values": [0, 0, 0, 0, 0, 1, 0, 0],
+      "r": ["FP7", "FP6", "FP5", "FP4", "FP3", "FP2", "FP1", "FP0"],
+      "w": ["BFP7", "BFP6", "BFP5", "BFP4", "BFP3", "BFP2", "BFP1", "BFP0"]
     },
     "Reg22": {
       "name": "CHG1",
-      "values": [ 0, 0, 1, 1, 1, 1, 0, 0 ],
-      "r": [ "CHGL7", "CHGL6", "CHGL5", "CHGL4", "CHGL3", "CHGL2", "CHGL1", "CHGL0" ],
-      "w": [ "CHGL7", "CHGL6", "CHGL5", "CHGL4", "CHGL3", "CHGL2", "CHGL1", "CHGL0" ]
+      "values": [0, 0, 1, 1, 1, 1, 0, 0],
+      "r": ["CHGL7", "CHGL6", "CHGL5", "CHGL4", "CHGL3", "CHGL2", "CHGL1", "CHGL0"],
+      "w": ["CHGL7", "CHGL6", "CHGL5", "CHGL4", "CHGL3", "CHGL2", "CHGL1", "CHGL0"]
     },
     "Reg23": {
       "name": "CHG2",
-      "values": [ 0, 1, 1, 1, 1, 0, 0, 0 ],
-      "r": [ "CHGH7", "CHGH6", "CHGH5", "CHGH4", "CHGH3", "CHGH2", "CHGH1", "CHGH0" ],
-      "w": [ "CHGH7", "CHGH6", "CHGH5", "CHGH4", "CHGH3", "CHGH2", "CHGH1", "CHGH0" ]
+      "values": [0, 1, 1, 1, 1, 0, 0, 0],
+      "r": ["CHGH7", "CHGH6", "CHGH5", "CHGH4", "CHGH3", "CHGH2", "CHGH1", "CHGH0"],
+      "w": ["CHGH7", "CHGH6", "CHGH5", "CHGH4", "CHGH3", "CHGH2", "CHGH1", "CHGH0"]
     },
     "Reg24": {
       "name": "TX1",
-      "values": [ -1, 1, 0, 1, 0, 1, 1, 0 ],
-      "r": [ "NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA" ],
-      "w": [ "NA", "TMDE", "TXDI", "TME", "FS", "FDP2", "FPD1", "FDP0" ]
+      "values": [-1, 1, 0, 1, 0, 1, 1, 0],
+      "r": ["NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA"],
+      "w": ["NA", "TMDE", "TXDI", "TME", "FS", "FDP2", "FPD1", "FDP0"]
     },
     "Reg25": {
       "name": "TX2",
-      "values": [ 1, 1, 0, 0, 0, 0, 0, 0 ],
-      "r": [ "NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA" ],
-      "w": [ "FD7", "FD6", "FD5", "FD4", "FD3", "FD2", "FD1", "FD0" ]
+      "values": [1, 1, 0, 0, 0, 0, 0, 0],
+      "r": ["NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA"],
+      "w": ["FD7", "FD6", "FD5", "FD4", "FD3", "FD2", "FD1", "FD0"]
     },
     "Reg26": {
       "name": "DELAY1",
-      "values": [ 0, 0, 0, 1, 0, 0, 1, 0 ],
-      "r": [ "NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA" ],
-      "w": [ "DPR2", "DPR1", "DPR0", "TDL1", "TDL0", "PDL2", "PDL1", "PDL0" ]
+      "values": [0, 0, 0, 1, 0, 0, 1, 0],
+      "r": ["NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA"],
+      "w": ["DPR2", "DPR1", "DPR0", "TDL1", "TDL0", "PDL2", "PDL1", "PDL0"]
     },
     "Reg27": {
       "name": "CODE1",
-      "values": [ 0, 0, 0, 0, 0, 1, 1, 1 ],
-      "r": [ "NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA" ],
-      "w": [ "MCS", "WHTS", "FECS", "CRCS", "IDL1", "IDL0", "PML1", "PML0" ]
+      "values": [0, 0, 0, 0, 0, 1, 1, 1],
+      "r": ["NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA"],
+      "w": ["MCS", "WHTS", "FECS", "CRCS", "IDL1", "IDL0", "PML1", "PML0"]
     },
     "Reg28": {
       "name": "CODE2",
-      "values": [ -1, 0, 1, 0, 1, 0, 1, 0 ],
-      "r": [ "NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA" ],
-      "w": [ "HWCKS", "WS6", "WS5", "WS4", "WS3", "WS2", "WS1", "WS0" ]
+      "values": [-1, 0, 1, 0, 1, 0, 1, 0],
+      "r": ["NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA"],
+      "w": ["HWCKS", "WS6", "WS5", "WS4", "WS3", "WS2", "WS1", "WS0"]
     },
     "Reg29": {
       "name": "VOCC",
-      "values": [ -1, -1, 1, 0, 1, 1, 0, 0 ],
-      "r": [ "NA", "NA", "NA", "VCCF", "VCB3", "VCB2", "VCB1", "VCB0" ],
-      "w": [ "NA", "NA", "VCCS", "MVCS", "VCOC3", "VCOC2", "VCOC1", "VCOC0" ]
+      "values": [-1, -1, 1, 0, 1, 1, 0, 0],
+      "r": ["NA", "NA", "NA", "VCCF", "VCB3", "VCB2", "VCB1", "VCB0"],
+      "w": ["NA", "NA", "VCCS", "MVCS", "VCOC3", "VCOC2", "VCOC1", "VCOC0"]
     },
     "Reg30": {
       "name": "VCOBC1",
-      "values": [ 1, 1, 0, -1, 0, 1, 0, 0 ],
-      "r": [ "NA", "NA", "NA", "NA", "VBCF", "VB2", "VB1", "VB0" ],
-      "w": [ "DCD1", "DCD0", "DAGS", "DMGS", "MVBS", "MVB2", "MVB1", "MVB0" ]
+      "values": [1, 1, 0, -1, 0, 1, 0, 0],
+      "r": ["NA", "NA", "NA", "NA", "VBCF", "VB2", "VB1", "VB0"],
+      "w": ["DCD1", "DCD0", "DAGS", "DMGS", "MVBS", "MVB2", "MVB1", "MVB0"]
     },
     "Reg31": {
       "name": "VCOBC2",
-      "values": [ 1, 0, 0, 0, 0, 0, 0, 0 ],
-      "r": [ "ADAG7", "ADAG6", "ADAG5", "ADAG4", "ADAG3", "ADAG2", "ADAG1", "ADAG0" ],
-      "w": [ "MDAG7", "MDAG6", "MDAG5", "MDAG4", "MDAG3", "MDAG2", "MDAG1", "MDAG0" ]
+      "values": [1, 0, 0, 0, 0, 0, 0, 0],
+      "r": ["ADAG7", "ADAG6", "ADAG5", "ADAG4", "ADAG3", "ADAG2", "ADAG1", "ADAG0"],
+      "w": ["MDAG7", "MDAG6", "MDAG5", "MDAG4", "MDAG3", "MDAG2", "MDAG1", "MDAG0"]
     },
     "Reg32": {
       "name": "VCODC1",
-      "values": [ 0, 1, 1, 1, 0, 0, 0, 0 ],
-      "r": [ "DEVA7", "DEVA6", "DEVA5", "DEVA4", "DEVA3", "DEVA2", "DEVA1", "DEVA0" ],
-      "w": [ "DEVS3", "DEVS2", "DEVS1", "DEVS0", "DAMR_M", "VMTE_M", "VMS_M", "MSEL" ]
+      "values": [0, 1, 1, 1, 0, 0, 0, 0],
+      "r": ["DEVA7", "DEVA6", "DEVA5", "DEVA4", "DEVA3", "DEVA2", "DEVA1", "DEVA0"],
+      "w": ["DEVS3", "DEVS2", "DEVS1", "DEVS0", "DAMR_M", "VMTE_M", "VMS_M", "MSEL"]
     },
     "Reg33": {
       "name": "VCODC2",
-      "values": [ 0, 0, 1, 0, 1, 0, 0, 0 ],
-      "r": [ "ADEV7", "ADEV6", "ADEV5", "ADEV4", "ADEV3", "ADEV2", "ADEV1", "ADEV0" ],
-      "w": [ "MVDS", "MDEV6", "MDEV5", "MDEV4", "MDEV3", "MDEV2", "MDEV1", "MDEV0" ]
+      "values": [0, 0, 1, 0, 1, 0, 0, 0],
+      "r": ["ADEV7", "ADEV6", "ADEV5", "ADEV4", "ADEV3", "ADEV2", "ADEV1", "ADEV0"],
+      "w": ["MVDS", "MDEV6", "MDEV5", "MDEV4", "MDEV3", "MDEV2", "MDEV1", "MDEV0"]
     },
     "Reg34": {
       "name": "VCODC3",
-      "values": [ 1, 0, 0, 0, 0, 0, 0, 0 ],
-      "r": [ "VMG7", "VMG6", "VMG5", "VMG4", "VMG3", "VMG2", "VMG1", "VMG0" ],
-      "w": [ "VMG7", "VMG6", "VMG5", "VMG4", "VMG3", "VMG2", "VMG1", "VMG0" ]
+      "values": [1, 0, 0, 0, 0, 0, 0, 0],
+      "r": ["VMG7", "VMG6", "VMG5", "VMG4", "VMG3", "VMG2", "VMG1", "VMG0"],
+      "w": ["VMG7", "VMG6", "VMG5", "VMG4", "VMG3", "VMG2", "VMG1", "VMG0"]
     },
     "Reg35": {
       "name": "VCOMD",
-      "values": [ 0, 0, 0, 0, 0, 0, 0, 0 ],
-      "r": [ "NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA" ],
-      "w": [ "MDEN", "CMV", "DEVFD2", "DEVFD1", "DEVFD0", "DEVD2", "DEVD1", "DEVD0" ]
+      "values": [0, 0, 0, 0, 0, 0, 0, 0],
+      "r": ["NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA"],
+      "w": ["MDEN", "CMV", "DEVFD2", "DEVFD1", "DEVFD0", "DEVD2", "DEVD1", "DEVD0"]
     },
     "Reg36": {
       "name": "BD",
-      "values": [ 0, 1, 0, 0, 0, 1, 1, 0 ],
-      "r": [ "RGS", "RGV1", "RGV0", "BDF", "BVT2", "BVT1", "BVT0", "BD_E" ],
-      "w": [ "RGS", "RGV1", "RGV0", "LVR", "BVT2", "BVT1", "BVT0", "BD_E" ]
+      "values": [0, 1, 0, 0, 0, 1, 1, 0],
+      "r": ["RGS", "RGV1", "RGV0", "BDF", "BVT2", "BVT1", "BVT0", "BD_E"],
+      "w": ["RGS", "RGV1", "RGV0", "LVR", "BVT2", "BVT1", "BVT0", "BD_E"]
     },
     "Reg37": {
       "name": "TXT",
-      "values": [ 0, 0, 0, 1, 0, 1, 1, 1 ],
-      "r": [ "NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA" ],
-      "w": [ "TXSM1", "TXSM0", "TXCS", "PAC1", "PAC0", "TBG2", "TBG1", "TBG0" ]
+      "values": [0, 0, 0, 1, 0, 1, 1, 1],
+      "r": ["NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA"],
+      "w": ["TXSM1", "TXSM0", "TXCS", "PAC1", "PAC0", "TBG2", "TBG1", "TBG0"]
     },
     "Reg38": {
       "name": "CPC",
-      "values": [ 1, 1, 1, 1, 1, 1, 1, 1 ],
-      "r": [ "NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA" ],
-      "w": [ "CPM3", "CPM2", "CPM1", "CPM0", "CPT3", "CPT2", "CPT1", "CPT0" ]
+      "values": [1, 1, 1, 1, 1, 1, 1, 1],
+      "r": ["NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA"],
+      "w": ["CPM3", "CPM2", "CPM1", "CPM0", "CPT3", "CPT2", "CPT1", "CPT0"]
     },
     "Reg39": {
       "name": "XTLT",
-      "values": [ 0, 0, 0, 0, 0, 1, 0, 1 ],
-      "r": [ "NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA" ],
-      "w": [ "VRPL1", "VRPL0", "INTXC", "INTPRC", "DBD", "XCC", "XCP1", "XCP0" ]
+      "values": [0, 0, 0, 0, 0, 1, 0, 1],
+      "r": ["NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA"],
+      "w": ["VRPL1", "VRPL0", "INTXC", "INTPRC", "DBD", "XCC", "XCP1", "XCP0"]
     },
     "Reg40": {
       "name": "PLLT",
-      "values": [ 1, 1, 0, 0, 0, 1, 0, 1 ],
-      "r": [ "NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA" ],
-      "w": [ "CPH", "CPS", "PRRC1", "PRRC0", "PRIC1", "PRIC0", "SDPW", "NSDO" ]
+      "values": [1, 1, 0, 0, 0, 1, 0, 1],
+      "r": ["NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA"],
+      "w": ["CPH", "CPS", "PRRC1", "PRRC0", "PRIC1", "PRIC0", "SDPW", "NSDO"]
     },
     "Reg41": {
       "name": "VCOT",
-      "values": [ 0, 1, 0, 1, 1, 0, 0, 0 ],
-      "r": [ "NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA" ],
-      "w": [ "OLM", "SDMS", "VTBS", "TLB1", "TLB0", "RSIS", "ROSCS", "VBHC" ]
+      "values": [0, 1, 0, 1, 1, 0, 0, 0],
+      "r": ["NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA"],
+      "w": ["OLM", "SDMS", "VTBS", "TLB1", "TLB0", "RSIS", "ROSCS", "VBHC"]
     },
     "Reg42": {
       "name": "CHS",
-      "values": [ -1, -1, -1, -1, 0, 1, 0, 0 ],
-      "r": [ "NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA" ],
-      "w": [ "XADPS", "RFT2", "RFT1", "RFT0", "CHD3", "CHD2", "CHD1", "CHD0" ]
+      "values": [-1, -1, -1, -1, 0, 1, 0, 0],
+      "r": ["NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA"],
+      "w": ["XADPS", "RFT2", "RFT1", "RFT0", "CHD3", "CHD2", "CHD1", "CHD0"]
     },
     "Reg43": {
       "name": "VRB",
-      "values": [ 0, 0, 0, 0, 0, 0, 0, 0 ],
-      "r": [ "NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA" ],
-      "w": [ "VTRB3", "VTRB2", "VTRB1", "VTRB0", "VMRB3", "VMRB2", "VMRB1", "VMRB0" ]
+      "values": [0, 0, 0, 0, 0, 0, 0, 0],
+      "r": ["NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA"],
+      "w": ["VTRB3", "VTRB2", "VTRB1", "VTRB0", "VMRB3", "VMRB2", "VMRB1", "VMRB0"]
     },
     "Reg44": {
       "name": "RTX",
-      "values": [ 0, 0, 0, 0, 0, 0, 0, 0 ],
-      "r": [ "NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA" ],
-      "w": [ "QDS", "TRT2", "TRT1", "TRT0", "ASMV2", "ASMV1", "ASMV0", "AMVS" ]
+      "values": [0, 0, 0, 0, 0, 0, 0, 0],
+      "r": ["NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA"],
+      "w": ["QDS", "TRT2", "TRT1", "TRT0", "ASMV2", "ASMV1", "ASMV0", "AMVS"]
     },
     "Reg45": {
       "name": "INTS",
-      "values": [ 0, 0, 0, 1, 0, 0, 0, 0 ],
-      "r": [ "NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA" ],
-      "w": [ "CELS", "PWORS", "STS", "IXTLS4", "IXTLS3", "IXTLS2", "IXTLS1", "IXTLS0" ]
+      "values": [0, 0, 0, 1, 0, 0, 0, 0],
+      "r": ["NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA"],
+      "w": ["CELS", "PWORS", "STS", "IXTLS4", "IXTLS3", "IXTLS2", "IXTLS1", "IXTLS0"]
     }
   },
   "commands": {
@@ -308,397 +308,397 @@
       "logic": "FIFO Read pointer reset"
     },
     "cmd8": {
-      "hex": "0x40,",
+      "hex": "0x40",
       "isstrobe": false,
       "isread": true,
       "registername": "MODE"
     },
     "cmd9": {
-      "hex": "0x00,",
+      "hex": "0x00",
       "isstrobe": false,
       "isread": false,
       "registername": "MODE"
     },
     "cmd10": {
-      "hex": "0x41,",
+      "hex": "0x41",
       "isstrobe": false,
       "isread": true,
       "registername": "MODEC"
     },
     "cmd11": {
-      "hex": "0x01,",
+      "hex": "0x01",
       "isstrobe": false,
       "isread": false,
       "registername": "MODEC"
     },
     "cmd12": {
-      "hex": "0x42,",
+      "hex": "0x42",
       "isstrobe": false,
       "isread": true,
       "registername": "CALC"
     },
     "cmd13": {
-      "hex": "0x02,",
+      "hex": "0x02",
       "isstrobe": false,
       "isread": false,
       "registername": "CALC"
     },
     "cmd15": {
-      "hex": "0x03,",
+      "hex": "0x03",
       "isstrobe": false,
       "isread": false,
       "registername": "FIFO1"
     },
     "cmd17": {
-      "hex": "0x04,",
+      "hex": "0x04",
       "isstrobe": false,
       "isread": false,
       "registername": "FIFO2"
     },
     "cmd19": {
-      "hex": "0x05,",
+      "hex": "0x05",
       "isstrobe": false,
       "isread": false,
       "registername": "FIFOD"
     },
     "cmd21": {
-      "hex": "0x06,",
+      "hex": "0x06",
       "isstrobe": false,
       "isread": false,
       "registername": "IDD"
     },
     "cmd22": {
-      "hex": "0x47,",
+      "hex": "0x47",
       "isstrobe": false,
       "isread": true,
       "registername": "RCOSC1"
     },
     "cmd23": {
-      "hex": "0x07,",
+      "hex": "0x07",
       "isstrobe": false,
       "isread": false,
       "registername": "RCOSC1"
     },
     "cmd25": {
-      "hex": "0x08,",
+      "hex": "0x08",
       "isstrobe": false,
       "isread": false,
       "registername": "RCOSC2"
     },
     "cmd27": {
-      "hex": "0x09,",
+      "hex": "0x09",
       "isstrobe": false,
       "isread": false,
       "registername": "RCOSC3"
     },
     "cmd29": {
-      "hex": "0x0A,",
+      "hex": "0x0A",
       "isstrobe": false,
       "isread": false,
       "registername": "CKO"
     },
     "cmd31": {
-      "hex": "0x0B,",
+      "hex": "0x0B",
       "isstrobe": false,
       "isread": false,
       "registername": "GPIO1"
     },
     "cmd32": {
-      "hex": "0x4C,",
+      "hex": "0x4C",
       "isstrobe": false,
       "isread": true,
       "registername": "CLOCK"
     },
     "cmd33": {
-      "hex": "0x0C,",
+      "hex": "0x0C",
       "isstrobe": false,
       "isread": false,
       "registername": "CLOCK"
     },
     "cmd34": {
-      "hex": "0x4D,",
+      "hex": "0x4D",
       "isstrobe": false,
       "isread": true,
       "registername": "DR"
     },
     "cmd35": {
-      "hex": "0x0D,",
+      "hex": "0x0D",
       "isstrobe": false,
       "isread": false,
       "registername": "DR"
     },
     "cmd36": {
-      "hex": "0x4E,",
+      "hex": "0x4E",
       "isstrobe": false,
       "isread": true,
       "registername": "PLL1"
     },
     "cmd37": {
-      "hex": "0x0E,",
+      "hex": "0x0E",
       "isstrobe": false,
       "isread": false,
       "registername": "PLL1"
     },
     "cmd38": {
-      "hex": "0x4F,",
+      "hex": "0x4F",
       "isstrobe": false,
       "isread": true,
       "registername": "PLL2"
     },
     "cmd39": {
-      "hex": "0x0F,",
+      "hex": "0x0F",
       "isstrobe": false,
       "isread": false,
       "registername": "PLL2"
     },
     "cmd40": {
-      "hex": "0x50,",
+      "hex": "0x50",
       "isstrobe": false,
       "isread": true,
       "registername": "PLL3"
     },
     "cmd41": {
-      "hex": "0x10,",
+      "hex": "0x10",
       "isstrobe": false,
       "isread": false,
       "registername": "PLL3"
     },
     "cmd42": {
-      "hex": "0x51,",
+      "hex": "0x51",
       "isstrobe": false,
       "isread": true,
       "registername": "PLL4"
     },
     "cmd43": {
-      "hex": "0x11,",
+      "hex": "0x11",
       "isstrobe": false,
       "isread": false,
       "registername": "PLL4"
     },
     "cmd44": {
-      "hex": "0x52,",
+      "hex": "0x52",
       "isstrobe": false,
       "isread": true,
       "registername": "PLL5"
     },
     "cmd45": {
-      "hex": "0x12,",
+      "hex": "0x12",
       "isstrobe": false,
       "isread": false,
       "registername": "PLL5"
     },
     "cmd46": {
-      "hex": "0x53,",
+      "hex": "0x53",
       "isstrobe": false,
       "isread": true,
       "registername": "CHG1"
     },
     "cmd47": {
-      "hex": "0x13,",
+      "hex": "0x13",
       "isstrobe": false,
       "isread": false,
       "registername": "CHG1"
     },
     "cmd48": {
-      "hex": "0x54,",
+      "hex": "0x54",
       "isstrobe": false,
       "isread": true,
       "registername": "CHG2"
     },
     "cmd49": {
-      "hex": "0x14,",
+      "hex": "0x14",
       "isstrobe": false,
       "isread": false,
       "registername": "CHG2"
     },
     "cmd51": {
-      "hex": "0x15,",
+      "hex": "0x15",
       "isstrobe": false,
       "isread": false,
       "registername": "TX1"
     },
     "cmd53": {
-      "hex": "0x16,",
+      "hex": "0x16",
       "isstrobe": false,
       "isread": false,
       "registername": "TX2"
     },
     "cmd55": {
-      "hex": "0x17,",
+      "hex": "0x17",
       "isstrobe": false,
       "isread": false,
       "registername": "DELAY1"
     },
     "cmd57": {
-      "hex": "0x18,",
+      "hex": "0x18",
       "isstrobe": false,
       "isread": false,
       "registername": "DELAY2"
     },
     "cmd58": {
-      "hex": "0x59,",
+      "hex": "0x59",
       "isstrobe": false,
       "isread": true,
       "registername": "ADC"
     },
     "cmd59": {
-      "hex": "0x19,",
+      "hex": "0x19",
       "isstrobe": false,
       "isread": false,
       "registername": "ADC"
     },
     "cmd61": {
-      "hex": "0x1A,",
+      "hex": "0x1A",
       "isstrobe": false,
       "isread": false,
       "registername": "CODE1"
     },
     "cmd63": {
-      "hex": "0x1B,",
+      "hex": "0x1B",
       "isstrobe": false,
       "isread": false,
       "registername": "CODE2"
     },
     "cmd64": {
-      "hex": "0x5C,",
+      "hex": "0x5C",
       "isstrobe": false,
       "isread": true,
       "registername": "VOCC"
     },
     "cmd65": {
-      "hex": "0x1C,",
+      "hex": "0x1C",
       "isstrobe": false,
       "isread": false,
       "registername": "VOCC"
     },
     "cmd66": {
-      "hex": "0x5D,",
+      "hex": "0x5D",
       "isstrobe": false,
       "isread": true,
       "registername": "VCOBC1"
     },
     "cmd67": {
-      "hex": "0x1D,",
+      "hex": "0x1D",
       "isstrobe": false,
       "isread": false,
       "registername": "VCOBC1"
     },
     "cmd68": {
-      "hex": "0x5E,",
+      "hex": "0x5E",
       "isstrobe": false,
       "isread": true,
       "registername": "VCOBC2"
     },
     "cmd69": {
-      "hex": "0x1E,",
+      "hex": "0x1E",
       "isstrobe": false,
       "isread": false,
       "registername": "VCOBC2"
     },
     "cmd70": {
-      "hex": "0x5F,",
+      "hex": "0x5F",
       "isstrobe": false,
       "isread": true,
       "registername": "VCODC1"
     },
     "cmd71": {
-      "hex": "0x1F,",
+      "hex": "0x1F",
       "isstrobe": false,
       "isread": false,
       "registername": "VCODC1"
     },
     "cmd72": {
-      "hex": "0x60,",
+      "hex": "0x60",
       "isstrobe": false,
       "isread": true,
       "registername": "VCODC2"
     },
     "cmd73": {
-      "hex": "0x20,",
+      "hex": "0x20",
       "isstrobe": false,
       "isread": false,
       "registername": "VCODC2"
     },
     "cmd74": {
-      "hex": "0x61,",
+      "hex": "0x61",
       "isstrobe": false,
       "isread": true,
       "registername": "VCODC3"
     },
     "cmd75": {
-      "hex": "0x21,",
+      "hex": "0x21",
       "isstrobe": false,
       "isread": false,
       "registername": "VCODC3"
     },
     "cmd77": {
-      "hex": "0x22,",
+      "hex": "0x22",
       "isstrobe": false,
       "isread": false,
       "registername": "VCOMD"
     },
     "cmd78": {
-      "hex": "0x63,",
+      "hex": "0x63",
       "isstrobe": false,
       "isread": true,
       "registername": "BD"
     },
     "cmd79": {
-      "hex": "0x23,",
+      "hex": "0x23",
       "isstrobe": false,
       "isread": false,
       "registername": "BD"
     },
     "cmd81": {
-      "hex": "0x24,",
+      "hex": "0x24",
       "isstrobe": false,
       "isread": false,
       "registername": "TXT"
     },
     "cmd83": {
-      "hex": "0x25,",
+      "hex": "0x25",
       "isstrobe": false,
       "isread": false,
       "registername": "CPC"
     },
     "cmd85": {
-      "hex": "0x26,",
+      "hex": "0x26",
       "isstrobe": false,
       "isread": false,
       "registername": "XTLT"
     },
     "cmd87": {
-      "hex": "0x27,",
+      "hex": "0x27",
       "isstrobe": false,
       "isread": false,
       "registername": "PLLT"
     },
     "cmd89": {
-      "hex": "0x28,",
+      "hex": "0x28",
       "isstrobe": false,
       "isread": false,
       "registername": "VCOT"
     },
     "cmd91": {
-      "hex": "0x29,",
+      "hex": "0x29",
       "isstrobe": false,
       "isread": false,
       "registername": "CHS"
     },
     "cmd93": {
-      "hex": "0x2A,",
+      "hex": "0x2A",
       "isstrobe": false,
       "isread": false,
       "registername": "VRB"
     },
     "cmd95": {
-      "hex": "0x2B,",
+      "hex": "0x2B",
       "isstrobe": false,
       "isread": false,
       "registername": "RTX"
     },
     "cmd97": {
-      "hex": "0x2C,",
+      "hex": "0x2C",
       "isstrobe": false,
       "isread": false,
       "registername": "INTS"
@@ -709,7 +709,7 @@
       "isfunc": false,
       "ibits": {
         "CELS": {
-          "iwith": [ "CELS", "PWORS" ],
+          "iwith": ["CELS", "PWORS"],
           "ipret": {
             "00": "dinge",
             "01": "andere dinge"
