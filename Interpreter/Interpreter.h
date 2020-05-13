@@ -5,8 +5,8 @@
 class Interpreter
 {
 private:
-	Registers* registers;
-	Commands* commands;
+	Registers *registers;
+	Commands *commands;
 
 public:
 	Interpreter(std::string confName);
