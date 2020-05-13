@@ -705,6 +705,114 @@
     }
   },
   "interpret": {
+    "MODE": {
+      "ibitsr": {
+        "CER": {
+          "isfunc": false,
+          "iwith": [ "CER" ],
+          "ipret": {
+            "0": "RF Chip is disabled",
+            "1": "RF Chip is enabled"
+          }
+        },
+        "XER": {
+          "isfunc": false,
+          "iwith": [ "XER" ],
+          "ipret": {
+            "0": "Internal Chrystal Oscillator is disabled",
+            "1": "Internal Chrystal Oscillator is enabled"
+          }
+        },
+        "PLLER": {
+          "isfunc": false,
+          "iwith": [ "PLLER" ],
+          "ipret": {
+            "0": "PLL is disabled",
+            "1": "PLL is enabled"
+          }
+        },
+        "TRSR": {
+          "isfunc": false,
+          "iwith": [ "TRSR" ],
+          "ipret": {
+            "0": "TRX status Register not in TX state",
+            "1": "TRX status Register in TX state"
+          }
+        },
+        "TRER": {
+          "isfunc": false,
+          "iwith": [ "TRER" ],
+          "ipret": {
+            "0": "TRX is disabled",
+            "1": "TRX is enabled"
+          }
+        }
+      }
+    },
+    "MODEC": {
+      "ibits": {
+        "DDPC": {
+          "isfunc": false,
+          "iwith": [ "DDPC" ],
+          "ipret": {
+            "0": "Direct mode modem data can not be received via SDIO",
+            "1": "Direct mode modem data can be received via SDIO"
+          }
+        },
+        "WOTE": {
+          "isfunc": false,
+          "iwith": [ "WOTE" ],
+          "ipret": {
+            "0": "Wake on TX is disabled",
+            "1": "Wake on TX is enabled"
+          }
+        },
+        "FMS": {
+          "isfunc": false,
+          "iwith": [ "FMS" ],
+          "ipret": {
+            "0": "Direct Mode",
+            "1": "FIFO mode"
+          }
+        },
+        "ADCM": {
+          "isfunc": false,
+          "iwith": [ "ADCM" ],
+          "ipret": {
+            "0": "ADC measurment diabled or finished",
+            "1": "ADC measurment enabled"
+          }
+        }
+      }
+    },
+    "CALC": {
+      "ibits": {
+        "VCC": {
+          "isfunc": false,
+          "iwith": [ "VCC" ],
+          "ipret": {
+            "0": "VCO Current Calibration is disabled",
+            "1": "VCO Current Calibration is enabled"
+          }
+        },
+        "VBC": {
+          "isfunc": false,
+          "iwith": [ "VBC" ],
+          "ipret": {
+            "0": "VBC Bank calibration is disabled",
+            "1": "VBC Bank calibration is enabled"
+          }
+        },
+        "VDC": {
+          "isfunc": false,
+          "iwith": [ "VDC" ],
+          "ipret": {
+            "0": "VCO deviation calibration is disabled",
+            "1": "VCO deviation calibration is enabled"
+          }
+        }
+      }
+    },
     "INTS": {
       "isfunc": false,
       "ibits": {
