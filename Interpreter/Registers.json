@@ -275,7 +275,7 @@
     "cmd1": {
       "hex": "0x80",
       "isstrobe": true,
-      "logic": "Entered Sleep Mode" 
+      "logic": "Entered Sleep Mode"
     },
     "cmd2": {
       "hex": "0x90",
@@ -709,7 +709,7 @@
       "ibitsr": {
         "CER": {
           "isfunc": false,
-          "iwith": [ "CER" ],
+          "iwith": ["CER"],
           "ipret": {
             "0": "RF Chip is disabled",
             "1": "RF Chip is enabled"
@@ -717,7 +717,7 @@
         },
         "XER": {
           "isfunc": false,
-          "iwith": [ "XER" ],
+          "iwith": ["XER"],
           "ipret": {
             "0": "Internal Chrystal Oscillator is disabled",
             "1": "Internal Chrystal Oscillator is enabled"
@@ -725,7 +725,7 @@
         },
         "PLLER": {
           "isfunc": false,
-          "iwith": [ "PLLER" ],
+          "iwith": ["PLLER"],
           "ipret": {
             "0": "PLL is disabled",
             "1": "PLL is enabled"
@@ -733,7 +733,7 @@
         },
         "TRSR": {
           "isfunc": false,
-          "iwith": [ "TRSR" ],
+          "iwith": ["TRSR"],
           "ipret": {
             "0": "TRX status Register not in TX state",
             "1": "TRX status Register in TX state"
@@ -741,7 +741,7 @@
         },
         "TRER": {
           "isfunc": false,
-          "iwith": [ "TRER" ],
+          "iwith": ["TRER"],
           "ipret": {
             "0": "TRX is disabled",
             "1": "TRX is enabled"
@@ -753,7 +753,7 @@
       "ibits": {
         "DDPC": {
           "isfunc": false,
-          "iwith": [ "DDPC" ],
+          "iwith": ["DDPC"],
           "ipret": {
             "0": "Direct mode modem data can not be received via SDIO",
             "1": "Direct mode modem data can be received via SDIO"
@@ -761,7 +761,7 @@
         },
         "WOTE": {
           "isfunc": false,
-          "iwith": [ "WOTE" ],
+          "iwith": ["WOTE"],
           "ipret": {
             "0": "Wake on TX is disabled",
             "1": "Wake on TX is enabled"
@@ -769,7 +769,7 @@
         },
         "FMS": {
           "isfunc": false,
-          "iwith": [ "FMS" ],
+          "iwith": ["FMS"],
           "ipret": {
             "0": "Direct Mode",
             "1": "FIFO mode"
@@ -777,7 +777,7 @@
         },
         "ADCM": {
           "isfunc": false,
-          "iwith": [ "ADCM" ],
+          "iwith": ["ADCM"],
           "ipret": {
             "0": "ADC measurment diabled or finished",
             "1": "ADC measurment enabled"
@@ -789,7 +789,7 @@
       "ibits": {
         "VCC": {
           "isfunc": false,
-          "iwith": [ "VCC" ],
+          "iwith": ["VCC"],
           "ipret": {
             "0": "VCO Current Calibration is disabled",
             "1": "VCO Current Calibration is enabled"
@@ -797,7 +797,7 @@
         },
         "VBC": {
           "isfunc": false,
-          "iwith": [ "VBC" ],
+          "iwith": ["VBC"],
           "ipret": {
             "0": "VBC Bank calibration is disabled",
             "1": "VBC Bank calibration is enabled"
@@ -805,7 +805,7 @@
         },
         "VDC": {
           "isfunc": false,
-          "iwith": [ "VDC" ],
+          "iwith": ["VDC"],
           "ipret": {
             "0": "VCO deviation calibration is disabled",
             "1": "VCO deviation calibration is enabled"
@@ -813,11 +813,29 @@
         }
       }
     },
+    "FIFO1": {
+      "ibitsw": {
+        "FEP7": {
+          "isfunc": true,
+          "iwith": ["FEP7", "FEP6", "FEP5", "FEP4", "FEP3", "FEP2", "FEP1", "FEP0"],
+          "ipret": {}
+        }
+      }
+    },
+    "FIFO2": {
+      "ibitsw": {
+        "FPM1": {
+          "isfunc": true,
+          "iwith": ["FPM1", "FPM0"],
+          "ipret": {}
+        }
+      }
+    },
     "INTS": {
       "isfunc": false,
       "ibits": {
         "CELS": {
-          "iwith": [ "CELS", "PWORS" ],
+          "iwith": ["CELS", "PWORS"],
           "ipret": {
             "00": "dinge",
             "01": "andere dinge"
@@ -829,7 +847,7 @@
       "ibitsw": {
         "AVSEL1": {
           "isfunc": false,
-          "iwith": [ "AVSEL1", "AVEL0" ],
+          "iwith": ["AVSEL1", "AVEL0"],
           "ipret": {
             "00": "Avg 8 times",
             "01": "Avg 16 times",
@@ -839,7 +857,7 @@
         },
         "RADC": {
           "isfunc": false,
-          "iwith": [ "RADC" ],
+          "iwith": ["RADC"],
           "ipret": {
             "0": "reading ADC MVSEL",
             "1": "reading ADC AVSEL"
@@ -847,7 +865,7 @@
         },
         "FSARS": {
           "isfunc": false,
-          "iwith": [ "FSARS" ],
+          "iwith": ["FSARS"],
           "ipret": {
             "0": "4Mhz",
             "1": "8Mhz"
