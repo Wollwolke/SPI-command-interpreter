@@ -884,7 +884,7 @@
         },
         "WOT_AC5": {
           "isfunc": false,
-          "iwith": ["WOT_AC5","WOT_AC4","WOT_AC3","WOT_AC2","WOT_AC1","WOT_AC0"],
+          "iwith": ["WOT_AC5", "WOT_AC4", "WOT_AC3", "WOT_AC2", "WOT_AC1", "WOT_AC0"],
           "ipret": {
             "NA": "Set WOT_AC Timer"
           }
@@ -944,51 +944,190 @@
         }
       }
     },
-    "INTS": {
-      "isfunc": false,
-      "ibits": {
-        "CELS": {
-          "iwith": ["CELS", "PWORS"],
-          "ipret": {
-            "00": "dinge",
-            "01": "andere dinge"
-          }
-        }
-      }
-    },
-    "ADC": {
+    "CKO": {
       "ibitsw": {
-        "AVSEL1": {
+        "DDCKOE": {
           "isfunc": false,
-          "iwith": ["AVSEL1", "AVEL0"],
+          "iwith": ["DDCKOE"],
           "ipret": {
-            "00": "Avg 8 times",
-            "01": "Avg 16 times",
-            "10": "Avg 32 Times",
-            "11": "Avg 64 Times"
+            "0": "Disable External Clock Output for CKOS",
+            "1": "Enable External Clock Output for CKOS"
           }
         },
-        "RADC": {
+        "CKOS3": {
           "isfunc": false,
-          "iwith": ["RADC"],
+          "iwith": ["CKOS3", "CKOS2", "CKOS1", "CKOS0"],
           "ipret": {
-            "0": "reading ADC MVSEL",
-            "1": "reading ADC AVSEL"
+            "0000": "Set CKO pin output to: BCK (TX bit clock)",
+            "0001": "Set CKO pin output to: MRCK (modulation rate)",
+            "0010": "Set CKO pin output to: FPF (FIFO pointer flag)",
+            "0011": "Set CKO pin output to: EOP, EOVBC, EOADC, EOVCC, OKADC (Internal usage only)",
+            "0100": "Set CKO pin output to: External clock output= F(SYCK)/ 2",
+            "0101": "Set CKO pin output to: External clock output / 2= F(SYCK)/ 4",
+            "0110": "Set CKO pin output to: External clock output / 4= F(SYCK)/ 8",
+            "0111": "Set CKO pin output to: External clock output / 8= F(SYCK)/ 16",
+            "1000": "Set CKO pin output to: WOT clock",
+            "1001": "Set CKO pin output to: 8 Mhz clock",
+            "1010": "Set CKO pin output to: Internal ring OSC"
           }
         },
-        "FSARS": {
+        "CKOI": {
           "isfunc": false,
-          "iwith": ["FSARS"],
+          "iwith": ["CKOI"],
           "ipret": {
-            "0": "4Mhz",
-            "1": "8Mhz"
+            "0": "Non-inverted CKO output signal",
+            "1": "Inverted CKO output signal"
+          }
+        },
+        "CKOE": {
+          "isfunc": false,
+          "iwith": ["CKOE"],
+          "ipret": {
+            "0": "Disable CKO output (High impedance)",
+            "1": "Enable CKO output"
+          }
+        },
+        "SCKI": {
+          "isfunc": false,
+          "iwith": ["SCKI"],
+          "ipret": {
+            "0": "Non-inverted SPI Clock input signal",
+            "1": "Inverted SPI Clock input signal"
           }
         }
       }
     },
-    "ANDERS": {
-      "isfunc": true,
-      "func": "CELS + PWORS * INTS"
+    "GPIO1": {
+      "ibitsw": {
+        "GIO1S3": {
+          "isfunc": false,
+          "iwith": ["GIO1S3", "GIO1S2", "GIO1S1", "GIO1S0"],
+          "ipret": {
+            "0000": "Set GPIO1 pin function: WTR (Wait until TX)",
+            "0001": "Set GPIO1 pin function: EOAC(end of access code)",
+            "0010": "Set GPIO1 pin function: TMEO(TX modulation enable)",
+            "0011": "Set GPIO1 pin function: TMEOD (delta sigma TX modulation enable) output",
+            "0100": "Set GPIO1 pin function: WAK (For TWOT only)",
+            "0101": "Set GPIO1 pin function: Direct mode data input",
+            "0110": "Set GPIO1 pin function: SDO (4 wires SPI data out)",
+            "0111": "Set GPIO1 pin function: Direct mode data input",
+            "1000": "Set GPIO1 pin function: Internal FPF output",
+            "1001": "Set GPIO1 pin function: Internal PDN_TX",
+            "1010": "Set GPIO1 pin function: Data rate output",
+            "1011": "Set GPIO1 pin function: Reserve, for FIFO mode data output",
+            "1100": "Set GPIO1 pin function: Reserved",
+            "1101": "Set GPIO1 pin function: Reserved",
+            "1110": "Set GPIO1 pin function: Reserved",
+            "1111": "Set GPIO1 pin function: Reserved"
+          }
+        },
+        "GIO1I": {
+          "isfunc": false,
+          "iwith": ["GIO1I"],
+          "ipret": {
+            "0": "Non-inverted GPIO1 output signal ",
+            "1": "Inverted GPIO1 output signal"
+          }
+        },
+        "GIO1OE": {
+          "isfunc": false,
+          "iwith": ["GIO1OE"],
+          "ipret": {
+            "0": "Disable GPIO1 output (High impedance)",
+            "1": "Enable GPIO1 output"
+          }
+        }
+      }
+    },
+    "CLOCK": {
+      "ibits": {
+        "IFS": {
+          "isfunc": false,
+          "iwith": ["IFS"],
+          "ipret": {
+            "0": "Set maximum data rate to 500K bps",
+            "1": "Set maximum data rate to 2M bps"
+          }
+        },
+        "CSC": {
+          "isfunc": false,
+          "iwith": ["CSC"],
+          "ipret": {
+            "0": "Set system clock divider F(CSCK)/1",
+            "1": "Set system clock divider F(CSCK)/2"
+          }
+        },
+        "GRC3": {
+          "isfunc": false,
+          "iwith": ["GRC3", "GRC2", "GRC1", "GRC0"],
+          "ipret": {
+            "NA": "Set Clock generation reference counter"
+          }
+        },
+        "CGS": {
+          "isfunc": false,
+          "iwith": ["CGS"],
+          "ipret": {
+            "0": "Disable Clock generator",
+            "1": "Enable Clock generator"
+          }
+        },
+        "XS": {
+          "isfunc": false,
+          "iwith": ["XS"],
+          "ipret": {
+            "0": "Select crystal oscillator: Use external clock",
+            "1": "Select crystal oscillator: Use internal crystal"
+          }
+        }
+      }
     }
+  },
+  "INTS": {
+    "isfunc": false,
+    "ibits": {
+      "CELS": {
+        "iwith": ["CELS", "PWORS"],
+        "ipret": {
+          "00": "dinge",
+          "01": "andere dinge"
+        }
+      }
+    }
+  },
+  "ADC": {
+    "ibitsw": {
+      "AVSEL1": {
+        "isfunc": false,
+        "iwith": ["AVSEL1", "AVEL0"],
+        "ipret": {
+          "00": "Avg 8 times",
+          "01": "Avg 16 times",
+          "10": "Avg 32 Times",
+          "11": "Avg 64 Times"
+        }
+      },
+      "RADC": {
+        "isfunc": false,
+        "iwith": ["RADC"],
+        "ipret": {
+          "0": "reading ADC MVSEL",
+          "1": "reading ADC AVSEL"
+        }
+      },
+      "FSARS": {
+        "isfunc": false,
+        "iwith": ["FSARS"],
+        "ipret": {
+          "0": "4Mhz",
+          "1": "8Mhz"
+        }
+      }
+    }
+  },
+  "ANDERS": {
+    "isfunc": true,
+    "func": "CELS + PWORS * INTS"
   }
+}
 }

@@ -4,6 +4,7 @@
 - FIFO2 wtf does it do....
 - RCOSC1 formula?
 - RCOSC3 formula?
+- CLOCK formula?
 
 
 Interpret:
