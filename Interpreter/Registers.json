@@ -831,6 +831,119 @@
         }
       }
     },
+    "FIFOD": {
+      "ibitsw": {
+        "FIFO7": {
+          "isfunc": false,
+          "iwith": ["FIFO7", "FIFO6", "FIFO5", "FIFO4", "FIFO3", "FIFO2", "FIFO1", "FIFO0"],
+          "ipret": {
+            "NA": "Wrote to FIFO"
+          }
+        }
+      }
+    },
+    "IDD": {
+      "ibitsw": {
+        "ID7": {
+          "isfunc": false,
+          "iwith": ["ID7", "ID6", "ID5", "ID4", "ID3", "ID2", "ID1", "ID0"],
+          "ipret": {
+            "NA": "Wrote Syncword"
+          }
+        }
+      }
+    },
+    "RCOSC1": {
+      "ibitsw": {
+        "WOT_SL7": {
+          "isfunc": false,
+          "iwith": ["RCOSC2:WOT_SL9", "RCOSC2:WOT_SL8", "WOT_SL7", "WOT_SL6", "WOT_SL5", "WOT_SL4", "WOT_SL3", "WOT_SL2", "WOT_SL1", "WOT_SL0"],
+          "ipret": {
+            "NA": "Set WOT_SL Timer"
+          }
+        }
+      },
+      "ibitsr": {
+        "RCOC6": {
+          "isfunc": false,
+          "iwith": ["RCOC6", "RCOC5", "RCOC4", "RCOC3", "RCOC2", "RCOC1", "RCOC0"],
+          "ipret": {
+            "NA": "Read RC Oscillator Calibration"
+          }
+        }
+      }
+    },
+    "RCOSC2": {
+      "ibitsw": {
+        "WOT_SL9": {
+          "isfunc": false,
+          "iwith": ["WOT_SL9", "WOT_SL8", "RCOSC1:WOT_SL7", "RCOSC1:WOT_SL6", "RCOSC1:WOT_SL5", "RCOSC1:WOT_SL4", "RCOSC1:WOT_SL3", "RCOSC1:WOT_SL2", "RCOSC1:WOT_SL1", "RCOSC1:WOT_SL0"],
+          "ipret": {
+            "NA": "Set WOT_SL Timer"
+          }
+        },
+        "WOT_AC5": {
+          "isfunc": false,
+          "iwith": ["WOT_AC5","WOT_AC4","WOT_AC3","WOT_AC2","WOT_AC1","WOT_AC0"],
+          "ipret": {
+            "NA": "Set WOT_AC Timer"
+          }
+        }
+      }
+    },
+    "RCOSC3": {
+      "ibitsw": {
+        "BBCKS1": {
+          "isfunc": false,
+          "iwith": ["BBCKS1", "BBCKS0"],
+          "ipret": {
+            "00": "Set Clock for digital block to F(SYCK)/1",
+            "01": "Set Clock for digital block to F(SYCK)/2",
+            "10": "Set Clock for digital block to F(SYCK)/4",
+            "11": "Set Clock for digital block to F(SYCK)/8"
+          }
+        },
+        "RCOT1": {
+          "isfunc": false,
+          "iwith": ["RCOT1", "RCOT0"],
+          "ipret": {
+            "NA": "RC Oscillator current selection"
+          }
+        },
+        "CALW": {
+          "isfunc": false,
+          "iwith": ["CALW"],
+          "ipret": {
+            "0": "Disable RC Oscillator calibration",
+            "1": "Enable RC Oscillator calibration"
+          }
+        },
+        "RCOSC_E": {
+          "isfunc": false,
+          "iwith": ["RCOSC_E"],
+          "ipret": {
+            "0": "Disable RC Oscillator",
+            "1": "Enable RC Oscillator"
+          }
+        },
+        "TSEL": {
+          "isfunc": false,
+          "iwith": ["TSEL"],
+          "ipret": {
+            "0": "Use WOT_AC as timer",
+            "1": "Use WOT_SL as timer"
+          }
+        },
+        "TWOT_E": {
+          "isfunc": false,
+          "iwith": ["TWOT_E"],
+          "ipret": {
+            "0": "Disable TWOT",
+            "1": "Enable TWOT"
+          }
+        }
+      }
+    },
     "INTS": {
       "isfunc": false,
       "ibits": {
