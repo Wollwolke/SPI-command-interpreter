@@ -5,6 +5,7 @@
 - RCOSC1 formula?
 - RCOSC3 formula?
 - CLOCK formula?
+- DR formula
 
 
 Interpret:

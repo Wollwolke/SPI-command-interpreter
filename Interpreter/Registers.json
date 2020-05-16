@@ -1081,53 +1081,69 @@
           }
         }
       }
-    }
-  },
-  "INTS": {
-    "isfunc": false,
-    "ibits": {
-      "CELS": {
-        "iwith": ["CELS", "PWORS"],
-        "ipret": {
-          "00": "dinge",
-          "01": "andere dinge"
+    },
+    "DR": {
+      "ibits": {
+        "SDR7": {
+          "isfunc": true,
+          "iwith": ["SDR7", "SDR6", "SDR5", "SDR4", "SDR3", "SDR2", "SDR1", "SDR0"],
+          "ipret": {}
         }
       }
-    }
-  },
-  "ADC": {
-    "ibitsw": {
-      "AVSEL1": {
-        "isfunc": false,
-        "iwith": ["AVSEL1", "AVEL0"],
-        "ipret": {
-          "00": "Avg 8 times",
-          "01": "Avg 16 times",
-          "10": "Avg 32 Times",
-          "11": "Avg 64 Times"
-        }
-      },
-      "RADC": {
-        "isfunc": false,
-        "iwith": ["RADC"],
-        "ipret": {
-          "0": "reading ADC MVSEL",
-          "1": "reading ADC AVSEL"
-        }
-      },
-      "FSARS": {
-        "isfunc": false,
-        "iwith": ["FSARS"],
-        "ipret": {
-          "0": "4Mhz",
-          "1": "8Mhz"
+    },
+    "PLL1": {
+      "ibits": {
+        "CHN7": {
+          "isfunc": true,
+          "iwith": ["CHN7", "CHN6", "CHN5", "CHN4", "CHN3", "CHN2", "CHN1", "CHN0"],
+          "ipret": {}
         }
       }
+    },
+    "INTS": {
+      "isfunc": false,
+      "ibits": {
+        "CELS": {
+          "iwith": ["CELS", "PWORS"],
+          "ipret": {
+            "00": "dinge",
+            "01": "andere dinge"
+          }
+        }
+      }
+    },
+    "ADC": {
+      "ibitsw": {
+        "AVSEL1": {
+          "isfunc": false,
+          "iwith": ["AVSEL1", "AVEL0"],
+          "ipret": {
+            "00": "Avg 8 times",
+            "01": "Avg 16 times",
+            "10": "Avg 32 Times",
+            "11": "Avg 64 Times"
+          }
+        },
+        "RADC": {
+          "isfunc": false,
+          "iwith": ["RADC"],
+          "ipret": {
+            "0": "reading ADC MVSEL",
+            "1": "reading ADC AVSEL"
+          }
+        },
+        "FSARS": {
+          "isfunc": false,
+          "iwith": ["FSARS"],
+          "ipret": {
+            "0": "4Mhz",
+            "1": "8Mhz"
+          }
+        }
+      }
+    },
+    "ANDERS": {
+      "isfunc": true,
+      "func": "CELS + PWORS * INTS"
     }
-  },
-  "ANDERS": {
-    "isfunc": true,
-    "func": "CELS + PWORS * INTS"
   }
-}
-}
