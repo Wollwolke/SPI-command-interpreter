@@ -23,6 +23,8 @@ private:
 	std::map<std::string, Register *> regMap;
 
 public:
+	int readBit(std::string registername, std::string bitname);
+	void writeByte(std::string registername, std::string hex);
 	Registers(const nlohmann::json &jfile);
 	~Registers();
 };

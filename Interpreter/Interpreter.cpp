@@ -11,7 +11,7 @@ Interpreter::Interpreter(std::string confName)
 	jconfig = jfile;
 	file.close();
 	registers = new Registers(jconfig);
-	commands = new Commands(jconfig);
+	commands = new Commands(registers, jconfig);
 }
 
 void Interpreter::interpretFile(std::string fname)
@@ -20,7 +20,7 @@ void Interpreter::interpretFile(std::string fname)
 	std::string line;
 	while (std::getline(file, line))
 	{
-		std::list<std::string> bytes;
+		std::vector<std::string> bytes;
 		if (line != "")
 		{
 			if (line.at(0) == '#')
@@ -46,9 +46,21 @@ void Interpreter::interpretFile(std::string fname)
 				bytes.push_back(line);
 				//std::cout << line << "\n";
 				// TODO: remove \ when \\ 
-				std::string test = commands->interpret(jconfig, bytes.front());
-				std::cout << test << std::endl;
+				if (bytes.size() > 1) {
+					for (size_t i = 1; i < bytes.size(); i++)
+					{
+						commands->executeCommand(bytes[0], bytes[i]);
+						std::cout << commands->interpret(jconfig, bytes.front());
+					}	
+				}
+				else
+				{
+					std::cout << commands->interpret(jconfig, bytes.front());
+				}
 			}
-		}	
+		}
+		else {
+			std::cout << std::endl;
+		}
 	}
 }

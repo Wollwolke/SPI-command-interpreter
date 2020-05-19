@@ -2,6 +2,24 @@
 #include <iostream>
 #include <fstream>
 
+int Registers::readBit(std::string registername, std::string bitname)
+{
+	return regMap[registername]->readBit(bitname);
+}
+
+void Registers::writeByte(std::string registername, std::string hex)
+{
+	uint8_t byte = (uint8_t)strtol(hex.c_str(), NULL, 16);
+	uint8_t bits[Registersize];
+	for (size_t i = 1; i <= Registersize; ++i) {
+		auto mask = (1 << i - 1);
+		bits[Registersize - i] = (byte &mask) != 0;
+		//00000001
+	}
+	auto *test = regMap[registername];
+	test->writeRegister(bits);
+}
+
 Registers::Registers(const nlohmann::json &jfile)
 {
 	auto jregisters = jfile.at("registers");
@@ -49,8 +67,10 @@ int Registers::Register::readBit(std::string name)
 {
 	if (NameIndices.count(name) != 0)
 	{
-		return Values[NameIndices[name]];
+		int erg = Values[NameIndices[name]];
+		return erg;
 	}
+	std::cout << name << std::endl;
 	return -1;
 }
 
