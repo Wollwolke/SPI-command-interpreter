@@ -1,5 +1,6 @@
 #pragma once
 #include "Registers.h"
+#include "utils.h"
 #include <nlohmann/json.hpp>
 #include "Commands.h"
 #include <string>

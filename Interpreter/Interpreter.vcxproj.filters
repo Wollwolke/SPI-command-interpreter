@@ -38,6 +38,9 @@
     <ClInclude Include="Commands.h">
       <Filter>Headerdateien</Filter>
     </ClInclude>
+    <ClInclude Include="utils.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

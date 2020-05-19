@@ -134,6 +134,7 @@
     <ClInclude Include="Commands.h" />
     <ClInclude Include="Interpreter.h" />
     <ClInclude Include="Registers.h" />
+    <ClInclude Include="utils.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
