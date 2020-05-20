@@ -91,7 +91,7 @@ std::string Commands::RegCommand::interpret(nlohmann::json& config)
 		}
 	}
 	catch (nlohmann::json::exception e) {
-		std::cerr << "Error failed to load interpretation bits from JSON file-missing registername" << std::endl;
+		std::cerr << "Error failed to load interpretation bits from JSON file-missing registername " << registername << std::endl;
 		throw ERR_INTERPRET;
 	}
 	catch (ERRORCODES e) {

@@ -101,7 +101,7 @@ void Interpreter::interpretFile(std::string fname)
 			}
 		}
 		catch (ERRORCODES e) {
-			throw ERR_INTERPRET;
+			//throw ERR_INTERPRET;
 		}
 		catch (...) {
 			std::cerr << "Unexpected Error occured whlie Parsing input text file" << std::endl;
