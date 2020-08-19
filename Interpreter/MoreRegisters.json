@@ -1,0 +1,322 @@
+{
+    "interpret": {
+        "TEMPLATE": {
+            "ibits": {
+                "BIT1": {
+                    "isfunc": false,
+                    "iwith": ["BIT1", "OTHERREG:BIT2"],
+                    "ipret": {
+                        "0": "",
+                        "1": ""
+                    }
+                },
+                "BIT2": {
+                    "isfunc": true,
+                    "ipret": "",
+                    "iwith": {
+                        "VAR": ["BIT1", "OTHERREG:BIT2"]
+                    },
+                    "func": "3*VAR"
+                }
+            }
+        },
+        "PLLT": {
+            "ibitw": {
+                "CPH": {
+                    "isfunc": false,
+                    "iwith": ["CPH"],
+                    "ipret": {
+                        "0": "High current mode of Charge pump disabled",
+                        "1": "High current mode of Charge pump enabled"
+                    }
+                },
+                "CPS": {
+                    "isfunc": false,
+                    "iwith": ["CPS"],
+                    "ipret": {
+                        "NA": "Wrote to reserved Bit PLLT:CPS"
+                    }
+                },
+                "PRRC1": {
+                    "isfunc": false,
+                    "iwith": ["PRRC1", "PRRC0"],
+                    "ipret": {
+                        "NA": "Wrote to reserved Bit PLLT:PRRC[1:0]"
+                    }
+                },
+                "PRIC1": {
+                    "isfunc": false,
+                    "iwith": ["PRIC1", "PRIC0"],
+                    "ipret": {
+                        "NA": "Wrote to reserved Bit PLLT:PRIC[1:0]"
+                    }
+                },
+                "SDPW": {
+                    "isfunc": false,
+                    "iwith": ["SDPW"],
+                    "ipret": {
+                        "NA": "Wrote to reserved Bit PLLT:SDPW"
+                    }
+                },
+                "NSDO": {
+                    "isfunc": false,
+                    "iwith": ["NSDO"],
+                    "ipret": {
+                        "NA": "Wrote to reserved Bit PLLT:NSDO"
+                    }
+                }
+            }
+        },
+        "VCOT": {
+            "ibitw": {
+                "OLM": {
+                    "isfunc": false,
+                    "iwith": ["OLM"],
+                    "ipret": {
+                        "NA": "Wrote to reserved Bit VCOT:OLM"
+                    }
+                },
+                "SDMS": {
+                    "isfunc": false,
+                    "iwith": ["SDMS"],
+                    "ipret": {
+                        "NA": "Wrote to reserved Bit VCOT:SDMS"
+                    }
+                },
+                "VTBS": {
+                    "isfunc": false,
+                    "iwith": ["VTBS"],
+                    "ipret": {
+                        "NA": "Wrote to reserved Bit VCOT:VTBS"
+                    }
+                },
+                "TLB1": {
+                    "isfunc": false,
+                    "iwith": ["TLB1", "TLB0"],
+                    "ipret": {
+                        "NA": "Wrote to reserved Bits VCOT:TLB[1:0]"
+                    }
+                },
+                "RSIS": {
+                    "isfunc": false,
+                    "iwith": ["RSIS"],
+                    "ipret": {
+                        "NA": "Current bias selection for differential mode ring OSC set to"
+                    }
+                },
+                "ROSCS": {
+                    "isfunc": false,
+                    "iwith": ["ROSCS"],
+                    "ipret": {
+                        "0": "Ring Oscillation set to: Single mode",
+                        "1": "Ring Oscillation set to differential mode"
+                    }
+                },
+                "VBHC": {
+                    "isfunc": false,
+                    "iwith": ["VBHC"],
+                    "ipret": {
+                        "NA": "Wrote to reserved Bit VCOT:VBHC"
+                    }
+                }
+            }
+        },
+        "CHS": {
+            "ibitw": {
+                "XADPS": {
+                    "isfunc": false,
+                    "iwith": ["XADPS"],
+                    "ipret": {
+                        "NA": "External ADC pin selection set to"
+                    }
+                },
+                "RFT2": {
+                    "isfunc": false,
+                    "iwith": ["XADPS", "RFT2", "RFT1", "RFT0"],
+                    "ipret": {
+                        "0000": "RF analog pin configuration connected to external AD input",
+                        "0001": "RF analog pin configuration connected to analog temperature voltage",
+                        "0010": "RF analog pin configuration connected to internal DA output",
+                        "0011": "RF analog pin configuration connected to low power current source",
+                        "1000": "RF analog pin configuration connected to external AD input",
+                        "1001": "RF analog pin configuration connected to external AD input",
+                        "1010": "RF analog pin configuration connected to external AD input",
+                        "1011": "RF analog pin configuration connected to external AD input"
+                    }
+                },
+                "CHD3": {
+                    "isfunc": true,
+                    "ipret": "Offset channel number for deviation calibration set to +/-",
+                    "iwith": {
+                        "CHD": ["CHD3", "CHD2", "CHD1", "CHD0"]
+                    },
+                    "func": "CHD+1"
+                }
+            }
+        },
+        "VRB": {
+            "ibitw": {
+                "VTRB3": {
+                    "isfunc": false,
+                    "iwith": ["VTRB3", "VTRB2", "VTRB1", "VTRB0"],
+                    "ipret": {
+                        "NA": "Resistor bank for VT RC filtering set to"
+                    }
+                },
+                "VMRB3": {
+                    "isfunc": false,
+                    "iwith": ["VMRB3", "VMRB2", "VMRB1", "VMRB0"],
+                    "ipret": {
+                        "NA": "Resistor bank for VM RC filtering. set to"
+                    }
+                }
+            }
+        },
+        "RTX": {
+            "ibitw": {
+                "QDS": {
+                    "isfunc": false,
+                    "iwith": ["QDS"],
+                    "ipret": {
+                        "NA": "Regulator quick charge select set to"
+                    }
+                },
+                "TRT2": {
+                    "isfunc": false,
+                    "iwith": ["TRT2", "TRT1", "TRT0"],
+                    "ipret": {
+                        "000": "TX ramping down time set to 4µs",
+                        "001": "TX ramping down time set to 8µs",
+                        "010": "TX ramping down time set to 12µs",
+                        "011": "TX ramping down time set to 16µs",
+                        "100": "TX ramping down time set to 20µs",
+                        "101": "TX ramping down time set to 24µs",
+                        "110": "TX ramping down time set to 28µs",
+                        "111": "TX ramping down time set to 32µs"
+                    }
+                },
+                "ASMV2": {
+                    "isfunc": false,
+                    "iwith": ["ASMV2", "ASMV1", "ASMV0"],
+                    "ipret": {
+                        "000": "TX ramping up time set to 4µs",
+                        "001": "TX ramping up time set to 8µs",
+                        "010": "TX ramping up time set to 12µs",
+                        "011": "TX ramping up time set to 16µs",
+                        "100": "TX ramping up time set to 20µs",
+                        "101": "TX ramping up time set to 24µs",
+                        "110": "TX ramping up time set to 28µs",
+                        "111": "TX ramping up time set to 32µs"
+                    }
+                },
+                "AMVS": {
+                    "isfunc": false,
+                    "iwith": ["AMVS"],
+                    "ipret": {
+                        "0": "TX Ramping set to Disabled",
+                        "1": "TX Ramping set to Enabled"
+                    }
+                }
+            }
+        },
+        "INTS": {
+            "ibitw": {
+                "CELS": {
+                    "isfunc": false,
+                    "iwith": ["CELS"],
+                    "ipret": {
+                        "NA": "Wrote to reserved Bit INTS:CELS"
+                    }
+                },
+                "PWORS": {
+                    "isfunc": false,
+                    "iwith": ["PWORS"],
+                    "ipret": {
+                        "NA": "Wrote to reserved Bit INTS:PWORS"
+                    }
+                },
+                "STS": {
+                    "isfunc": false,
+                    "iwith": ["STS"],
+                    "ipret": {
+                        "NA": "Wrote to reserved Bit INTS:STS"
+                    }
+                },
+                "IXTLS4": {
+                    "isfunc": false,
+                    "iwith": ["IXTLS4", "IXTLS3", "IXTLS2", "IXTLS1", "IXTLS0"],
+                    "ipret": {
+                        "NA": "Internal crystal capacitor value set to"
+                    }
+                }
+            }
+        },
+        "ADC": {
+            "ibitsw": {
+                "AVSEL1": {
+                    "isfunc": false,
+                    "iwith": ["AVSEL1", "AVSEL0"],
+                    "ipret": {
+                        "00": "ADC average times (VCO calibration) Avg 8 times",
+                        "01": "ADC average times (VCO calibration) Avg 16 times",
+                        "10": "ADC average times (VCO calibration) Avg 32 times",
+                        "11": "ADC average times (VCO calibration) Avg 64 times"
+                    }
+                },
+                "RADC": {
+                    "isfunc": false,
+                    "iwith": ["RADC"],
+                    "ipret": {
+                        "0": "Reading of ADC average for MVSEL mode",
+                        "1": "Reading of ADC average for AVSEL mode"
+                    }
+                },
+                "FSARS": {
+                    "isfunc": false,
+                    "iwith": ["FSARS"],
+                    "ipret": {
+                        "0": "ADC clock select set to 4Mhz",
+                        "1": "ADC clock select set to 8Mhz"
+                    }
+                },
+                "MVSEL1": {
+                    "isfunc": false,
+                    "iwith": ["MVSEL1", "MVSEL0"],
+                    "ipret": {
+                        "00": "ADC average times set to no average",
+                        "01": "ADC average times set to Avg 2 times",
+                        "10": "ADC average times set to Avg 4 times",
+                        "11": "ADC average times set to Avg 8 times"
+                    }
+                },
+                "XADS": {
+                    "isfunc": false,
+                    "iwith": ["XADS"],
+                    "ipret": {
+                        "0": "ADC input signal select set to: Convert internal temperature",
+                        "1": "ADC input signal select set to: Convert external voltage"
+                    }
+                },
+                "CDM": {
+                    "isfunc": false,
+                    "iwith": ["CDM"],
+                    "ipret": {
+                        "0": "Continuous measurement mode set to: Single mode",
+                        "1": "Continuous measurement mode set to: Continuous mode"
+                    }
+                }
+            },
+            "ibitr": {
+                "ADC7": {
+                    "isfunc": true,
+                    "ipret": "Temperature value / ADC Reading (V) [Depending on ADC:XADS]",
+                    "iwith": {
+                        "ADC": ["ADC7", "ADC6", "ADC5", "ADC4", "ADC3", "ADC2", "ADC1", "ADC0"],
+                        "XADS": ["XADS"]
+                    },
+                    "func": "if (XADS == 1, 0.3+1.2*ADC/256, ADC)"
+                }
+            }
+        }
+    }
+}

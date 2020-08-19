@@ -10,3 +10,6 @@
 
 Interpret:
 - "NA" --> Text mit Wert ausgeben
+
+
+muss getestet werden: ADC Read mit Temp/Voltage
