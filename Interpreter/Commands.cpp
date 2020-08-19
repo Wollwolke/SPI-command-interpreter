@@ -181,7 +181,7 @@ std::string Commands::RegCommand::interpretFunction(nlohmann::json & ifunc)
 	exprtk::parser<double> parser;
 	parser.compile(formula, expression);
 	std::string ipret = ifunc.at("ipret");
-	return  ipret + std::to_string(expression.value());
+	return  ipret + " " + std::to_string(expression.value());
 }
 
 double Commands::RegCommand::intFromRegisters(std::vector<std::string> ibits) {

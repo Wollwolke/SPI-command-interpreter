@@ -1,0 +1,123 @@
+{
+    "interpret": {
+        "TEMPLATE": {
+            "ibits": {
+                "BIT1": {
+                    "isfunc": false,
+                    "iwith": ["BIT1", "OTHERREG:BIT2"],
+                    "ipret": {
+                        "0": "",
+                        "1": ""
+                    }
+                },
+                "BIT2": {
+                    "isfunc": true,
+                    "ipret": "",
+                    "iwith": {
+                        "VAR": ["BIT1", "OTHERREG:BIT2"]
+                    },
+                    "func": "3*VAR"
+                }
+            }
+        },
+        "INTS": {
+            "ibitw": {
+                "CELS": {
+                    "isfunc": false,
+                    "iwith": ["CELS"],
+                    "ipret": {
+                        "NA": "Wrote to reserved Bit INTS:CELS"
+                    }
+                },
+                "PWORS": {
+                    "isfunc": false,
+                    "iwith": ["PWORS"],
+                    "ipret": {
+                        "NA": "Wrote to reserved Bit INTS:PWORS"
+                    }
+                },
+                "STS": {
+                    "isfunc": false,
+                    "iwith": ["STS"],
+                    "ipret": {
+                        "NA": "Wrote to reserved Bit INTS:STS"
+                    }
+                },
+                "IXTLS4": {
+                    "isfunc": false,
+                    "iwith": ["IXTLS4", "IXTLS3", "IXTLS2", "IXTLS1", "IXTLS0"],
+                    "ipret": {
+                        "NA": "Internal crystal capacitor value set to"
+                    }
+                }
+            }
+        },
+        "ADC": {
+            "ibitsw": {
+                "AVSEL1": {
+                    "isfunc": false,
+                    "iwith": ["AVSEL1", "AVSEL0"],
+                    "ipret": {
+                        "00": "ADC average times (VCO calibration) Avg 8 times",
+                        "01": "ADC average times (VCO calibration) Avg 16 times",
+                        "10": "ADC average times (VCO calibration) Avg 32 times",
+                        "11": "ADC average times (VCO calibration) Avg 64 times"
+                    }
+                },
+                "RADC": {
+                    "isfunc": false,
+                    "iwith": ["RADC"],
+                    "ipret": {
+                        "0": "Reading of ADC average for MVSEL mode",
+                        "1": "Reading of ADC average for AVSEL mode"
+                    }
+                },
+                "FSARS": {
+                    "isfunc": false,
+                    "iwith": ["FSARS"],
+                    "ipret": {
+                        "0": "ADC clock select set to 4Mhz",
+                        "1": "ADC clock select set to 8Mhz"
+                    }
+                },
+                "MVSEL1": {
+                    "isfunc": false,
+                    "iwith": ["MVSEL1", "MVSEL0"],
+                    "ipret": {
+                        "00": "ADC average times set to no average",
+                        "01": "ADC average times set to Avg 2 times",
+                        "10": "ADC average times set to Avg 4 times",
+                        "11": "ADC average times set to Avg 8 times"
+                    }
+                },
+                "XADS": {
+                    "isfunc": false,
+                    "iwith": ["XADS"],
+                    "ipret": {
+                        "0": "ADC input signal select set to: Convert internal temperature",
+                        "1": "ADC input signal select set to: Convert external voltage"
+                    }
+                },
+                "CDM": {
+                    "isfunc": false,
+                    "iwith": ["CDM"],
+                    "ipret": {
+                        "0": "Continuous measurement mode set to: Single mode",
+                        "1": "Continuous measurement mode set to: Continuous mode"
+                    }
+                }
+            },
+            "ibitr": {
+                "ADC7": {
+                    "isfunc": true,
+                    "ipret": "Temperature value / ADC Reading (V) [Depending on ADC:XADS]",
+                    "iwith": {
+                        "ADC": ["ADC7", "ADC6", "ADC5", "ADC4", "ADC3", "ADC2", "ADC1", "ADC0"],
+                        "XADS": ["ADC:XADS"]
+                    },
+                    "func": "if (XADS == 1, 0.3+1.2*ADC/256, ADC)"
+                }
+            }
+        }
+    }
+}
