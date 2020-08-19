@@ -142,7 +142,7 @@
       "name": "TX1",
       "values": [ -1, 1, 0, 1, 0, 1, 1, 0 ],
       "r": [ "NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA" ],
-      "w": [ "NA", "TMDE", "TXDI", "TME", "FS", "FDP2", "FPD1", "FDP0" ]
+      "w": [ "NA", "TMDE", "TXDI", "TME", "FS", "FDP2", "FDP1", "FDP0" ]
     },
     "Reg25": {
       "name": "TX2",
@@ -1096,12 +1096,12 @@
       "ibits": {
         "SDR7": {
           "isfunc": true,
-          "ipret": "data rate in Mhz is ",
+          "ipret": "Data rate in bps is ",
           "iwith": {
             "IFS": [ "CLOCK:IFS" ],
             "SDR": [ "SDR7", "SDR6", "SDR5", "SDR4", "SDR3", "SDR2", "SDR1", "SDR0" ]
           },
-          "func": "16/(8*(4-3*(0.5+(IFS*1.5)))*(SDR+1))"
+          "func": "16000000/(8*(4-3*(0.5+(IFS*1.5)))*(SDR+1))"
         }
       }
     },
@@ -1210,27 +1210,361 @@
       "ibitsw": {
         "BFP15": {
           "isfunc": false,
-          "iwith": [ "BFP14", "BFP13", "BFP12", "BFP11", "BFP10", "BFP9", "BFP8", "OTHERREG:BIT2" ],
+          "iwith": [ "BFP14", "BFP13", "BFP12", "BFP11", "BFP10", "BFP9", "BFP8", "PLL5:BFP7", "PLL5:BFP6", "PLL5:BFP5", "PLL5:BFP4", "PLL5:BFP3", "PLL5:BFP2", "PLL5:BFP1", "PLL5:BFP0" ],
           "ipret": {
-            "0": "",
-            "1": ""
+            "NA": "Low frequency fractional part setting set to"
           }
-        },
-        "BIT2": {
-          "isfunc": true,
-          "ipret": "",
-          "iwith": {
-            "VAR": [ "BIT1", "OTHERREG:BIT2" ]
-          },
-          "func": "3*VAR"
+        }
+      },
+      "ibitsr": {
+        "BFP15": {
+          "isfunc": false,
+          "iwith": [ "FP14", "FP13", "FP12", "FP11", "FP10", "FP9", "FP8", "PLL5:FP7", "PLL5:FP6", "PLL5:FP5", "PLL5:FP4", "PLL5:FP3", "PLL5:FP2", "PLL5:FP1", "PLL5:FP0" ],
+          "ipret": {
+            "NA": "Low frequency fractional part setting currently set to"
+          }
         }
       }
     },
-
-
-
-
-
+    "PLL5": {
+      "ibitsw": {
+        "BFP7": {
+          "isfunc": false,
+          "iwith": [ "PLL4:BFP14", "PLL4:BFP13", "PLL4:BFP12", "PLL4:BFP11", "PLL4:BFP10", "PLL4:BFP9", "PLL4:BFP8", "BFP7", "BFP6", "BFP5", "BFP4", "BFP3", "BFP2", "BFP1", "BFP0" ],
+          "ipret": {
+            "NA": "Low frequency fractional part setting set to"
+          }
+        }
+      },
+      "ibitsr": {
+        "BFP15": {
+          "isfunc": false,
+          "iwith": [ "PLL4:FP14", "PLL4:FP13", "PLL4:FP12", "PLL4:FP11", "PLL4:FP10", "PLL4:FP9", "PLL4:FP8", "FP7", "FP6", "FP5", "FP4", "FP3", "FP2", "FP1", "FP0" ],
+          "ipret": {
+            "NA": "Low frequency fractional part setting currently set to"
+          }
+        }
+      }
+    },
+    "CHG1": {
+      "ibits": {
+        "CHGL7": {
+          "isfunc": false,
+          "iwith": [ "CHGL7", "CHGL6", "CHGL5", "CHGL4", "CHGL3", "CHGL2", "CHGL1", "CHGL0" ],
+          "ipret": {
+            "NA": "Pll channel group low boundary setting"
+          }
+        }
+      }
+    },
+    "CHG2": {
+      "ibits": {
+        "CHGH7": {
+          "isfunc": false,
+          "iwith": [ "CHGH7", "CHGH6", "CHGH5", "CHGH4", "CHGH3", "CHGH2", "CHGH1", "CHGH0" ],
+          "ipret": {
+            "NA": "Pll channel group high boundary setting"
+          }
+        }
+      }
+    },
+    "TX1": {
+      "ibitsw": {
+        "TMDE": {
+          "isfunc": false,
+          "iwith": [ "TMDE" ],
+          "ipret": {
+            "0": "VCO modulation disabled",
+            "1": "VCO modulation enabled"
+          }
+        },
+        "TXDI": {
+          "isfunc": false,
+          "iwith": [ "TXDI" ],
+          "ipret": {
+            "0": "Non-inverted TX data",
+            "1": "Inverted TX data"
+          }
+        },
+        "TME": {
+          "isfunc": false,
+          "iwith": [ "TME" ],
+          "ipret": {
+            "0": "TX modulation disabled",
+            "1": "TX modulation enabled"
+          }
+        },
+        "FS": {
+          "isfunc": false,
+          "iwith": [ "FS" ],
+          "ipret": {
+            "0": "Gaussian Filter(BT=0.7) disabled",
+            "1": "Gaussian Filter(BT=0.7) enabled"
+          }
+        },
+        "FDP2": {
+          "isfunc": false,
+          "iwith": [ "FDP2", "FDP1", "FDP0" ],
+          "ipret": {
+            "NA": "Frequency deviation power setting"
+          }
+        }
+      }
+    },
+    "TX2": {
+      "ibitsw": {
+        "FD7": {
+          "isfunc": false,
+          "iwith": [ "FD7", "FD6", "FD5", "FD4", "FD3", "FD2", "FD1", "FD0" ],
+          "ipret": {
+            "NA": "Frequency deviation setting"
+          }
+        },
+        "FD6": {
+          "isfunc": true,
+          "ipret": "TX modulation Frequency(Mhz) is",
+          "iwith": {
+            "DBL": [ "PLL2:DBL" ],
+            "RRC": [ "PLL2:RRC1", "PLL2:RRC0" ],
+            "FDP": [ "TX1:FDP2", "TX1:FDP1", "TX1:FDP0" ],
+            "FD": [ "FD4", "FD3", "FD2", "FD1", "FD0" ]
+          },
+          "func": "(16*(DBL+1)/(RRC+1))*127*2^FDP*(FD+1)/2^25"
+        }
+      }
+    },
+    "DELAY1": {
+      "ibitsw": {
+        "DPR2": {
+          "isfunc": false,
+          "iwith": [ "DPR2", "DPR1", "DPR0" ],
+          "ipret": {
+            "NA": "Delay scale set to"
+          }
+        },
+        "TDL1": {
+          "isfunc": true,
+          "ipret": "TX delay in us set to",
+          "iwith": {
+            "TDL": [ "TDL1", "TDL0" ],
+            "DPR": [ "DPR2", "DPR1", "DPR0" ]
+          },
+          "func": "20*(TDL+1)*(DPR+1)"
+        },
+        "PDL2": {
+          "isfunc": true,
+          "ipret": "TX delay for settling from PLL to WPLL in us i set to",
+          "iwith": {
+            "PDL": [ "PDL2", "PDL1", "PDL0" ],
+            "DPR": [ "DPR2", "DPR1", "DPR0" ]
+          },
+          "func": "10+20*(PDL+1)*(DPR+1)"
+        }
+      }
+    },
+    "DELAY2": {
+      "ibitsw": {
+        "WSEL2": {
+          "isfunc": false,
+          "iwith": [ "WSEL2", "WSEL1", "WSEL0" ],
+          "ipret": {
+            "000": "XTAL settling delay set to 200us",
+            "001": "XTAL settling delay set to 400us",
+            "010": "XTAL settling delay set to 600us",
+            "011": "XTAL settling delay set to 800us",
+            "100": "XTAL settling delay set to 1ms",
+            "101": "XTAL settling delay set to 1,5ms",
+            "110": "XTAL settling delay set to 2ms",
+            "111": "XTAL settling delay set to 2,5ms"
+          }
+        },
+        "WOTS1": {
+          "isfunc": false,
+          "iwith": [ "WOTS1", "WOTS0" ],
+          "ipret": {
+            "00": "WOT repeat is set to no repeats",
+            "01": "WOT repeat is set to one repeat",
+            "10": "WOT repeat is set to two repeats",
+            "11": "WOT repeat is set to four repeats"
+          }
+        }
+      }
+    },
+    "CODE1": {
+      "ibitsw": {
+        "MCS": {
+          "isfunc": false,
+          "iwith": [ "MCS" ],
+          "ipret": {
+            "0": "Matches Code is disabled",
+            "1": "Matches Code is enabled"
+          }
+        },
+        "WHTS": {
+          "isfunc": false,
+          "iwith": [ "WHTS" ],
+          "ipret": {
+            "0": "Data whitening(data encryption) is disabled",
+            "1": "Data whitening(data encryption) is enabled"
+          }
+        },
+        "FECS": {
+          "isfunc": false,
+          "iwith": [ "FECS" ],
+          "ipret": {
+            "0": "FEC is disabled",
+            "1": "FEC is enabled"
+          }
+        },
+        "CRCS": {
+          "isfunc": false,
+          "iwith": [ "CRCS" ],
+          "ipret": {
+            "0": "CRC is disabled",
+            "1": "CRC is enabled"
+          }
+        },
+        "IDL1": {
+          "isfunc": false,
+          "iwith": [ "IDL1", "IDL0" ],
+          "ipret": {
+            "00": "ID code length is set to 1 byte",
+            "01": "ID code length is set to 2 bytes",
+            "10": "ID code length is set to 3 bytes",
+            "11": "ID code length is set to 4 bytes"
+          }
+        },
+        "PML1": {
+          "isfunc": false,
+          "iwith": [ "PML1", "PML0" ],
+          "ipret": {
+            "00": "Preamble length is set to 1 byte",
+            "01": "Preamble length is set to 2 bytes",
+            "10": "Preamble length is set to 3 bytes",
+            "11": "Preamble length is set to 4 bytes"
+          }
+        }
+      }
+    },
+    "CODE2": {
+      "ibitsw": {
+        "HWCKS": {
+          "isfunc": false,
+          "iwith": [ "HWCKS" ],
+          "ipret": {
+            "0": "WOT calibration reference clock is set to 4KHz",
+            "1": "WOT calibration reference clock is set to 2KHz"
+          }
+        },
+        "WS6": {
+          "isfunc": false,
+          "iwith": [ "WS6", "WS5", "WS4", "WS3", "WS2", "WS1", "WS0" ],
+          "ipret": {
+            "NA": "Data Whitening seed(data encryption key) is set to"
+          }
+        }
+      }
+    },
+    "VOCC": {
+      "ibitsw": {
+        "MVCS": {
+          "isfunc": false,
+          "iwith": [ "MVCS" ],
+          "ipret": {
+            "0": "VCO current calibration set to auto calibration value",
+            "1": "VCO current calibration set to manual calibration value"
+          }
+        },
+        "VCOC3": {
+          "isfunc": false,
+          "iwith": [ "VCOC3", "VCOC2", "VCOC1", "VCOC0" ],
+          "ipret": {
+            "NA": "VCO current manual calibration value set to"
+          }
+        }
+      },
+      "ibitsr": {
+        "VCCF": {
+          "isfunc": false,
+          "iwith": [ "VCCF" ],
+          "ipret": {
+            "0": "VCO current auto calibration passed",
+            "1": "VCO current auto calibration failed"
+          }
+        },
+        "VCB3": {
+          "isfunc": false,
+          "iwith": [ "VCB3", "VCB2", "VCB1", "VCB0" ],
+          "ipret": {
+            "NA": "VCO current calibration value is"
+          }
+        }
+      }
+    },
+    "VCOBC1": {
+      "ibitsw": {
+        "DCD1": {
+          "isfunc": true,
+          "ipret": "VCO deviation calibration delay is",
+          "iwith": {
+            "DCD": [ "DCD1", "DCD0" ]
+          },
+          "func": "DCD+1"
+        },
+        "MVBS": {
+          "isfunc": false,
+          "iwith": [ "MVBS" ],
+          "ipret": {
+            "0": "VCO bank calibration is set to auto calibration",
+            "1": "VCO bank calibration is set to manual calibration"
+          }
+        },
+        "MVB2": {
+          "isfunc": false,
+          "iwith": [ "MVB2", "MVB1", "MVB0" ],
+          "ipret": {
+            "NA": "VCO band manual calibration value set to"
+          }
+        }
+      },
+      "ibitsr": {
+        "VBCF": {
+          "isfunc": false,
+          "iwith": [ "VBCF" ],
+          "ipret": {
+            "0": "VCO bank auto calibration passed",
+            "1": "VCO bank auto calibration failed"
+          }
+        },
+        "VB2": {
+          "isfunc": false,
+          "iwith": [ "VB2", "VB1", "VB0" ],
+          "ipret": {
+            "NA": "VCO band manual calibration value set to"
+          }
+        }
+      }
+    },
+    "VCOBC2": {
+      "ibitsw": {
+        "MDAG7": {
+          "isfunc": false,
+          "iwith": [ "MDAG7", "MDAG6", "MDAG5", "MDAG4", "MDAG3", "MDAG2", "MDAG1", "MDAG0" ],
+          "ipret": {
+            "NA": "DAG manual claibration value set to"
+          }
+        }
+      },
+      "ibitsr": {
+        "ADAG7": {
+          "isfunc": false,
+          "iwith": [ "ADAG7", "ADAG6", "ADAG5", "ADAG4", "ADAG3", "ADAG2", "ADAG1", "ADAG0" ],
+          "ipret": {
+            "NA": "DAG auto claibration value is"
+          }
+        }
+      }
+    },
 
     "TEMPLATE": {
       "ibits": {
@@ -1251,53 +1585,6 @@
           "func": "3*VAR"
         }
       }
-    },
-    "INTS": {
-      "isfunc": false,
-      "ibits": {
-        "CELS": {
-          "iwith": [ "CELS", "PWORS" ],
-          "ipret": {
-            "00": "dinge",
-            "01": "andere dinge"
-          }
-        }
-      }
-    },
-    "ADC": {
-      "ibitsw": {
-        "AVSEL1": {
-          "isfunc": false,
-          "iwith": [ "AVSEL1", "AVSEL0" ],
-          "ipret": {
-            "00": "ADC average times (VCO calibration) Avg 8 times",
-            "01": "ADC average times (VCO calibration) Avg 16 times",
-            "10": "ADC average times (VCO calibration) Avg 32 Times",
-            "11": "ADC average times (VCO calibration) Avg 64 Times"
-          }
-        },
-        "RADC": {
-          "isfunc": false,
-          "iwith": [ "RADC" ],
-          "ipret": {
-            "0": "reading of ADC average for MVSEL mode.",
-            "1": "reading of ADC average for AVSEL mode"
-          }
-        },
-        "FSARS": {
-          "isfunc": false,
-          "iwith": [ "FSARS" ],
-          "ipret": {
-            "0": "ADC clock select 4Mhz",
-            "1": "ADC clock select 8Mhz"
-          }
-        }
-      }
-    },
-
-    "ANDERS": {
-      "isfunc": true,
-      "func": "CELS + PWORS * INTS"
     }
   }
 }
