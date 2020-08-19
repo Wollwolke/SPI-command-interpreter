@@ -1,3 +1,7 @@
-﻿  main.cpp
-d:\uni\semester 1\presenterweisgradnetwiesh\spi-command-interpreter-git\interpreter\main.cpp(15): warning C4101: 'e': unreferenced local variable
+﻿  Commands.cpp
+d:\uni\semester 1\presenterweisgradnetwiesh\spi-command-interpreter-git\interpreter\commands.cpp(37): warning C4101: 'e': unreferenced local variable
+d:\uni\semester 1\presenterweisgradnetwiesh\spi-command-interpreter-git\interpreter\commands.cpp(55): warning C4101: 'e': unreferenced local variable
+d:\uni\semester 1\presenterweisgradnetwiesh\spi-command-interpreter-git\interpreter\commands.cpp(102): warning C4101: 'e': unreferenced local variable
+d:\uni\semester 1\presenterweisgradnetwiesh\spi-command-interpreter-git\interpreter\commands.cpp(130): warning C4101: 'e': unreferenced local variable
+d:\uni\semester 1\presenterweisgradnetwiesh\spi-command-interpreter-git\interpreter\commands.cpp(169): warning C4101: 'e': unreferenced local variable
   Interpreter.vcxproj -> D:\uni\semester 1\presenterweisgradnetwiesh\SPI-command-interpreter-git\Interpreter\Debug\Interpreter.exe

@@ -282,11 +282,11 @@
             "isstrobe": true,
             "logic": "Entered Idle Mode"
         },
-        "cmd3": {
-            "hex": "0xA0",
-            "isstrobe": true,
-            "logic": "Entered Standby Mode"
-        },
+      "cmd3": {
+        "hex": "0xA0",
+        "isstrobe": true,
+        "logic": "Entered Standby Mode"
+      },
         "cmd4": {
             "hex": "0xB0",
             "isstrobe": true,
@@ -752,10 +752,10 @@
                 "RESETN": {
                     "isfunc": false,
                     "iwith": ["RESETN"],
-                    "ipret": {
-                        "0": "Reset Command sent",
-                        "1": "Undefined command for mode register"
-                    }
+                  "ipret": {
+                    "0": "Reset Command sent",
+                    "1": "Undefined command for mode register"
+                  }
                 }
             }
         },
@@ -1120,19 +1120,20 @@
         },
         "PLL1": {
             "ibits": {
-                "CHN7": {
-                    "isfunc": true,
-                    "ipret": "Frequenz(Mhz) ist ",
-                    "iwith": {
-                        "CHN": ["CHN7", "CHN6", "CHN5", "CHN4", "CHN3", "CHN2", "CHN1", "CHN0"],
-                        "CHR": ["PLL2:CHR3", "PLL2:CHR2", "PLL2:CHR1", "PLL2:CHR0"],
-                        "BIP": ["PLL2:BIP8", "PLL3:BIP7", "PLL3:BIP6", "PLL3:BIP5", "PLL3:BIP4", "PLL3:BIP3", "PLL3:BIP2", "PLL3:BIP1", "PLL3:BIP0"],
-                        "BFP": ["PLL4:BFP15", "PLL4:BFP14", "PLL4:BFP13", "PLL4:BFP12", "PLL4:BFP11", "PLL4:BFP10", "PLL4:BFP9", "PLL4:BFP8", "PLL5:BFP7", "PLL5:BFP6", "PLL5:BFP5", "PLL5:BFP4", "PLL5:BFP3", "PLL5:BFP2", "PLL5:BFP1", "PLL5:BFP0"],
-                        "DBL": ["PLL2:DBL"],
-                        "RRC": ["PLL2:RRC1", "PLL2:RRC0"]
-                    },
-                    "func": "((DBL+1)*16/(RRC+1)*(BIP+BFP/2^16))+CHN*16*(DBL+1)/4/(CHR+1)"
-                }
+              "CHN7": {
+                "highlight": true,
+                "isfunc": true,
+                "ipret": "frequency in MHz ",
+                "iwith": {
+                  "CHN": [ "CHN7", "CHN6", "CHN5", "CHN4", "CHN3", "CHN2", "CHN1", "CHN0" ],
+                  "CHR": [ "PLL2:CHR3", "PLL2:CHR2", "PLL2:CHR1", "PLL2:CHR0" ],
+                  "BIP": [ "PLL2:BIP8", "PLL3:BIP7", "PLL3:BIP6", "PLL3:BIP5", "PLL3:BIP4", "PLL3:BIP3", "PLL3:BIP2", "PLL3:BIP1", "PLL3:BIP0" ],
+                  "BFP": [ "PLL4:BFP15", "PLL4:BFP14", "PLL4:BFP13", "PLL4:BFP12", "PLL4:BFP11", "PLL4:BFP10", "PLL4:BFP9", "PLL4:BFP8", "PLL5:BFP7", "PLL5:BFP6", "PLL5:BFP5", "PLL5:BFP4", "PLL5:BFP3", "PLL5:BFP2", "PLL5:BFP1", "PLL5:BFP0" ],
+                  "DBL": [ "PLL2:DBL" ],
+                  "RRC": [ "PLL2:RRC1", "PLL2:RRC0" ]
+                },
+                "func": "((DBL+1)*16/(RRC+1)*(BIP+BFP/2^16))+CHN*16*(DBL+1)/4/(CHR+1)"
+              }
             }
         },
         "PLL2": {

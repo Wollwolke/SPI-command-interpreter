@@ -70,7 +70,7 @@ Commands::StrobeCommand::StrobeCommand(std::string ilogic, Registers* reg) :inte
 
 std::string Commands::StrobeCommand::interpret(nlohmann::json& config)
 {
-	return interpretation + "\n"; 
+	return "\x1B[37m" + interpretation + "\n";
 }
 
 Commands::RegCommand::RegCommand(bool isread, std::string name, Registers* reg):isread(isread),registername(name), Command(false, reg){}
@@ -79,17 +79,21 @@ std::string Commands::RegCommand::interpret(nlohmann::json& config)
 {
 	try {
 		auto jsonptr = config.at("interpret").at(registername);
+
+		std::string out = "";
+
 		if (jsonptr.contains("ibits")) {
-			return interpretRegisters(jsonptr.at("ibits"));
+			out += interpretRegisters(jsonptr.at("ibits"));
 		}
 		else {
 			if (jsonptr.contains("ibitsw") && !isread) {
-				return interpretRegisters(jsonptr.at("ibitsw"));
+				out += interpretRegisters(jsonptr.at("ibitsw"));
 			}
 			if (jsonptr.contains("ibitsr") && isread) {
-				return interpretRegisters(jsonptr.at("ibitsr"));
+				out += interpretRegisters(jsonptr.at("ibitsr"));
 			}
 		}
+		return out;
 	}
 	catch (nlohmann::json::exception e) {
 		std::cerr << "Error failed to load interpretation bits from JSON file-missing registername " << registername << std::endl;
@@ -105,6 +109,12 @@ std::string Commands::RegCommand::interpretRegisters(nlohmann::json & ibits)
 	std::string result = "";
 	try {
 		for (auto& bit : ibits) {
+			if (bit.contains("highlight")) {
+				result += "\x1B[31m";
+			}
+			else {
+				result += "\x1B[37m";
+			}
 			if (bit.at("isfunc")) {
 				result += interpretFunction(bit) + "\n";
 			}
