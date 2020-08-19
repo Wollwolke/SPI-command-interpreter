@@ -1,4 +1,5 @@
 #include "Commands.h"
+#include "exprtk.hpp"
 #include "utils.h"
 #include <iostream>
 
@@ -162,6 +163,44 @@ std::string Commands::RegCommand::interpretBits(nlohmann::json & ibit)
 
 std::string Commands::RegCommand::interpretFunction(nlohmann::json & ifunc)
 {
-	return "hההה function kann i net";
+	exprtk::symbol_table<double> symbols;
+	std::string formula = ifunc.at("func");
+
+	int pos = 0;
+	std::vector<double> registerVal;
+	for (auto iterator : ifunc.at("iwith").items()) {
+		std::vector<std::string> ibits = ifunc.at("iwith").at(iterator.key());
+		registerVal.push_back(intFromRegisters(ibits));
+		symbols.add_constant(iterator.key(), registerVal[pos]);
+		pos++;
+	}
+
+	exprtk::expression<double> expression;
+	expression.register_symbol_table(symbols);
+
+	exprtk::parser<double> parser;
+	parser.compile(formula, expression);
+	std::string ipret = ifunc.at("ipret");
+	return  ipret + std::to_string(expression.value());
+}
+
+double Commands::RegCommand::intFromRegisters(std::vector<std::string> ibits) {
+	std::string currentbitseq = "";
+	for (auto bit : ibits) {
+		int pos = 0;
+		if ((pos = bit.find(":")) != std::string::npos) {
+			try {
+				currentbitseq += std::to_string(reg->readBit(bit.substr(0, pos), bit.substr(pos + 1, std::string::npos)));
+			}
+			catch (std::out_of_range) {
+				std::cerr << "Error Namespace expression in JSON file interpret bits is invalid" << std::endl;
+			}
+		}
+		else {
+			currentbitseq += std::to_string(reg->readBit(registername, bit));
+		}
+	}
+	double res = std::stol(currentbitseq, nullptr, 2);
+	return res;
 }
 

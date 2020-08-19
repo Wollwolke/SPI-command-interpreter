@@ -1,2 +1,38 @@
-﻿  main.cpp
-  Interpreter.vcxproj -> E:\Uni\Semester 1\itfs\Interpreter\Debug\Interpreter.exe
+﻿  Commands.cpp
+d:\uni\semester 1\presenterweisgradnetwiesh\spi-command-interpreter-git\interpreter\commands.cpp(37): warning C4101: 'e': unreferenced local variable
+d:\uni\semester 1\presenterweisgradnetwiesh\spi-command-interpreter-git\interpreter\commands.cpp(55): warning C4101: 'e': unreferenced local variable
+d:\uni\semester 1\presenterweisgradnetwiesh\spi-command-interpreter-git\interpreter\commands.cpp(98): warning C4101: 'e': unreferenced local variable
+d:\uni\semester 1\presenterweisgradnetwiesh\spi-command-interpreter-git\interpreter\commands.cpp(120): warning C4101: 'e': unreferenced local variable
+d:\uni\semester 1\presenterweisgradnetwiesh\spi-command-interpreter-git\interpreter\commands.cpp(159): warning C4101: 'e': unreferenced local variable
+  Interpreter.cpp
+d:\uni\semester 1\presenterweisgradnetwiesh\spi-command-interpreter-git\interpreter\interpreter.cpp(104): warning C4101: 'e': unreferenced local variable
+  main.cpp
+d:\uni\semester 1\presenterweisgradnetwiesh\spi-command-interpreter-git\interpreter\main.cpp(12): warning C4101: 'e': unreferenced local variable
+  Registers.cpp
+d:\uni\semester 1\presenterweisgradnetwiesh\spi-command-interpreter-git\interpreter\registers.cpp(27): warning C4101: 'e': unreferenced local variable
+d:\uni\semester 1\presenterweisgradnetwiesh\spi-command-interpreter-git\interpreter\registers.cpp(41): warning C4101: 'e': unreferenced local variable
+d:\uni\semester 1\presenterweisgradnetwiesh\spi-command-interpreter-git\interpreter\registers.cpp(51): warning C4554: '<<': check operator precedence for possible error; use parentheses to clarify precedence
+c:\program files (x86)\microsoft visual studio\2019\community\vc\tools\msvc\14.16.27023\include\utility(174): warning C4267: 'initializing': conversion from 'size_t' to '_Ty2', possible loss of data
+          with
+          [
+              _Ty2=uint8_t
+          ]
+  d:\uni\semester 1\presenterweisgradnetwiesh\spi-command-interpreter-git\interpreter\registers.cpp(69): note: see reference to function template instantiation 'std::pair<const _Kty,_Ty>::pair<std::basic_string<char,std::char_traits<char>,std::allocator<char>>&,size_t&,0>(_Other1,_Other2) noexcept(false)' being compiled
+          with
+          [
+              _Kty=std::string,
+              _Ty=uint8_t,
+              _Other1=std::string &,
+              _Other2=size_t &
+          ]
+  d:\uni\semester 1\presenterweisgradnetwiesh\spi-command-interpreter-git\interpreter\registers.cpp(69): note: see reference to function template instantiation 'std::pair<const _Kty,_Ty>::pair<std::basic_string<char,std::char_traits<char>,std::allocator<char>>&,size_t&,0>(_Other1,_Other2) noexcept(false)' being compiled
+          with
+          [
+              _Kty=std::string,
+              _Ty=uint8_t,
+              _Other1=std::string &,
+              _Other2=size_t &
+          ]
+  Generating Code...
+d:\uni\semester 1\presenterweisgradnetwiesh\spi-command-interpreter-git\interpreter\commands.cpp(101): warning C4715: 'Commands::RegCommand::interpret': not all control paths return a value
+  Interpreter.vcxproj -> D:\uni\semester 1\presenterweisgradnetwiesh\SPI-command-interpreter-git\Interpreter\Debug\Interpreter.exe

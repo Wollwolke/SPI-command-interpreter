@@ -7,6 +7,7 @@ int main()
 	try {
 		auto interpreter = Interpreter("Registers.json");
 		interpreter.interpretFile("B01_power_on.txt");
+		interpreter.interpretFile("A02_button_up.txt");
 	}
 	catch (ERRORCODES e) {
 

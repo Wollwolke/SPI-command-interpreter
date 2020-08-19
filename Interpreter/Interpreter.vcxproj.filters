@@ -43,9 +43,9 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <None Include="packages.config" />
     <None Include="Registers.json">
       <Filter>Ressourcendateien</Filter>
     </None>
+    <None Include="packages.config" />
   </ItemGroup>
 </Project>

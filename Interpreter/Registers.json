@@ -1096,8 +1096,12 @@
       "ibits": {
         "SDR7": {
           "isfunc": true,
-          "iwith": [ "SDR7", "SDR6", "SDR5", "SDR4", "SDR3", "SDR2", "SDR1", "SDR0" ],
-          "ipret": {}
+          "ipret": "data rate in Mhz is ",
+          "iwith": {
+            "IFS": [ "CLOCK:IFS" ],
+            "SDR": [ "SDR7", "SDR6", "SDR5", "SDR4", "SDR3", "SDR2", "SDR1", "SDR0" ]
+          },
+          "func": "16/(8*(4-3*(0.5+(IFS*1.5)))*(SDR+1))"
         }
       }
     },
@@ -1105,8 +1109,146 @@
       "ibits": {
         "CHN7": {
           "isfunc": true,
-          "iwith": [ "CHN7", "CHN6", "CHN5", "CHN4", "CHN3", "CHN2", "CHN1", "CHN0" ],
-          "ipret": {}
+          "ipret": "Frequenz(Mhz) ist ",
+          "iwith": {
+            "CHN": [ "CHN7", "CHN6", "CHN5", "CHN4", "CHN3", "CHN2", "CHN1", "CHN0" ],
+            "CHR": [ "PLL2:CHR3", "PLL2:CHR2", "PLL2:CHR1", "PLL2:CHR0" ],
+            "BIP": [ "PLL2:BIP8", "PLL3:BIP7", "PLL3:BIP6", "PLL3:BIP5", "PLL3:BIP4", "PLL3:BIP3", "PLL3:BIP2", "PLL3:BIP1", "PLL3:BIP0" ],
+            "BFP": [ "PLL4:BFP15", "PLL4:BFP14", "PLL4:BFP13", "PLL4:BFP12", "PLL4:BFP11", "PLL4:BFP10", "PLL4:BFP9", "PLL4:BFP8", "PLL5:BFP7", "PLL5:BFP6", "PLL5:BFP5", "PLL5:BFP4", "PLL5:BFP3", "PLL5:BFP2", "PLL5:BFP1", "PLL5:BFP0" ],
+            "DBL": [ "PLL2:DBL" ],
+            "RRC": [ "PLL2:RRC1", "PLL2:RRC0" ]
+          },
+          "func": "((DBL+1)*16/(RRC+1)*(BIP+BFP/2^16))+CHN*16*(DBL+1)/4/(CHR+1)"
+        }
+      }
+    },
+    "PLL2": {
+      "ibitw": {
+        "DBL": {
+          "isfunc": false,
+          "iwith": [ "DBL" ],
+          "ipret": {
+            "0": "set XREF=XTAL",
+            "1": "set XREF=2*XTAL"
+          }
+        },
+        "RRC1": {
+          "isfunc": false,
+          "iwith": [ "RRC1", "RRC0" ],
+          "ipret": {
+            "NA": "RF PLL counter setting set to"
+          }
+        },
+        "CHR3": {
+          "isfunc": false,
+          "iwith": [ "CHR3", "CHR2", "CHR1", "CHR0" ],
+          "ipret": {
+            "NA": "PLL channel step setting set to"
+          }
+        },
+        "BIP8": {
+          "isfunc": false,
+          "iwith": [ "BIP8", "PLL3:BIP7", "PLL3:BIP6", "PLL3:BIP5", "PLL3:BIP4", "PLL3:BIP3", "PLL3:BIP2", "PLL3:BIP1", "PLL3:BIP0" ],
+          "ipret": {
+            "NA": "LO base frequency integer part setting set to"
+          }
+        }
+      },
+      "ibitr": {
+        "DBL": {
+          "isfunc": false,
+          "iwith": [ "DBL" ],
+          "ipret": {
+            "0": "XREF=XTAL",
+            "1": "XREF=2*XTAL"
+          }
+        },
+        "RRC1": {
+          "isfunc": false,
+          "iwith": [ "RRC1", "RRC0" ],
+          "ipret": {
+            "NA": "RF PLL counter is"
+          }
+        },
+        "CHR3": {
+          "isfunc": false,
+          "iwith": [ "CHR3", "CHR2", "CHR1", "CHR0" ],
+          "ipret": {
+            "NA": "PLL channel step is"
+          }
+        },
+        "IP8": {
+          "isfunc": false,
+          "iwith": [ "IP8", "PLL3:IP7", "PLL3:IP6", "PLL3:IP5", "PLL3:IP4", "PLL3:IP3", "PLL3:IP2", "PLL3:IP1", "PLL3:IP0" ],
+          "ipret": {
+            "NA": "LO base frequency integer part value is"
+          }
+        }
+      }
+    },
+    "PLL3": {
+      "ibitw": {
+        "BIP7": {
+          "isfunc": false,
+          "iwith": [ "PLL2:BIP8", "BIP7", "BIP6", "BIP5", "BIP4", "BIP3", "BIP2", "BIP1", "BIP0" ],
+          "ipret": {
+            "NA": "LO base frequency integer part setting set to"
+          }
+        }
+      },
+      "ibitr": {
+        "IP7": {
+          "isfunc": false,
+          "iwith": [ "PLL2:IP8", "IP7", "IP6", "IP5", "IP4", "IP3", "IP2", "IP1", "IP0" ],
+          "ipret": {
+            "NA": "LO base frequency integer part value is"
+          }
+        }
+      }
+    },
+    "PLL4": {
+      "ibitsw": {
+        "BFP15": {
+          "isfunc": false,
+          "iwith": [ "BFP14", "BFP13", "BFP12", "BFP11", "BFP10", "BFP9", "BFP8", "OTHERREG:BIT2" ],
+          "ipret": {
+            "0": "",
+            "1": ""
+          }
+        },
+        "BIT2": {
+          "isfunc": true,
+          "ipret": "",
+          "iwith": {
+            "VAR": [ "BIT1", "OTHERREG:BIT2" ]
+          },
+          "func": "3*VAR"
+        }
+      }
+    },
+
+
+
+
+
+
+    "TEMPLATE": {
+      "ibits": {
+        "BIT1": {
+          "isfunc": false,
+          "iwith": [ "BIT1", "OTHERREG:BIT2" ],
+          "ipret": {
+            "0": "",
+            "1": ""
+          }
+        },
+        "BIT2": {
+          "isfunc": true,
+          "ipret": "",
+          "iwith": {
+            "VAR": [ "BIT1", "OTHERREG:BIT2" ]
+          },
+          "func": "3*VAR"
         }
       }
     },
@@ -1152,6 +1294,7 @@
         }
       }
     },
+
     "ANDERS": {
       "isfunc": true,
       "func": "CELS + PWORS * INTS"

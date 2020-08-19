@@ -1,0 +1,5 @@
+D:/uni/semester 1/presenterweisgradnetwiesh/SPI-command-interpreter-git/out/build/x64-Debug (default)/CMakeFiles/rebuild_cache.dir
+D:/uni/semester 1/presenterweisgradnetwiesh/SPI-command-interpreter-git/out/build/x64-Debug (default)/CMakeFiles/interpreter.dir
+D:/uni/semester 1/presenterweisgradnetwiesh/SPI-command-interpreter-git/out/build/x64-Debug (default)/CMakeFiles/edit_cache.dir
+D:/uni/semester 1/presenterweisgradnetwiesh/SPI-command-interpreter-git/out/build/x64-Debug (default)/_deps/json-build/CMakeFiles/edit_cache.dir
+D:/uni/semester 1/presenterweisgradnetwiesh/SPI-command-interpreter-git/out/build/x64-Debug (default)/_deps/json-build/CMakeFiles/rebuild_cache.dir

@@ -1,4 +1,5 @@
 #include "Interpreter.h"
+#include "exprtk.hpp"
 #include <fstream>
 #include <iostream>
 #include <list>

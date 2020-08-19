@@ -35,6 +35,7 @@ protected:
 		std::string interpretRegisters(nlohmann::json& ibits);
 		std::string interpretBits(nlohmann::json& ibit);
 		std::string interpretFunction(nlohmann::json& ifunc);
+		double intFromRegisters(std::vector<std::string> a);
 		//std::string createBitS(std::string[] iwith);
 	};
 	std::map<std::string, Command*> cmds;
