@@ -20,6 +20,339 @@
                 }
             }
         },
+        "VCODC1": {
+            "ibitw": {
+                "DEVS3": {
+                    "isfunc": false,
+                    "iwith": ["DEVS3", "DEVS2", "DEVS1", "DEVS0"],
+                    "ipret": {
+                        "NA": "Deviation output scaling set to"
+                    }
+                },
+                "DAMR_M": {
+                    "isfunc": false,
+                    "iwith": ["DAMR_M"],
+                    "ipret": {
+                        "0": "DAMR manual disabled",
+                        "1": "DAMR manual enabled"
+                    }
+                },
+                "VMTE_M": {
+                    "isfunc": false,
+                    "iwith": ["VMTE_M"],
+                    "ipret": {
+                        "0": "VMT manual disabled",
+                        "1": "VMT manual enabled"
+                    }
+                },
+                "VMS_M": {
+                    "isfunc": false,
+                    "iwith": ["VMS_M"],
+                    "ipret": {
+                        "0": "VM manual disabled",
+                        "1": "VM manual enabled"
+                    }
+                },
+                "MSEL": {
+                    "isfunc": false,
+                    "iwith": ["MSEL"],
+                    "ipret": {
+                        "0": "VMS, VMTE and DAMR control set to: Auto control",
+                        "1": "VMS, VMTE and DAMR control set to: Manual control"
+                    }
+                }
+            },
+            "ibitr": {
+                "DEVA7": {
+                    "isfunc": true,
+                    "ipret": "Deviation output value is",
+                    "iwith": {
+                        "MVDS": ["VCODC2:MVDS"],
+                        "ADEV": ["VCODC2:ADEV7", "VCODC2:ADEV6", "VCODC2:ADEV5", "VCODC2:ADEV4", "VCODC2:ADEV3", "VCODC2:ADEV2", "VCODC2:ADEV1", "VCODC2:ADEV0"],
+                        "MDEV": ["VCODC2:MDEV6", "VCODC2:MDEV5", "VCODC2:MDEV4", "VCODC2:MDEV3", "VCODC2:MDEV2", "VCODC2:MDEV1", "VCODC2:MDEV0"],
+                        "DEVS": ["DEVS3", "DEVS2", "DEVS1", "DEVS0"]
+                    },
+                    "func": "if (MVDS == 1, MDEV, (ADEV/8)*(DEVS+1))"
+                }
+            }
+        },
+        "VCODC2": {
+            "ibitw": {
+                "MVDS": {
+                    "isfunc": false,
+                    "iwith": ["MVDS"],
+                    "ipret": {
+                        "0": "VCO deviation calibration set to: Auto calibration mode",
+                        "1": "VCO deviation calibration set to: Manual calibration mode"
+                    }
+                },
+                "MDEV6": {
+                    "isfunc": false,
+                    "iwith": ["MDEV6", "MDEV5", "MDEV4", "MDEV3", "MDEV2", "MDEV1", "MDEV0"],
+                    "ipret": {
+                        "NA": "VCO deviation manual calibration value set to"
+                    }
+                }
+            },
+            "ibitr": {
+                "ADEV7": {
+                    "isfunc": false,
+                    "iwith": ["ADEV7", "ADEV6", "ADEV5", "ADEV4", "ADEV3", "ADEV2", "ADEV1", "ADEV0"],
+                    "ipret": {
+                        "NA": "VCO deviation auto calibration value is"
+                    }
+                }
+            }
+        },
+        "VCODC3": {
+            "ibits": {
+                "VMG7": {
+                    "isfunc": false,
+                    "iwith": ["VMG7", "VMG6", "VMG5", "VMG4", "VMG3", "VMG2", "VMG1", "VMG0"],
+                    "ipret": {
+                        "NA": "Access to reserved Bits VCODC3:VMG[7:0]"
+                    }
+                }
+            }
+        },
+        "VCOMD": {
+            "ibitw": {
+                "MDEN": {
+                    "isfunc": false,
+                    "iwith": ["MDEN"],
+                    "ipret": {
+                        "NA": "Wrote to reserved Bit VCOMD:MDEN"
+                    }
+                },
+                "CMV": {
+                    "isfunc": false,
+                    "iwith": ["CMV"],
+                    "ipret": {
+                        "0": "Modulation D/A scale set to 0.3V",
+                        "1": "Modulation D/A scale set to 0.15V"
+                    }
+                },
+                "DEVFD2": {
+                    "isfunc": false,
+                    "iwith": ["DEVFD2", "DEVFD1", "DEVFD0"],
+                    "ipret": {
+                        "NA": "Wrote to reserved Bits VCOMD:DEVFD[2:0]"
+                    }
+                },
+                "DEVD2": {
+                    "isfunc": false,
+                    "iwith": ["DEVD2", "DEVD1", "DEVD0"],
+                    "ipret": {
+                        "NA": "Wrote to reserved Bits VCOMD:DEVD[2:0]"
+                    }
+                }
+            }
+        },
+        "BD": {
+            "ibitw": {
+                "RGS": {
+                    "isfunc": false,
+                    "iwith": ["RGS"],
+                    "ipret": {
+                        "NA": "VDD_D voltage setting in Sleep mode set to"
+                    }
+                },
+                "RGV1": {
+                    "isfunc": false,
+                    "iwith": ["RGV1", "RGV0"],
+                    "ipret": {
+                        "00": "VDD_D and VDD_A voltage setting in non-Sleep mode set to: 2.1V",
+                        "01": "VDD_D and VDD_A voltage setting in non-Sleep mode set to: 2.0V",
+                        "10": "VDD_D and VDD_A voltage setting in non-Sleep mode set to: 1.9V",
+                        "11": "VDD_D and VDD_A voltage setting in non-Sleep mode set to: 1.8V"
+                    }
+                },
+                "LVR": {
+                    "isfunc": false,
+                    "iwith": ["LVR"],
+                    "ipret": {
+                        "NA": "Wrote to reserved Bit BD:LVR"
+                    }
+                },
+                "BVT2": {
+                    "isfunc": false,
+                    "iwith": ["BVT2", "BVT1", "BVT0"],
+                    "ipret": {
+                        "000": "Battery voltage detect threshold set to 2.0V",
+                        "001": "Battery voltage detect threshold set to 2.1V",
+                        "010": "Battery voltage detect threshold set to 2.2V",
+                        "011": "Battery voltage detect threshold set to 2.3V",
+                        "100": "Battery voltage detect threshold set to 2.4V",
+                        "101": "Battery voltage detect threshold set to 2.5V",
+                        "110": "Battery voltage detect threshold set to 2.6V",
+                        "111": "Battery voltage detect threshold set to 2.7V"
+                    }
+                },
+                "BD_E": {
+                    "isfunc": false,
+                    "iwith": ["BD_E"],
+                    "ipret": {
+                        "0": "Battery detect disabled",
+                        "1": "Battery detect enable"
+                    }
+                }
+            },
+            "ibitr": {
+                "RGS": {
+                    "isfunc": false,
+                    "iwith": ["RGS"],
+                    "ipret": {
+                        "NA": "VDD_D voltage setting in Sleep mode value is"
+                    }
+                },
+                "RGV1": {
+                    "isfunc": false,
+                    "iwith": ["RGV1", "RGV0"],
+                    "ipret": {
+                        "00": "VDD_D and VDD_A voltage setting in non-Sleep mode value is: 2.1V",
+                        "01": "VDD_D and VDD_A voltage setting in non-Sleep mode value is: 2.0V",
+                        "10": "VDD_D and VDD_A voltage setting in non-Sleep mode value is: 1.9V",
+                        "11": "VDD_D and VDD_A voltage setting in non-Sleep mode value is: 1.8V"
+                    }
+                },
+                "BDF": {
+                    "isfunc": false,
+                    "iwith": ["BDF"],
+                    "ipret": {
+                        "0": "Battery voltage less than threshold",
+                        "1": "Battery voltage greater than threshold"
+                    }
+                },
+                "BVT2": {
+                    "isfunc": false,
+                    "iwith": ["BVT2", "BVT1", "BVT0"],
+                    "ipret": {
+                        "000": "Battery voltage detect threshold value is 2.0V",
+                        "001": "Battery voltage detect threshold value is 2.1V",
+                        "010": "Battery voltage detect threshold value is 2.2V",
+                        "011": "Battery voltage detect threshold value is 2.3V",
+                        "100": "Battery voltage detect threshold value is 2.4V",
+                        "101": "Battery voltage detect threshold value is 2.5V",
+                        "110": "Battery voltage detect threshold value is 2.6V",
+                        "111": "Battery voltage detect threshold value is 2.7V"
+                    }
+                },
+                "BD_E": {
+                    "isfunc": false,
+                    "iwith": ["BD_E"],
+                    "ipret": {
+                        "0": "Battery detect is disabled",
+                        "1": "Battery detect is enable"
+                    }
+                }
+            }
+        },
+        "TXT": {
+            "ibitw": {
+                "TXSM1": {
+                    "isfunc": false,
+                    "iwith": ["TXSM1", "TXSM0"],
+                    "ipret": {
+                        "00": "Moving average for non-filter select set to: No average",
+                        "01": "Moving average for non-filter select set to: 2 moving average",
+                        "10": "Moving average for non-filter select set to: 4 moving average",
+                        "11": "Moving average for non-filter select set to: 8 moving average"
+                    }
+                },
+                "TXCS": {
+                    "isfunc": false,
+                    "iwith": ["TXCS"],
+                    "ipret": {
+                        "NA": "TX Current setting set to"
+                    }
+                },
+                "PAC1": {
+                    "isfunc": false,
+                    "iwith": ["PAC1", "PAC0"],
+                    "ipret": {
+                        "NA": "PA Current setting set to"
+                    }
+                },
+                "TBG2": {
+                    "isfunc": false,
+                    "iwith": ["TBG2", "TBG1", "TBG0"],
+                    "ipret": {
+                        "NA": "TX Buffer setting set to"
+                    }
+                }
+            }
+        },
+        "CPC": {
+            "ibitw": {
+                "CPM3": {
+                    "isfunc": true,
+                    "ipret": "Charge pump current (mA) for VM Loop set to",
+                    "iwith": {
+                        "CPM": ["CPM3", "CPM2", "CPM1", "CPM0"]
+                    },
+                    "func": "(CPM+1)/16"
+                },
+                "CPT3": {
+                    "isfunc": true,
+                    "ipret": "Charge pump current (mA) for VT Loop set to",
+                    "iwith": {
+                        "CPT": ["CPT3", "CPT2", "CPT1", "CPT0"]
+                    },
+                    "func": "(CPT+1)/16"
+                }
+            }
+        },
+        "XTLT": {
+            "ibitw": {
+                "VRPL1": {
+                    "isfunc": false,
+                    "iwith": ["VRPL1", "VRPL0"],
+                    "ipret": {
+                        "00": "Internal PLL register select set to 500 ohm",
+                        "01": "Internal PLL register select set to 666 ohm",
+                        "10": "Internal PLL register select set to 1K ohm",
+                        "11": "Internal PLL register select set to 2K ohm"
+                    }
+                },
+                "INTXC": {
+                    "isfunc": false,
+                    "iwith": ["INTXC"],
+                    "ipret": {
+                        "0": "Internal crystal capacitor disabled",
+                        "1": "Internal crystal capacitor enable"
+                    }
+                },
+                "INTPRC": {
+                    "isfunc": false,
+                    "iwith": ["INTPRC"],
+                    "ipret": {
+                        "0": "Internal PLL capacitor and resistor disabled",
+                        "1": "Internal PLL capacitor and resistor enable"
+                    }
+                },
+                "DBD": {
+                    "isfunc": false,
+                    "iwith": ["DBD"],
+                    "ipret": {
+                        "NA": "Wrote to reserved Bit XTLT:DBD"
+                    }
+                },
+                "XCC": {
+                    "isfunc": false,
+                    "iwith": ["XCC"],
+                    "ipret": {
+                        "NA": "Wrote to reserved Bit XTLT:XCC"
+                    }
+                },
+                "XCP1": {
+                    "isfunc": false,
+                    "iwith": ["XCP1", "XCP0"],
+                    "ipret": {
+                        "NA": "Wrote to reserved Bits XTLT:XCP[1:0]"
+                    }
+                }
+            }
+        },
         "PLLT": {
             "ibitw": {
                 "CPH": {
@@ -41,14 +374,14 @@
                     "isfunc": false,
                     "iwith": ["PRRC1", "PRRC0"],
                     "ipret": {
-                        "NA": "Wrote to reserved Bit PLLT:PRRC[1:0]"
+                        "NA": "Wrote to reserved Bits PLLT:PRRC[1:0]"
                     }
                 },
                 "PRIC1": {
                     "isfunc": false,
                     "iwith": ["PRIC1", "PRIC0"],
                     "ipret": {
-                        "NA": "Wrote to reserved Bit PLLT:PRIC[1:0]"
+                        "NA": "Wrote to reserved Bits PLLT:PRIC[1:0]"
                     }
                 },
                 "SDPW": {

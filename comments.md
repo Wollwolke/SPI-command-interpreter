@@ -11,5 +11,8 @@
 Interpret:
 - "NA" --> Text mit Wert ausgeben
 
-
-muss getestet werden: ADC Read mit Temp/Voltage
+## Neues Zeug
+- muss getestet werden:
+  - ADC Read mit Temp/Voltage
+  - VCODC1 Read DEVA7
+- BD:BD_E darf nicht auf 1 gesetzt werden?
