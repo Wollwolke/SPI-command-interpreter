@@ -845,7 +845,7 @@
                 },
                 "PSA5": {
                     "isfunc": true,
-                    "ipret": "Segmented FIFO legnth set to",
+                    "ipret": "Segmented FIFO length set to",
                     "iwith": {
                         "PSA": ["PSA5", "PSA4", "PSA3", "PSA2", "PSA1", "PSA0"],
                         "FEP": ["FIFO1:FEP7", "FIFO1:FEP6", "FIFO1:FEP5", "FIFO1:FEP4", "FIFO1:FEP3", "FIFO1:FEP2", "FIFO1:FEP1", "FIFO1:FEP0"]
