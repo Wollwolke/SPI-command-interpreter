@@ -1565,7 +1565,637 @@
         }
       }
     },
-
+    "VCODC1": {
+      "ibitw": {
+        "DEVS3": {
+          "isfunc": false,
+          "iwith": [ "DEVS3", "DEVS2", "DEVS1", "DEVS0" ],
+          "ipret": {
+            "NA": "Deviation output scaling set to"
+          }
+        },
+        "DAMR_M": {
+          "isfunc": false,
+          "iwith": [ "DAMR_M" ],
+          "ipret": {
+            "0": "DAMR manual disabled",
+            "1": "DAMR manual enabled"
+          }
+        },
+        "VMTE_M": {
+          "isfunc": false,
+          "iwith": [ "VMTE_M" ],
+          "ipret": {
+            "0": "VMT manual disabled",
+            "1": "VMT manual enabled"
+          }
+        },
+        "VMS_M": {
+          "isfunc": false,
+          "iwith": [ "VMS_M" ],
+          "ipret": {
+            "0": "VM manual disabled",
+            "1": "VM manual enabled"
+          }
+        },
+        "MSEL": {
+          "isfunc": false,
+          "iwith": [ "MSEL" ],
+          "ipret": {
+            "0": "VMS, VMTE and DAMR control set to: Auto control",
+            "1": "VMS, VMTE and DAMR control set to: Manual control"
+          }
+        }
+      },
+      "ibitr": {
+        "DEVA7": {
+          "isfunc": true,
+          "ipret": "Deviation output value is",
+          "iwith": {
+            "MVDS": [ "VCODC2:MVDS" ],
+            "ADEV": [ "VCODC2:ADEV7", "VCODC2:ADEV6", "VCODC2:ADEV5", "VCODC2:ADEV4", "VCODC2:ADEV3", "VCODC2:ADEV2", "VCODC2:ADEV1", "VCODC2:ADEV0" ],
+            "MDEV": [ "VCODC2:MDEV6", "VCODC2:MDEV5", "VCODC2:MDEV4", "VCODC2:MDEV3", "VCODC2:MDEV2", "VCODC2:MDEV1", "VCODC2:MDEV0" ],
+            "DEVS": [ "DEVS3", "DEVS2", "DEVS1", "DEVS0" ]
+          },
+          "func": "if (MVDS == 1, MDEV, (ADEV/8)*(DEVS+1))"
+        }
+      }
+    },
+    "VCODC2": {
+      "ibitw": {
+        "MVDS": {
+          "isfunc": false,
+          "iwith": [ "MVDS" ],
+          "ipret": {
+            "0": "VCO deviation calibration set to: Auto calibration mode",
+            "1": "VCO deviation calibration set to: Manual calibration mode"
+          }
+        },
+        "MDEV6": {
+          "isfunc": false,
+          "iwith": [ "MDEV6", "MDEV5", "MDEV4", "MDEV3", "MDEV2", "MDEV1", "MDEV0" ],
+          "ipret": {
+            "NA": "VCO deviation manual calibration value set to"
+          }
+        }
+      },
+      "ibitr": {
+        "ADEV7": {
+          "isfunc": false,
+          "iwith": [ "ADEV7", "ADEV6", "ADEV5", "ADEV4", "ADEV3", "ADEV2", "ADEV1", "ADEV0" ],
+          "ipret": {
+            "NA": "VCO deviation auto calibration value is"
+          }
+        }
+      }
+    },
+    "VCODC3": {
+      "ibits": {
+        "VMG7": {
+          "isfunc": false,
+          "iwith": [ "VMG7", "VMG6", "VMG5", "VMG4", "VMG3", "VMG2", "VMG1", "VMG0" ],
+          "ipret": {
+            "NA": "Access to reserved Bits VCODC3:VMG[7:0]"
+          }
+        }
+      }
+    },
+    "VCOMD": {
+      "ibitw": {
+        "MDEN": {
+          "isfunc": false,
+          "iwith": [ "MDEN" ],
+          "ipret": {
+            "NA": "Wrote to reserved Bit VCOMD:MDEN"
+          }
+        },
+        "CMV": {
+          "isfunc": false,
+          "iwith": [ "CMV" ],
+          "ipret": {
+            "0": "Modulation D/A scale set to 0.3V",
+            "1": "Modulation D/A scale set to 0.15V"
+          }
+        },
+        "DEVFD2": {
+          "isfunc": false,
+          "iwith": [ "DEVFD2", "DEVFD1", "DEVFD0" ],
+          "ipret": {
+            "NA": "Wrote to reserved Bits VCOMD:DEVFD[2:0]"
+          }
+        },
+        "DEVD2": {
+          "isfunc": false,
+          "iwith": [ "DEVD2", "DEVD1", "DEVD0" ],
+          "ipret": {
+            "NA": "Wrote to reserved Bits VCOMD:DEVD[2:0]"
+          }
+        }
+      }
+    },
+    "BD": {
+      "ibitw": {
+        "RGS": {
+          "isfunc": false,
+          "iwith": [ "RGS" ],
+          "ipret": {
+            "NA": "VDD_D voltage setting in Sleep mode set to"
+          }
+        },
+        "RGV1": {
+          "isfunc": false,
+          "iwith": [ "RGV1", "RGV0" ],
+          "ipret": {
+            "00": "VDD_D and VDD_A voltage setting in non-Sleep mode set to: 2.1V",
+            "01": "VDD_D and VDD_A voltage setting in non-Sleep mode set to: 2.0V",
+            "10": "VDD_D and VDD_A voltage setting in non-Sleep mode set to: 1.9V",
+            "11": "VDD_D and VDD_A voltage setting in non-Sleep mode set to: 1.8V"
+          }
+        },
+        "LVR": {
+          "isfunc": false,
+          "iwith": [ "LVR" ],
+          "ipret": {
+            "NA": "Wrote to reserved Bit BD:LVR"
+          }
+        },
+        "BVT2": {
+          "isfunc": false,
+          "iwith": [ "BVT2", "BVT1", "BVT0" ],
+          "ipret": {
+            "000": "Battery voltage detect threshold set to 2.0V",
+            "001": "Battery voltage detect threshold set to 2.1V",
+            "010": "Battery voltage detect threshold set to 2.2V",
+            "011": "Battery voltage detect threshold set to 2.3V",
+            "100": "Battery voltage detect threshold set to 2.4V",
+            "101": "Battery voltage detect threshold set to 2.5V",
+            "110": "Battery voltage detect threshold set to 2.6V",
+            "111": "Battery voltage detect threshold set to 2.7V"
+          }
+        },
+        "BD_E": {
+          "isfunc": false,
+          "iwith": [ "BD_E" ],
+          "ipret": {
+            "0": "Battery detect disabled",
+            "1": "Battery detect enable"
+          }
+        }
+      },
+      "ibitr": {
+        "RGS": {
+          "isfunc": false,
+          "iwith": [ "RGS" ],
+          "ipret": {
+            "NA": "VDD_D voltage setting in Sleep mode value is"
+          }
+        },
+        "RGV1": {
+          "isfunc": false,
+          "iwith": [ "RGV1", "RGV0" ],
+          "ipret": {
+            "00": "VDD_D and VDD_A voltage setting in non-Sleep mode value is: 2.1V",
+            "01": "VDD_D and VDD_A voltage setting in non-Sleep mode value is: 2.0V",
+            "10": "VDD_D and VDD_A voltage setting in non-Sleep mode value is: 1.9V",
+            "11": "VDD_D and VDD_A voltage setting in non-Sleep mode value is: 1.8V"
+          }
+        },
+        "BDF": {
+          "isfunc": false,
+          "iwith": [ "BDF" ],
+          "ipret": {
+            "0": "Battery voltage less than threshold",
+            "1": "Battery voltage greater than threshold"
+          }
+        },
+        "BVT2": {
+          "isfunc": false,
+          "iwith": [ "BVT2", "BVT1", "BVT0" ],
+          "ipret": {
+            "000": "Battery voltage detect threshold value is 2.0V",
+            "001": "Battery voltage detect threshold value is 2.1V",
+            "010": "Battery voltage detect threshold value is 2.2V",
+            "011": "Battery voltage detect threshold value is 2.3V",
+            "100": "Battery voltage detect threshold value is 2.4V",
+            "101": "Battery voltage detect threshold value is 2.5V",
+            "110": "Battery voltage detect threshold value is 2.6V",
+            "111": "Battery voltage detect threshold value is 2.7V"
+          }
+        },
+        "BD_E": {
+          "isfunc": false,
+          "iwith": [ "BD_E" ],
+          "ipret": {
+            "0": "Battery detect is disabled",
+            "1": "Battery detect is enable"
+          }
+        }
+      }
+    },
+    "TXT": {
+      "ibitw": {
+        "TXSM1": {
+          "isfunc": false,
+          "iwith": [ "TXSM1", "TXSM0" ],
+          "ipret": {
+            "00": "Moving average for non-filter select set to: No average",
+            "01": "Moving average for non-filter select set to: 2 moving average",
+            "10": "Moving average for non-filter select set to: 4 moving average",
+            "11": "Moving average for non-filter select set to: 8 moving average"
+          }
+        },
+        "TXCS": {
+          "isfunc": false,
+          "iwith": [ "TXCS" ],
+          "ipret": {
+            "NA": "TX Current setting set to"
+          }
+        },
+        "PAC1": {
+          "isfunc": false,
+          "iwith": [ "PAC1", "PAC0" ],
+          "ipret": {
+            "NA": "PA Current setting set to"
+          }
+        },
+        "TBG2": {
+          "isfunc": false,
+          "iwith": [ "TBG2", "TBG1", "TBG0" ],
+          "ipret": {
+            "NA": "TX Buffer setting set to"
+          }
+        }
+      }
+    },
+    "CPC": {
+      "ibitw": {
+        "CPM3": {
+          "isfunc": true,
+          "ipret": "Charge pump current (mA) for VM Loop set to",
+          "iwith": {
+            "CPM": [ "CPM3", "CPM2", "CPM1", "CPM0" ]
+          },
+          "func": "(CPM+1)/16"
+        },
+        "CPT3": {
+          "isfunc": true,
+          "ipret": "Charge pump current (mA) for VT Loop set to",
+          "iwith": {
+            "CPT": [ "CPT3", "CPT2", "CPT1", "CPT0" ]
+          },
+          "func": "(CPT+1)/16"
+        }
+      }
+    },
+    "XTLT": {
+      "ibitw": {
+        "VRPL1": {
+          "isfunc": false,
+          "iwith": [ "VRPL1", "VRPL0" ],
+          "ipret": {
+            "00": "Internal PLL register select set to 500 ohm",
+            "01": "Internal PLL register select set to 666 ohm",
+            "10": "Internal PLL register select set to 1K ohm",
+            "11": "Internal PLL register select set to 2K ohm"
+          }
+        },
+        "INTXC": {
+          "isfunc": false,
+          "iwith": [ "INTXC" ],
+          "ipret": {
+            "0": "Internal crystal capacitor disabled",
+            "1": "Internal crystal capacitor enable"
+          }
+        },
+        "INTPRC": {
+          "isfunc": false,
+          "iwith": [ "INTPRC" ],
+          "ipret": {
+            "0": "Internal PLL capacitor and resistor disabled",
+            "1": "Internal PLL capacitor and resistor enable"
+          }
+        },
+        "DBD": {
+          "isfunc": false,
+          "iwith": [ "DBD" ],
+          "ipret": {
+            "NA": "Wrote to reserved Bit XTLT:DBD"
+          }
+        },
+        "XCC": {
+          "isfunc": false,
+          "iwith": [ "XCC" ],
+          "ipret": {
+            "NA": "Wrote to reserved Bit XTLT:XCC"
+          }
+        },
+        "XCP1": {
+          "isfunc": false,
+          "iwith": [ "XCP1", "XCP0" ],
+          "ipret": {
+            "NA": "Wrote to reserved Bits XTLT:XCP[1:0]"
+          }
+        }
+      }
+    },
+    "PLLT": {
+      "ibitw": {
+        "CPH": {
+          "isfunc": false,
+          "iwith": [ "CPH" ],
+          "ipret": {
+            "0": "High current mode of Charge pump disabled",
+            "1": "High current mode of Charge pump enabled"
+          }
+        },
+        "CPS": {
+          "isfunc": false,
+          "iwith": [ "CPS" ],
+          "ipret": {
+            "NA": "Wrote to reserved Bit PLLT:CPS"
+          }
+        },
+        "PRRC1": {
+          "isfunc": false,
+          "iwith": [ "PRRC1", "PRRC0" ],
+          "ipret": {
+            "NA": "Wrote to reserved Bits PLLT:PRRC[1:0]"
+          }
+        },
+        "PRIC1": {
+          "isfunc": false,
+          "iwith": [ "PRIC1", "PRIC0" ],
+          "ipret": {
+            "NA": "Wrote to reserved Bits PLLT:PRIC[1:0]"
+          }
+        },
+        "SDPW": {
+          "isfunc": false,
+          "iwith": [ "SDPW" ],
+          "ipret": {
+            "NA": "Wrote to reserved Bit PLLT:SDPW"
+          }
+        },
+        "NSDO": {
+          "isfunc": false,
+          "iwith": [ "NSDO" ],
+          "ipret": {
+            "NA": "Wrote to reserved Bit PLLT:NSDO"
+          }
+        }
+      }
+    },
+    "VCOT": {
+      "ibitw": {
+        "OLM": {
+          "isfunc": false,
+          "iwith": [ "OLM" ],
+          "ipret": {
+            "NA": "Wrote to reserved Bit VCOT:OLM"
+          }
+        },
+        "SDMS": {
+          "isfunc": false,
+          "iwith": [ "SDMS" ],
+          "ipret": {
+            "NA": "Wrote to reserved Bit VCOT:SDMS"
+          }
+        },
+        "VTBS": {
+          "isfunc": false,
+          "iwith": [ "VTBS" ],
+          "ipret": {
+            "NA": "Wrote to reserved Bit VCOT:VTBS"
+          }
+        },
+        "TLB1": {
+          "isfunc": false,
+          "iwith": [ "TLB1", "TLB0" ],
+          "ipret": {
+            "NA": "Wrote to reserved Bits VCOT:TLB[1:0]"
+          }
+        },
+        "RSIS": {
+          "isfunc": false,
+          "iwith": [ "RSIS" ],
+          "ipret": {
+            "NA": "Current bias selection for differential mode ring OSC set to"
+          }
+        },
+        "ROSCS": {
+          "isfunc": false,
+          "iwith": [ "ROSCS" ],
+          "ipret": {
+            "0": "Ring Oscillation set to: Single mode",
+            "1": "Ring Oscillation set to differential mode"
+          }
+        },
+        "VBHC": {
+          "isfunc": false,
+          "iwith": [ "VBHC" ],
+          "ipret": {
+            "NA": "Wrote to reserved Bit VCOT:VBHC"
+          }
+        }
+      }
+    },
+    "CHS": {
+      "ibitw": {
+        "XADPS": {
+          "isfunc": false,
+          "iwith": [ "XADPS" ],
+          "ipret": {
+            "NA": "External ADC pin selection set to"
+          }
+        },
+        "RFT2": {
+          "isfunc": false,
+          "iwith": [ "XADPS", "RFT2", "RFT1", "RFT0" ],
+          "ipret": {
+            "0000": "RF analog pin configuration connected to external AD input",
+            "0001": "RF analog pin configuration connected to analog temperature voltage",
+            "0010": "RF analog pin configuration connected to internal DA output",
+            "0011": "RF analog pin configuration connected to low power current source",
+            "1000": "RF analog pin configuration connected to external AD input",
+            "1001": "RF analog pin configuration connected to external AD input",
+            "1010": "RF analog pin configuration connected to external AD input",
+            "1011": "RF analog pin configuration connected to external AD input"
+          }
+        },
+        "CHD3": {
+          "isfunc": true,
+          "ipret": "Offset channel number for deviation calibration set to +/-",
+          "iwith": {
+            "CHD": [ "CHD3", "CHD2", "CHD1", "CHD0" ]
+          },
+          "func": "CHD+1"
+        }
+      }
+    },
+    "VRB": {
+      "ibitw": {
+        "VTRB3": {
+          "isfunc": false,
+          "iwith": [ "VTRB3", "VTRB2", "VTRB1", "VTRB0" ],
+          "ipret": {
+            "NA": "Resistor bank for VT RC filtering set to"
+          }
+        },
+        "VMRB3": {
+          "isfunc": false,
+          "iwith": [ "VMRB3", "VMRB2", "VMRB1", "VMRB0" ],
+          "ipret": {
+            "NA": "Resistor bank for VM RC filtering. set to"
+          }
+        }
+      }
+    },
+    "ADC": {
+      "ibitsw": {
+        "AVSEL1": {
+          "isfunc": false,
+          "iwith": [ "AVSEL1", "AVSEL0" ],
+          "ipret": {
+            "00": "ADC average times (VCO calibration) Avg 8 times",
+            "01": "ADC average times (VCO calibration) Avg 16 times",
+            "10": "ADC average times (VCO calibration) Avg 32 times",
+            "11": "ADC average times (VCO calibration) Avg 64 times"
+          }
+        },
+        "RADC": {
+          "isfunc": false,
+          "iwith": [ "RADC" ],
+          "ipret": {
+            "0": "Reading of ADC average for MVSEL mode",
+            "1": "Reading of ADC average for AVSEL mode"
+          }
+        },
+        "FSARS": {
+          "isfunc": false,
+          "iwith": [ "FSARS" ],
+          "ipret": {
+            "0": "ADC clock select set to 4Mhz",
+            "1": "ADC clock select set to 8Mhz"
+          }
+        },
+        "MVSEL1": {
+          "isfunc": false,
+          "iwith": [ "MVSEL1", "MVSEL0" ],
+          "ipret": {
+            "00": "ADC average times set to no average",
+            "01": "ADC average times set to Avg 2 times",
+            "10": "ADC average times set to Avg 4 times",
+            "11": "ADC average times set to Avg 8 times"
+          }
+        },
+        "XADS": {
+          "isfunc": false,
+          "iwith": [ "XADS" ],
+          "ipret": {
+            "0": "ADC input signal select set to: Convert internal temperature",
+            "1": "ADC input signal select set to: Convert external voltage"
+          }
+        },
+        "CDM": {
+          "isfunc": false,
+          "iwith": [ "CDM" ],
+          "ipret": {
+            "0": "Continuous measurement mode set to: Single mode",
+            "1": "Continuous measurement mode set to: Continuous mode"
+          }
+        }
+      },
+      "ibitr": {
+        "ADC7": {
+          "isfunc": true,
+          "ipret": "Temperature value / ADC Reading (V) [Depending on ADC:XADS]",
+          "iwith": {
+            "ADC": [ "ADC7", "ADC6", "ADC5", "ADC4", "ADC3", "ADC2", "ADC1", "ADC0" ],
+            "XADS": [ "XADS" ]
+          },
+          "func": "if (XADS == 1, 0.3+1.2*ADC/256, ADC)"
+        }
+      }
+    },
+    "INTS": {
+      "ibitw": {
+        "CELS": {
+          "isfunc": false,
+          "iwith": [ "CELS" ],
+          "ipret": {
+            "NA": "Wrote to reserved Bit INTS:CELS"
+          }
+        },
+        "PWORS": {
+          "isfunc": false,
+          "iwith": [ "PWORS" ],
+          "ipret": {
+            "NA": "Wrote to reserved Bit INTS:PWORS"
+          }
+        },
+        "STS": {
+          "isfunc": false,
+          "iwith": [ "STS" ],
+          "ipret": {
+            "NA": "Wrote to reserved Bit INTS:STS"
+          }
+        },
+        "IXTLS4": {
+          "isfunc": false,
+          "iwith": [ "IXTLS4", "IXTLS3", "IXTLS2", "IXTLS1", "IXTLS0" ],
+          "ipret": {
+            "NA": "Internal crystal capacitor value set to"
+          }
+        }
+      }
+    },
+    "RTX": {
+      "ibitw": {
+        "QDS": {
+          "isfunc": false,
+          "iwith": [ "QDS" ],
+          "ipret": {
+            "NA": "Regulator quick charge select set to"
+          }
+        },
+        "TRT2": {
+          "isfunc": false,
+          "iwith": [ "TRT2", "TRT1", "TRT0" ],
+          "ipret": {
+            "000": "TX ramping down time set to 4us",
+            "001": "TX ramping down time set to 8us",
+            "010": "TX ramping down time set to 12us",
+            "011": "TX ramping down time set to 16us",
+            "100": "TX ramping down time set to 20us",
+            "101": "TX ramping down time set to 24us",
+            "110": "TX ramping down time set to 28us",
+            "111": "TX ramping down time set to 32us"
+          }
+        },
+        "ASMV2": {
+          "isfunc": false,
+          "iwith": [ "ASMV2", "ASMV1", "ASMV0" ],
+          "ipret": {
+            "000": "TX ramping up time set to 4us",
+            "001": "TX ramping up time set to 8us",
+            "010": "TX ramping up time set to 12us",
+            "011": "TX ramping up time set to 16us",
+            "100": "TX ramping up time set to 20us",
+            "101": "TX ramping up time set to 24us",
+            "110": "TX ramping up time set to 28us",
+            "111": "TX ramping up time set to 32us"
+          }
+        },
+        "AMVS": {
+          "isfunc": false,
+          "iwith": [ "AMVS" ],
+          "ipret": {
+            "0": "TX Ramping set to Disabled",
+            "1": "TX Ramping set to Enabled"
+          }
+        }
+      }
+    },
     "TEMPLATE": {
       "ibits": {
         "BIT1": {
