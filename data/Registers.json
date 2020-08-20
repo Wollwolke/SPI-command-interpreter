@@ -282,11 +282,11 @@
             "isstrobe": true,
             "logic": "Entered Idle Mode"
         },
-      "cmd3": {
-        "hex": "0xA0",
-        "isstrobe": true,
-        "logic": "Entered Standby Mode"
-      },
+        "cmd3": {
+            "hex": "0xA0",
+            "isstrobe": true,
+            "logic": "Entered Standby Mode"
+        },
         "cmd4": {
             "hex": "0xB0",
             "isstrobe": true,
@@ -752,10 +752,10 @@
                 "RESETN": {
                     "isfunc": false,
                     "iwith": ["RESETN"],
-                  "ipret": {
-                    "0": "Reset Command sent",
-                    "1": "Undefined command for mode register"
-                  }
+                    "ipret": {
+                        "0": "Reset Command sent",
+                        "1": "Undefined command for mode register"
+                    }
                 }
             }
         },
@@ -1120,24 +1120,24 @@
         },
         "PLL1": {
             "ibits": {
-              "CHN7": {
-                "highlight": true,
-                "isfunc": true,
-                "ipret": "frequency in MHz ",
-                "iwith": {
-                  "CHN": [ "CHN7", "CHN6", "CHN5", "CHN4", "CHN3", "CHN2", "CHN1", "CHN0" ],
-                  "CHR": [ "PLL2:CHR3", "PLL2:CHR2", "PLL2:CHR1", "PLL2:CHR0" ],
-                  "BIP": [ "PLL2:BIP8", "PLL3:BIP7", "PLL3:BIP6", "PLL3:BIP5", "PLL3:BIP4", "PLL3:BIP3", "PLL3:BIP2", "PLL3:BIP1", "PLL3:BIP0" ],
-                  "BFP": [ "PLL4:BFP15", "PLL4:BFP14", "PLL4:BFP13", "PLL4:BFP12", "PLL4:BFP11", "PLL4:BFP10", "PLL4:BFP9", "PLL4:BFP8", "PLL5:BFP7", "PLL5:BFP6", "PLL5:BFP5", "PLL5:BFP4", "PLL5:BFP3", "PLL5:BFP2", "PLL5:BFP1", "PLL5:BFP0" ],
-                  "DBL": [ "PLL2:DBL" ],
-                  "RRC": [ "PLL2:RRC1", "PLL2:RRC0" ]
-                },
-                "func": "((DBL+1)*16/(RRC+1)*(BIP+BFP/2^16))+CHN*16*(DBL+1)/4/(CHR+1)"
-              }
+                "CHN7": {
+                    "highlight": true,
+                    "isfunc": true,
+                    "ipret": "frequency in MHz ",
+                    "iwith": {
+                        "CHN": ["CHN7", "CHN6", "CHN5", "CHN4", "CHN3", "CHN2", "CHN1", "CHN0"],
+                        "CHR": ["PLL2:CHR3", "PLL2:CHR2", "PLL2:CHR1", "PLL2:CHR0"],
+                        "BIP": ["PLL2:BIP8", "PLL3:BIP7", "PLL3:BIP6", "PLL3:BIP5", "PLL3:BIP4", "PLL3:BIP3", "PLL3:BIP2", "PLL3:BIP1", "PLL3:BIP0"],
+                        "BFP": ["PLL4:BFP15", "PLL4:BFP14", "PLL4:BFP13", "PLL4:BFP12", "PLL4:BFP11", "PLL4:BFP10", "PLL4:BFP9", "PLL4:BFP8", "PLL5:BFP7", "PLL5:BFP6", "PLL5:BFP5", "PLL5:BFP4", "PLL5:BFP3", "PLL5:BFP2", "PLL5:BFP1", "PLL5:BFP0"],
+                        "DBL": ["PLL2:DBL"],
+                        "RRC": ["PLL2:RRC1", "PLL2:RRC0"]
+                    },
+                    "func": "((DBL+1)*16/(RRC+1)*(BIP+BFP/2^16))+CHN*16*(DBL+1)/4/(CHR+1)"
+                }
             }
         },
         "PLL2": {
-            "ibitw": {
+            "ibitsw": {
                 "DBL": {
                     "isfunc": false,
                     "iwith": ["DBL"],
@@ -1168,7 +1168,7 @@
                     }
                 }
             },
-            "ibitr": {
+            "ibitsr": {
                 "DBL": {
                     "isfunc": false,
                     "iwith": ["DBL"],
@@ -1201,7 +1201,7 @@
             }
         },
         "PLL3": {
-            "ibitw": {
+            "ibitsw": {
                 "BIP7": {
                     "isfunc": false,
                     "iwith": ["PLL2:BIP8", "BIP7", "BIP6", "BIP5", "BIP4", "BIP3", "BIP2", "BIP1", "BIP0"],
@@ -1210,7 +1210,7 @@
                     }
                 }
             },
-            "ibitr": {
+            "ibitsr": {
                 "IP7": {
                     "isfunc": false,
                     "iwith": ["PLL2:IP8", "IP7", "IP6", "IP5", "IP4", "IP3", "IP2", "IP1", "IP0"],
@@ -1580,7 +1580,7 @@
             }
         },
         "VCODC1": {
-            "ibitw": {
+            "ibitsw": {
                 "DEVS3": {
                     "isfunc": false,
                     "iwith": ["DEVS3", "DEVS2", "DEVS1", "DEVS0"],
@@ -1621,7 +1621,7 @@
                     }
                 }
             },
-            "ibitr": {
+            "ibitsr": {
                 "DEVA7": {
                     "isfunc": true,
                     "ipret": "Deviation output value is",
@@ -1636,7 +1636,7 @@
             }
         },
         "VCODC2": {
-            "ibitw": {
+            "ibitsw": {
                 "MVDS": {
                     "isfunc": false,
                     "iwith": ["MVDS"],
@@ -1653,7 +1653,7 @@
                     }
                 }
             },
-            "ibitr": {
+            "ibitsr": {
                 "ADEV7": {
                     "isfunc": false,
                     "iwith": ["ADEV7", "ADEV6", "ADEV5", "ADEV4", "ADEV3", "ADEV2", "ADEV1", "ADEV0"],
@@ -1675,7 +1675,7 @@
             }
         },
         "VCOMD": {
-            "ibitw": {
+            "ibitsw": {
                 "MDEN": {
                     "isfunc": false,
                     "iwith": ["MDEN"],
@@ -1708,7 +1708,7 @@
             }
         },
         "BD": {
-            "ibitw": {
+            "ibitsw": {
                 "RGS": {
                     "isfunc": false,
                     "iwith": ["RGS"],
@@ -1756,7 +1756,7 @@
                     }
                 }
             },
-            "ibitr": {
+            "ibitsr": {
                 "RGS": {
                     "isfunc": false,
                     "iwith": ["RGS"],
@@ -1807,7 +1807,7 @@
             }
         },
         "TXT": {
-            "ibitw": {
+            "ibitsw": {
                 "TXSM1": {
                     "isfunc": false,
                     "iwith": ["TXSM1", "TXSM0"],
@@ -1842,7 +1842,7 @@
             }
         },
         "CPC": {
-            "ibitw": {
+            "ibitsw": {
                 "CPM3": {
                     "isfunc": true,
                     "ipret": "Charge pump current (mA) for VM Loop set to",
@@ -1862,7 +1862,7 @@
             }
         },
         "XTLT": {
-            "ibitw": {
+            "ibitsw": {
                 "VRPL1": {
                     "isfunc": false,
                     "iwith": ["VRPL1", "VRPL0"],
@@ -1913,7 +1913,7 @@
             }
         },
         "PLLT": {
-            "ibitw": {
+            "ibitsw": {
                 "CPH": {
                     "isfunc": false,
                     "iwith": ["CPH"],
@@ -1960,7 +1960,7 @@
             }
         },
         "VCOT": {
-            "ibitw": {
+            "ibitsw": {
                 "OLM": {
                     "isfunc": false,
                     "iwith": ["OLM"],
@@ -2014,7 +2014,7 @@
             }
         },
         "CHS": {
-            "ibitw": {
+            "ibitsw": {
                 "XADPS": {
                     "isfunc": false,
                     "iwith": ["XADPS"],
@@ -2047,7 +2047,7 @@
             }
         },
         "VRB": {
-            "ibitw": {
+            "ibitsw": {
                 "VTRB3": {
                     "isfunc": false,
                     "iwith": ["VTRB3", "VTRB2", "VTRB1", "VTRB0"],
@@ -2119,7 +2119,7 @@
                     }
                 }
             },
-            "ibitr": {
+            "ibitsr": {
                 "ADC7": {
                     "isfunc": true,
                     "ipret": "Temperature value / ADC Reading (V) [Depending on ADC:XADS]",
@@ -2132,7 +2132,7 @@
             }
         },
         "INTS": {
-            "ibitw": {
+            "ibitsw": {
                 "CELS": {
                     "isfunc": false,
                     "iwith": ["CELS"],
@@ -2164,7 +2164,7 @@
             }
         },
         "RTX": {
-            "ibitw": {
+            "ibitsw": {
                 "QDS": {
                     "isfunc": false,
                     "iwith": ["QDS"],
