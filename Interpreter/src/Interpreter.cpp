@@ -9,7 +9,7 @@ Interpreter::Interpreter(std::string confName)
 	std::ifstream file(confName);
 	if (file.fail())
 	{
-		std::cerr << "Error while opening JSON file" << std::endl;
+		std::cerr << "Error while opening JSON file " << confName << std::endl;
 		throw ERR_FATAL;
 	}
 	nlohmann::json jfile;
@@ -122,7 +122,7 @@ void Interpreter::interpretFile(std::string fname)
 		}
 		catch (...)
 		{
-			std::cerr << "Unexpected Error occured whlie Parsing input text file" << std::endl;
+			std::cerr << "Unexpected Error occured while Parsing input text file" << std::endl;
 			throw ERR_INTERPRET;
 		}
 	}
