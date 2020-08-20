@@ -72,7 +72,8 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>$(SolutionDir)/inc;$(SolutionDir)/libs;$(IncludePath)</IncludePath>
+    <IncludePath>$(SolutionDir)/include;$(SolutionDir)/libs;$(IncludePath)</IncludePath>
+    <SourcePath>$(VC_SourcePath);$(SolutionDir)/source</SourcePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
