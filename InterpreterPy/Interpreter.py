@@ -63,7 +63,8 @@ class Interpreter:
                                 )
                             )
                 else:
-                    print("\n")
+                    pass
+                    # print("\n")
         except utils.ERR_FATAL as e:
             raise utils.ERR_INTERPRET(
                 "Unexpected Error occured while Parsing input text file"
