@@ -21,5 +21,6 @@ if(NOT json_POPULATED)
 endif()
 
 add_executable(interpreter ${source})
+target_compile_options(interpreter PRIVATE -flto -Wl,-allow-multiple-definition -fuse-linker-plugin)
 
 target_link_libraries(interpreter PRIVATE nlohmann_json::nlohmann_json)

@@ -1,2 +1,0 @@
-Possible buglist
-DR IFS Größenordnung prüfen

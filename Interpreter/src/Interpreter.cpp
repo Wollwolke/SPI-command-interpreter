@@ -7,37 +7,46 @@
 Interpreter::Interpreter(std::string confName)
 {
 	std::ifstream file(confName);
-	if (file.fail()) {
+	if (file.fail())
+	{
 		std::cerr << "Error while opening JSON file" << std::endl;
 		throw ERR_FATAL;
 	}
 	nlohmann::json jfile;
-	try {
+	try
+	{
 		file >> jfile;
 		jconfig = jfile;
 	}
-	catch (...) {
+	catch (...)
+	{
 		std::cerr << "ERROR while creating JSON file object" << std::endl;
 		throw ERR_FATAL;
 	}
-	if (file.is_open()) {
+	if (file.is_open())
+	{
 		file.close();
 	}
 
-	try {
+	try
+	{
 		registers = new Registers(jconfig);
 		commands = new Commands(registers, jconfig);
 	}
-	catch (ERRORCODES e) {
-		if (e == ERR_JSONPARSER_REGISTER){
+	catch (ERRORCODES e)
+	{
+		if (e == ERR_JSONPARSER_REGISTER)
+		{
 			std::cerr << "Error while creating Registers from JSON file" << std::endl;
-		throw ERR_FATAL;
+			throw ERR_FATAL;
 		}
-		else if (e == ERR_JSONPARSER_CMD) {
+		else if (e == ERR_JSONPARSER_CMD)
+		{
 			std::cerr << "Error while creating Commands from JSON file" << std::endl;
 			throw ERR_FATAL;
 		}
-		else {
+		else
+		{
 			throw ERR_INTERPRET;
 		}
 	}
@@ -46,19 +55,22 @@ Interpreter::Interpreter(std::string confName)
 void Interpreter::interpretFile(std::string fname)
 {
 	std::ifstream file(fname);
-	if (file.fail()) {
+	if (file.fail())
+	{
 		std::cerr << "Error while opening file " << fname << std::endl;
 		throw ERR_INTERPRET;
 	}
 	std::string line;
 	while (std::getline(file, line))
 	{
-		if (file.fail() || file.bad()) {
+		if (file.fail() || file.bad())
+		{
 			std::cerr << "Error unexpected line error" << std::endl;
 			break;
 		}
 		std::vector<std::string> bytes;
-		try {
+		try
+		{
 			if (line != "")
 			{
 				if (line.at(0) == '#')
@@ -78,13 +90,15 @@ void Interpreter::interpretFile(std::string fname)
 						bytes.push_back(sub);
 						line.erase(0, pos + 1);
 					}
-					if (line.length() == 3) {
+					if (line.length() == 3)
+					{
 						line = line + "0";
 					}
 					bytes.push_back(line);
 					//std::cout << line << "\n";
-					// TODO: remove \ when \\ 
-					if (bytes.size() > 1) {
+					// TODO: remove "\" when "\\"
+					if (bytes.size() > 1)
+					{
 						for (size_t i = 1; i < bytes.size(); i++)
 						{
 							commands->executeCommand(bytes[0], bytes[i]);
@@ -97,14 +111,17 @@ void Interpreter::interpretFile(std::string fname)
 					}
 				}
 			}
-			else {
+			else
+			{
 				std::cout << std::endl;
 			}
 		}
-		catch (ERRORCODES e) {
+		catch (ERRORCODES e)
+		{
 			//throw ERR_INTERPRET;
 		}
-		catch (...) {
+		catch (...)
+		{
 			std::cerr << "Unexpected Error occured whlie Parsing input text file" << std::endl;
 			throw ERR_INTERPRET;
 		}

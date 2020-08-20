@@ -8,8 +8,8 @@
 - DR formula
 
 
-Interpret:
-- "NA" --> Text mit Wert ausgeben
+## Possible bugs
+- DR IFS Größenordnung prüfen
 
 ## Neues Zeug
 - muss getestet werden:
