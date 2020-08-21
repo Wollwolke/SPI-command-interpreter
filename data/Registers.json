@@ -1112,7 +1112,7 @@
                 "SDR7": {
                     "highlight": "32",
                     "isfunc": true,
-                    "ipret": "Data rate in bps is ",
+                    "ipret": "Data rate in bps is",
                     "iwith": {
                         "IFS": ["CLOCK:IFS"],
                         "SDR": ["SDR7", "SDR6", "SDR5", "SDR4", "SDR3", "SDR2", "SDR1", "SDR0"]
@@ -1126,7 +1126,7 @@
                 "CHN7": {
                     "highlight": "31",
                     "isfunc": true,
-                    "ipret": "frequency in MHz ",
+                    "ipret": "Frequency in MHz",
                     "iwith": {
                         "CHN": ["CHN7", "CHN6", "CHN5", "CHN4", "CHN3", "CHN2", "CHN1", "CHN0"],
                         "CHR": ["PLL2:CHR3", "PLL2:CHR2", "PLL2:CHR1", "PLL2:CHR0"],
@@ -1370,7 +1370,7 @@
                 },
                 "PDL2": {
                     "isfunc": true,
-                    "ipret": "TX delay for settling from PLL to WPLL in us i set to",
+                    "ipret": "TX delay for settling from PLL to WPLL in us is set to",
                     "iwith": {
                         "PDL": ["PDL2", "PDL1", "PDL0"],
                         "DPR": ["DPR2", "DPR1", "DPR0"]
@@ -1524,7 +1524,7 @@
             "ibitsw": {
                 "DCD1": {
                     "isfunc": true,
-                    "ipret": "VCO deviation calibration delay is",
+                    "ipret": "VCO deviation calibration delay is set to",
                     "iwith": {
                         "DCD": ["DCD1", "DCD0"]
                     },

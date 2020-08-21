@@ -37,35 +37,33 @@ class Interpreter:
             for line in lines:
                 readBytes = []
                 line = line.rstrip("\n").rstrip("\r\n")
-                if not line == "":
-                    if line[0] == "#":
-                        print("\x1B[90m", line, "\x1B[37m")
-                    else:
-                        splits = line.split(" ")
-                        for split in splits:
-                            if len(split) == 3:
-                                split = split + "0"
-                            readBytes.append(split)
+                print("\x1B[90m", line, "\x1B[0m", sep="")
+                if not line == "" and not line[0] == "#":
+                    splits = line.split(" ")
+                    for split in splits:
+                        if len(split) == 3:
+                            split = split + "0"
+                        readBytes.append(split)
 
-                        if len(readBytes) > 1:
-                            for x in range(1, len(readBytes)):
-                                self.commands.executeCommand(readBytes[0], readBytes[x])
-                                print(
-                                    self.commands.interpret(
-                                        self.jsonFile["interpret"], readBytes[0]
-                                    )
-                                )
-                        else:
+                    if len(readBytes) > 1:
+                        for x in range(1, len(readBytes)):
+                            self.commands.executeCommand(readBytes[0], readBytes[x])
                             print(
                                 self.commands.interpret(
                                     self.jsonFile["interpret"], readBytes[0]
-                                )
+                                ),
+                                end="",
                             )
-                else:
-                    pass
-                    # print("\n")
+                    else:
+                        print(
+                            self.commands.interpret(
+                                self.jsonFile["interpret"], readBytes[0]
+                            ),
+                            end="",
+                        )
+                    print()
         except utils.ERR_FATAL as e:
             raise utils.ERR_INTERPRET(
-                "Unexpected Error occured while Parsing input text file"
+                "Unexpected Error occurred while Parsing input text file"
             )
 
