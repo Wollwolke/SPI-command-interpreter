@@ -2,6 +2,7 @@
 #include "exprtk.hpp"
 #include "utils.h"
 #include <iostream>
+#include <Windows.h>
 
 Commands::Commands(Registers *reg, const nlohmann::json &config)
 {
@@ -29,7 +30,7 @@ Commands::Commands(Registers *reg, const nlohmann::json &config)
 	}
 }
 
-std::string Commands::interpret(nlohmann::json &jconfig, std::string hexcmd)
+void Commands::interpret(nlohmann::json &jconfig, std::string hexcmd)
 {
 	if (cmds.count(hexcmd) == 0)
 	{
@@ -39,11 +40,11 @@ std::string Commands::interpret(nlohmann::json &jconfig, std::string hexcmd)
 	Command *cmdPtr = cmds[hexcmd];
 	try
 	{
-		return cmdPtr->interpret(jconfig);
+		cmdPtr->interpret(jconfig);
 	}
 	catch (ERRORCODES e)
 	{
-		throw;
+		throw e;
 	}
 }
 
@@ -66,52 +67,49 @@ void Commands::executeCommand(std::string cmd, std::string data)
 			}
 			catch (ERRORCODES e)
 			{
-				throw;
+				throw e;
 			}
 		}
 	}
 }
 
-std::string Commands::Command::interpret(nlohmann::json &config)
+void Commands::Command::interpret(nlohmann::json &config)
 {
-	return std::string();
+	return;
 }
 
 Commands::Command::Command(bool strobe, Registers *reg) : isstrobe(strobe), reg(reg) {}
 
 Commands::StrobeCommand::StrobeCommand(std::string ilogic, Registers *reg) : interpretation(ilogic), Command(true, reg) {}
 
-std::string Commands::StrobeCommand::interpret(nlohmann::json &config)
+void Commands::StrobeCommand::interpret(nlohmann::json &config)
 {
-	return "\x1B[37m" + interpretation + "\n";
+	std::cout << interpretation << "\n";
 }
 
 Commands::RegCommand::RegCommand(bool isread, std::string name, Registers *reg) : isread(isread), registername(name), Command(false, reg) {}
 
-std::string Commands::RegCommand::interpret(nlohmann::json &config)
+void Commands::RegCommand::interpret(nlohmann::json &config)
 {
 	try
 	{
 		auto jsonptr = config.at("interpret").at(registername);
 
-		std::string out = "";
-
 		if (jsonptr.contains("ibits"))
 		{
-			out += interpretRegisters(jsonptr.at("ibits"));
+			interpretRegisters(jsonptr.at("ibits"));
 		}
 		else
 		{
 			if (jsonptr.contains("ibitsw") && !isread)
 			{
-				out += interpretRegisters(jsonptr.at("ibitsw"));
+				interpretRegisters(jsonptr.at("ibitsw"));
 			}
 			if (jsonptr.contains("ibitsr") && isread)
 			{
-				out += interpretRegisters(jsonptr.at("ibitsr"));
+				interpretRegisters(jsonptr.at("ibitsr"));
 			}
 		}
-		return out;
 	}
 	catch (nlohmann::json::exception e)
 	{
@@ -120,32 +118,37 @@ std::string Commands::RegCommand::interpret(nlohmann::json &config)
 	}
 	catch (ERRORCODES e)
 	{
-		throw;
+		throw e;
 	}
 }
 
-std::string Commands::RegCommand::interpretRegisters(nlohmann::json &ibits)
+void Commands::RegCommand::interpretRegisters(nlohmann::json &ibits)
 {
-	std::string result = "";
+	HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
 	try
 	{
 		for (auto &bit : ibits)
 		{
 			if (bit.contains("highlight"))
 			{
-				result += "\x1B[";
-				result += bit.at("highlight");
-				result += "m";
+				std::string colorval = bit.at("highlight");
+				int color = std::stoi(colorval);
+				SetConsoleTextAttribute(hConsole, (color%13)+1);
+				//result += "\x1B[";
+				//result += bit.at("highlight");
+				//result += "m";
 			}
 			if (bit.at("isfunc"))
 			{
-				result += interpretFunction(bit) + "\n";
+				std::cout << interpretFunction(bit) + "\n";
+				SetConsoleTextAttribute(hConsole, 15);
 			}
 			else
 			{
-				result += interpretBits(bit) + "\n";
+				std::cout << interpretBits(bit) + "\n";
+				SetConsoleTextAttribute(hConsole, 15);
 			}
-			result += "\x1B[37m";
+			//std::cout << result;
 		}
 	}
 	catch (nlohmann::json::exception e)
@@ -155,9 +158,8 @@ std::string Commands::RegCommand::interpretRegisters(nlohmann::json &ibits)
 	}
 	catch (ERRORCODES e)
 	{
-		throw;
+		throw e;
 	}
-	return result;
 }
 
 std::string Commands::RegCommand::interpretBits(nlohmann::json &ibit)
@@ -203,7 +205,7 @@ std::string Commands::RegCommand::interpretBits(nlohmann::json &ibit)
 	}
 	catch (ERRORCODES e)
 	{
-		throw;
+		throw e;
 	}
 }
 

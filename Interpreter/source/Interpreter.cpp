@@ -3,6 +3,7 @@
 #include <fstream>
 #include <iostream>
 #include <list>
+#include <Windows.h>
 
 Interpreter::Interpreter(std::string confName)
 {
@@ -98,19 +99,18 @@ void Interpreter::interpretFile(std::string fname)
 					bytes.push_back(line);
 					//std::cout << line << "\n";
 					// TODO: remove "\" when "\\"
-					
 					std::cout << "\n" << line << "\n";
 					if (bytes.size() > 1)
 					{
 						for (size_t i = 1; i < bytes.size(); i++)
 						{
 							commands->executeCommand(bytes[0], bytes[i]);
-							std::cout <<  commands->interpret(jconfig, bytes.front());
+							commands->interpret(jconfig, bytes.front());
 						}
 					}
 					else
 					{
-						std::cout << commands->interpret(jconfig, bytes.front());
+						commands->interpret(jconfig, bytes.front());
 					}
 				}
 			}
