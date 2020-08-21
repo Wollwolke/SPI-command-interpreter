@@ -50,7 +50,6 @@ class Interpreter:
                         if len(readBytes) > 1:
                             for x in range(1, len(readBytes)):
                                 self.commands.executeCommand(readBytes[0], readBytes[x])
-                                # TODO: reicht das print nicht nur einmal?
                                 print(
                                     self.commands.interpret(
                                         self.jsonFile["interpret"], readBytes[0]
