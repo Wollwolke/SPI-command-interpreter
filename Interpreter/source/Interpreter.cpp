@@ -123,7 +123,7 @@ void Interpreter::interpretFile(std::string fname)
 				std::cout << std::endl;
 			}
 		}
-		catch (ERRORCODES e)
+		catch (ERRORCODES)
 		{
 			//throw ERR_INTERPRET;
 		}
