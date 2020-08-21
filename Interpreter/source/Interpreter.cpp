@@ -55,6 +55,8 @@ Interpreter::Interpreter(std::string confName)
 
 void Interpreter::interpretFile(std::string fname)
 {
+	HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
+	SetConsoleMode(hConsole, 7);
 	std::ifstream file(fname);
 	if (file.fail())
 	{

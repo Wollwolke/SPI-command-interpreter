@@ -3,17 +3,18 @@
 #include <string>
 #include <Windows.h>
 
-int main()
+int main(int argc, char* argv[])
 {
 	try
 	{
-		/*HANDLE han = GetStdHandle(STD_OUTPUT_HANDLE);
-
-		for (size_t i = 0; i < 100; i++)
-		{
-			SetConsoleTextAttribute(han, i);
-			std::cout << i << " test\n";
-		}*/
+		//HANDLE han = GetStdHandle(STD_OUTPUT_HANDLE);
+		//SetConsoleMode(han, 7);
+		//SetConsoleTextAttribute(han, 15);
+		//for (size_t i = 30; i < 40; i++)
+		//{
+		//	//SetConsoleTextAttribute(han, i);
+		//	std::cout << "\x1B[" << i << "m" << i << " test\n";
+		//}
 		auto interpreter = Interpreter("../data/Registers.json");
 		interpreter.interpretFile("../data/presenter1/B01_power_on.txt");
 		interpreter.interpretFile("../data/presenter1/A02_button_up.txt");

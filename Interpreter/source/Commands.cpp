@@ -124,31 +124,33 @@ void Commands::RegCommand::interpret(nlohmann::json &config)
 
 void Commands::RegCommand::interpretRegisters(nlohmann::json &ibits)
 {
-	HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
+	/*HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
+	SetConsoleMode(hConsole, 7);*/
 	try
 	{
 		for (auto &bit : ibits)
 		{
+			std::string result = "";
 			if (bit.contains("highlight"))
 			{
-				std::string colorval = bit.at("highlight");
+				/*std::string colorval = bit.at("highlight");
 				int color = std::stoi(colorval);
-				SetConsoleTextAttribute(hConsole, (color%13)+1);
-				//result += "\x1B[";
-				//result += bit.at("highlight");
-				//result += "m";
+				SetConsoleTextAttribute(hConsole, (color%13)+1);*/
+				result += "\x1B[";
+				result += bit.at("highlight");
+				result += "m\x1B[1m";
 			}
 			if (bit.at("isfunc"))
 			{
-				std::cout << interpretFunction(bit) + "\n";
-				SetConsoleTextAttribute(hConsole, 15);
+				result += interpretFunction(bit) + "\x1B[37m\n";
+				//SetConsoleTextAttribute(hConsole, 15);
 			}
 			else
 			{
-				std::cout << interpretBits(bit) + "\n";
-				SetConsoleTextAttribute(hConsole, 15);
+				result += interpretBits(bit) + "\x1B[37m\n";
+				//SetConsoleTextAttribute(hConsole, 15);
 			}
-			//std::cout << result;
+			std::cout << result;
 		}
 	}
 	catch (nlohmann::json::exception e)
