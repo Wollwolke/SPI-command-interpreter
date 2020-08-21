@@ -18,13 +18,17 @@ int main(int argc, char* argv[])
 	else {
 		auto interpreter = Interpreter("./data/Registers.json");
 		try {
-			for (size_t i = 1; i < argc; i++)
+			for (int i = 1; i < argc; i++)
 			{
 				interpreter.interpretFile(argv[i]);
 			}
 		}
-		catch (ERRORCODES){}
+		catch (ERRORCODES){
+		}
 	}
+
+	std::cout << "\npress any key to continue";
+	std::cin.get();
 
 	//try
 	//{
