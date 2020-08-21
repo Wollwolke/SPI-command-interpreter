@@ -856,24 +856,26 @@
         },
         "FIFOD": {
             "ibitsw": {
-                "FIFO7": {
-                    "isfunc": false,
-                    "iwith": ["FIFO7", "FIFO6", "FIFO5", "FIFO4", "FIFO3", "FIFO2", "FIFO1", "FIFO0"],
-                    "ipret": {
-                        "NA": "Wrote to FIFO"
-                    }
+              "FIFO7": {
+                "highlight": "36",
+                "isfunc": false,
+                "iwith": [ "FIFO7", "FIFO6", "FIFO5", "FIFO4", "FIFO3", "FIFO2", "FIFO1", "FIFO0" ],
+                "ipret": {
+                  "NA": "Wrote to FIFO"
                 }
+              }
             }
         },
         "IDD": {
             "ibitsw": {
-                "ID7": {
-                    "isfunc": false,
-                    "iwith": ["ID7", "ID6", "ID5", "ID4", "ID3", "ID2", "ID1", "ID0"],
-                    "ipret": {
-                        "NA": "Wrote Syncword"
-                    }
+              "ID7": {
+                "highlight": "33",
+                "isfunc": false,
+                "iwith": [ "ID7", "ID6", "ID5", "ID4", "ID3", "ID2", "ID1", "ID0" ],
+                "ipret": {
+                  "NA": "Wrote Syncword (ID Code)"
                 }
+              }
             }
         },
         "RCOSC1": {
@@ -1107,15 +1109,16 @@
         },
         "DR": {
             "ibits": {
-                "SDR7": {
-                    "isfunc": true,
-                    "ipret": "Data rate in bps is ",
-                    "iwith": {
-                        "IFS": ["CLOCK:IFS"],
-                        "SDR": ["SDR7", "SDR6", "SDR5", "SDR4", "SDR3", "SDR2", "SDR1", "SDR0"]
-                    },
-                    "func": "16000000/(8*(4-3*IFS)*(SDR+1))"
-                }
+              "SDR7": {
+                "highlight": "32",
+                "isfunc": true,
+                "ipret": "Data rate in bps is ",
+                "iwith": {
+                  "IFS": [ "CLOCK:IFS" ],
+                  "SDR": [ "SDR7", "SDR6", "SDR5", "SDR4", "SDR3", "SDR2", "SDR1", "SDR0" ]
+                },
+                "func": "16000000/(8*(4-3*IFS)*(SDR+1))"
+              }
             }
         },
         "PLL1": {
@@ -1414,22 +1417,24 @@
                         "1": "Matches Code is enabled"
                     }
                 },
-                "WHTS": {
-                    "isfunc": false,
-                    "iwith": ["WHTS"],
-                    "ipret": {
-                        "0": "Data whitening(data encryption) is disabled",
-                        "1": "Data whitening(data encryption) is enabled"
-                    }
-                },
-                "FECS": {
-                    "isfunc": false,
-                    "iwith": ["FECS"],
-                    "ipret": {
-                        "0": "FEC is disabled",
-                        "1": "FEC is enabled"
-                    }
-                },
+              "WHTS": {
+                "highlight": "35",
+                "isfunc": false,
+                "iwith": [ "WHTS" ],
+                "ipret": {
+                  "0": "Data whitening(data encryption) is disabled",
+                  "1": "Data whitening(data encryption) is enabled"
+                }
+              },
+              "FECS": {
+                "highlight": "35",
+                "isfunc": false,
+                "iwith": [ "FECS" ],
+                "ipret": {
+                  "0": "FEC is disabled",
+                  "1": "FEC is enabled"
+                }
+              },
                 "CRCS": {
                     "isfunc": false,
                     "iwith": ["CRCS"],
