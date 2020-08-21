@@ -170,26 +170,7 @@ std::string Commands::RegCommand::interpretBits(nlohmann::json &ibit)
 	try
 	{
 		std::vector<std::string> ibits = ibit.at("iwith");
-		auto pos = 0;
-		for (auto bit : ibits)
-		{
-			pos = 0;
-			if ((pos = bit.find(":")) != std::string::npos)
-			{
-				try
-				{
-					currentbitseq += std::to_string(reg->readBit(bit.substr(0, pos), bit.substr(pos + 1, std::string::npos)));
-				}
-				catch (std::out_of_range)
-				{
-					std::cerr << "Error Namespace expression in JSON file interpret bits is invalid" << std::endl;
-				}
-			}
-			else
-			{
-				currentbitseq += std::to_string(reg->readBit(registername, bit));
-			}
-		}
+		generateBitString(ibits, currentbitseq);
 		if (ibit.at("ipret").contains("NA"))
 		{
 			//TODO: exceptions...
@@ -208,6 +189,30 @@ std::string Commands::RegCommand::interpretBits(nlohmann::json &ibit)
 	catch (ERRORCODES e)
 	{
 		throw e;
+	}
+}
+
+void Commands::RegCommand::generateBitString(std::vector<std::string>& ibits, std::string& currentbitseq)
+{
+	auto pos = 0;
+	for (auto bit : ibits)
+	{
+		pos = 0;
+		if ((pos = bit.find(":")) != std::string::npos)
+		{
+			try
+			{
+				currentbitseq += std::to_string(reg->readBit(bit.substr(0, pos), bit.substr(pos + 1, std::string::npos)));
+			}
+			catch (std::out_of_range)
+			{
+				std::cerr << "Error Namespace expression in JSON file interpret bits is invalid" << std::endl;
+			}
+		}
+		else
+		{
+			currentbitseq += std::to_string(reg->readBit(registername, bit));
+		}
 	}
 }
 
@@ -238,25 +243,7 @@ std::string Commands::RegCommand::interpretFunction(nlohmann::json &ifunc)
 double Commands::RegCommand::intFromRegisters(std::vector<std::string> ibits)
 {
 	std::string currentbitseq = "";
-	for (auto bit : ibits)
-	{
-		int pos = 0;
-		if ((pos = bit.find(":")) != std::string::npos)
-		{
-			try
-			{
-				currentbitseq += std::to_string(reg->readBit(bit.substr(0, pos), bit.substr(pos + 1, std::string::npos)));
-			}
-			catch (std::out_of_range)
-			{
-				std::cerr << "Error Namespace expression in JSON file interpret bits is invalid" << std::endl;
-			}
-		}
-		else
-		{
-			currentbitseq += std::to_string(reg->readBit(registername, bit));
-		}
-	}
+	generateBitString(ibits, currentbitseq);
 	double res = std::stol(currentbitseq, nullptr, 2);
 	return res;
 }

@@ -55,8 +55,10 @@ Interpreter::Interpreter(std::string confName)
 
 void Interpreter::interpretFile(std::string fname)
 {
+	// configure Console to accept ansi esc sequences
 	HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
 	SetConsoleMode(hConsole, 7);
+
 	std::ifstream file(fname);
 	if (file.fail())
 	{

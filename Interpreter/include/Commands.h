@@ -34,6 +34,7 @@ protected:
 	private:
 		void interpretRegisters(nlohmann::json& ibits);
 		std::string interpretBits(nlohmann::json& ibit);
+		void generateBitString(std::vector<std::string>& ibits, std::string& currentbitseq);
 		std::string interpretFunction(nlohmann::json& ifunc);
 		double intFromRegisters(std::vector<std::string> a);
 		//std::string createBitS(std::string[] iwith);
