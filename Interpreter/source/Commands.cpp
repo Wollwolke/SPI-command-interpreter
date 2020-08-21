@@ -133,11 +133,9 @@ std::string Commands::RegCommand::interpretRegisters(nlohmann::json &ibits)
 		{
 			if (bit.contains("highlight"))
 			{
-				result += "\x1B[31m";
-			}
-			else
-			{
-				result += "\x1B[37m";
+				result += "\x1B[";
+				result += bit.at("highlight");
+				result += "m";
 			}
 			if (bit.at("isfunc"))
 			{
@@ -147,6 +145,7 @@ std::string Commands::RegCommand::interpretRegisters(nlohmann::json &ibits)
 			{
 				result += interpretBits(bit) + "\n";
 			}
+			result += "\x1B[37m";
 		}
 	}
 	catch (nlohmann::json::exception e)

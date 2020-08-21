@@ -73,7 +73,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
     <IncludePath>$(SolutionDir)/include;$(SolutionDir)/libs;$(IncludePath)</IncludePath>
-    <SourcePath>$(VC_SourcePath);$(SolutionDir)/source</SourcePath>
+    <SourcePath>$(VC_SourcePath);</SourcePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
@@ -144,19 +144,21 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="src\Commands.cpp" />
-    <ClCompile Include="src\Interpreter.cpp" />
-    <ClCompile Include="src\main.cpp" />
-    <ClCompile Include="src\Registers.cpp" />
-  </ItemGroup>
-  <ItemGroup>
     <ClInclude Include="inc\Commands.h" />
     <ClInclude Include="inc\Interpreter.h" />
     <ClInclude Include="inc\Registers.h" />
     <ClInclude Include="inc\utils.h" />
+    <ClInclude Include="resource.h" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="..\data\Registers.json" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="source\Commands.cpp" />
+    <ClCompile Include="source\Interpreter.cpp" />
+    <ClCompile Include="source\main.cpp" />
+    <ClCompile Include="source\Registers.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -75,10 +75,11 @@ void Interpreter::interpretFile(std::string fname)
 			{
 				if (line.at(0) == '#')
 				{
-					std::cout << "Comment found" << std::endl;
+					std::cout << "Comment found: " << line << std::endl;
 				}
 				else
 				{
+					//std::cout << "\n" << line << "\n";
 					size_t pos = 0;
 					while ((pos = line.find(" ")) != std::string::npos)
 					{
@@ -97,12 +98,14 @@ void Interpreter::interpretFile(std::string fname)
 					bytes.push_back(line);
 					//std::cout << line << "\n";
 					// TODO: remove "\" when "\\"
+					
+					std::cout << "\n" << line << "\n";
 					if (bytes.size() > 1)
 					{
 						for (size_t i = 1; i < bytes.size(); i++)
 						{
 							commands->executeCommand(bytes[0], bytes[i]);
-							std::cout << commands->interpret(jconfig, bytes.front());
+							std::cout <<  commands->interpret(jconfig, bytes.front());
 						}
 					}
 					else

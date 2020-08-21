@@ -1121,7 +1121,7 @@
         "PLL1": {
             "ibits": {
                 "CHN7": {
-                    "highlight": true,
+                    "highlight": "31",
                     "isfunc": true,
                     "ipret": "frequency in MHz ",
                     "iwith": {
