@@ -25,7 +25,7 @@ Commands::Commands(Registers *reg, const nlohmann::json &config)
 	catch (nlohmann::json::exception e)
 	{
 		std::cerr << "Error while creating Command Objects from JSON" << std::endl;
-		throw ERR_JSONPARSER_CMD;
+		throw ERRORCODES::ERR_JSONPARSER_CMD;
 	}
 }
 
@@ -34,7 +34,7 @@ std::string Commands::interpret(nlohmann::json &jconfig, std::string hexcmd)
 	if (cmds.count(hexcmd) == 0)
 	{
 		std::cerr << "Tried to interpret unknown command " << hexcmd << std::endl;
-		throw ERR_INTERPRET;
+		throw ERRORCODES::ERR_INTERPRET;
 	}
 	Command *cmdPtr = cmds[hexcmd];
 	try
@@ -52,7 +52,7 @@ void Commands::executeCommand(std::string cmd, std::string data)
 	if (cmds.count(cmd) == 0)
 	{
 		std::cerr << "Tried to execute unknown command " << cmd << std::endl;
-		throw ERR_EXECUTE_CMD;
+		throw ERRORCODES::ERR_EXECUTE_CMD;
 	}
 	Command *cmdPtr = cmds[cmd];
 	if (!cmdPtr->isstrobe)
@@ -116,7 +116,7 @@ std::string Commands::RegCommand::interpret(nlohmann::json &config)
 	catch (nlohmann::json::exception e)
 	{
 		std::cerr << "Error failed to load interpretation bits from JSON file - missing registername " << registername << std::endl;
-		throw ERR_INTERPRET;
+		throw ERRORCODES::ERR_INTERPRET;
 	}
 	catch (ERRORCODES e)
 	{
@@ -151,7 +151,7 @@ std::string Commands::RegCommand::interpretRegisters(nlohmann::json &ibits)
 	catch (nlohmann::json::exception e)
 	{
 		std::cerr << "Error Parsing isfunc flag in JSON File " << registername << std::endl;
-		throw ERR_INTERPRET;
+		throw ERRORCODES::ERR_INTERPRET;
 	}
 	catch (ERRORCODES e)
 	{
@@ -199,7 +199,7 @@ std::string Commands::RegCommand::interpretBits(nlohmann::json &ibit)
 	catch (nlohmann::json::exception)
 	{
 		std::cerr << "Error parsing bit interpretation in JSON file at " << registername << std::endl;
-		throw ERR_INTERPRET;
+		throw ERRORCODES::ERR_INTERPRET;
 	}
 	catch (ERRORCODES e)
 	{

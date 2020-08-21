@@ -13,9 +13,8 @@ int main()
 		interpreter.interpretFile("../data/presenter1/B04_button_tab.txt");
 		interpreter.interpretFile("../data/presenter1/B05_button_enter.txt");
 	}
-	catch (ERRORCODES e)
-	{
-	}
+	catch (ERRORCODES)
+	{}
 	/*std::string test = "\033[1;31mhi\033[0m";
 	std::cout << test << std::endl;*/
 }

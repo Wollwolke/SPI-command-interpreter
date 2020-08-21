@@ -1,6 +1,6 @@
 #pragma once
 
-enum ERRORCODES {
+enum class ERRORCODES {
 	ERR_EXECUTE_CMD,
 	ERR_REGISTER,
 	ERR_JSONPARSER_REGISTER,

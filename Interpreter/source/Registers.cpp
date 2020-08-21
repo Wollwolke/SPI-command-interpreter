@@ -23,11 +23,11 @@ Registers::Registers(const nlohmann::json &jfile)
 	catch (nlohmann::json::exception e)
 	{
 		std::cerr << "Error at parsing json file to create Registers Object" << std::endl;
-		throw ERR_JSONPARSER_REGISTER;
+		throw ERRORCODES::ERR_JSONPARSER_REGISTER;
 	}
 	catch (ERRORCODES e)
 	{
-		throw ERR_JSONPARSER_REGISTER;
+		throw ERRORCODES::ERR_JSONPARSER_REGISTER;
 	}
 }
 
@@ -36,7 +36,7 @@ int Registers::readBit(std::string registername, std::string bitname)
 	if (regMap.count(registername) == 0)
 	{
 		std::cerr << "Tried to read nonexistent bit at " << registername << std::endl;
-		throw ERR_INTERPRET;
+		throw ERRORCODES::ERR_INTERPRET;
 	}
 	try
 	{
@@ -61,7 +61,7 @@ void Registers::writeByte(std::string registername, std::string hex)
 	if (regMap.count(registername) == 0)
 	{
 		std::cerr << "Tried to write nonexistent byte at " << registername << std::endl;
-		throw ERR_EXECUTE_CMD;
+		throw ERRORCODES::ERR_EXECUTE_CMD;
 	}
 	auto *registerP = regMap[registername];
 	registerP->writeRegister(bits);
@@ -81,7 +81,7 @@ Registers::Register::Register(std::vector<std::string> wNames, std::vector<std::
 	catch (std::out_of_range e)
 	{
 		std::cerr << "Error mismatched dimensions while creating Register with" << std::endl;
-		throw ERR_REGISTER;
+		throw ERRORCODES::ERR_REGISTER;
 	}
 };
 
@@ -101,7 +101,7 @@ int Registers::Register::readBit(std::string name)
 		return erg;
 	}
 	std::cerr << "Error trying to read Bit at " << name << std::endl;
-	throw ERR_INTERPRET;
+	throw ERRORCODES::ERR_INTERPRET;
 }
 
 Registers::~Registers()

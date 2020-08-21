@@ -24,10 +24,7 @@
     <ClInclude Include="inc\Registers.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="inc\utils.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="resource.h">
+    <ClInclude Include="include\utils.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

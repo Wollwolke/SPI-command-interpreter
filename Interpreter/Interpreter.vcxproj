@@ -144,11 +144,10 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="include\utils.h" />
     <ClInclude Include="inc\Commands.h" />
     <ClInclude Include="inc\Interpreter.h" />
     <ClInclude Include="inc\Registers.h" />
-    <ClInclude Include="inc\utils.h" />
-    <ClInclude Include="resource.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="..\data\Registers.json" />

@@ -10,7 +10,7 @@ Interpreter::Interpreter(std::string confName)
 	if (file.fail())
 	{
 		std::cerr << "Error while opening JSON file " << confName << std::endl;
-		throw ERR_FATAL;
+		throw ERRORCODES::ERR_FATAL;
 	}
 	nlohmann::json jfile;
 	try
@@ -21,7 +21,7 @@ Interpreter::Interpreter(std::string confName)
 	catch (...)
 	{
 		std::cerr << "ERROR while creating JSON file object" << std::endl;
-		throw ERR_FATAL;
+		throw ERRORCODES::ERR_FATAL;
 	}
 	if (file.is_open())
 	{
@@ -35,19 +35,19 @@ Interpreter::Interpreter(std::string confName)
 	}
 	catch (ERRORCODES e)
 	{
-		if (e == ERR_JSONPARSER_REGISTER)
+		if (e == ERRORCODES::ERR_JSONPARSER_REGISTER)
 		{
 			std::cerr << "Error while creating Registers from JSON file" << std::endl;
-			throw ERR_FATAL;
+			throw ERRORCODES::ERR_FATAL;
 		}
-		else if (e == ERR_JSONPARSER_CMD)
+		else if (e == ERRORCODES::ERR_JSONPARSER_CMD)
 		{
 			std::cerr << "Error while creating Commands from JSON file" << std::endl;
-			throw ERR_FATAL;
+			throw ERRORCODES::ERR_FATAL;
 		}
 		else
 		{
-			throw ERR_INTERPRET;
+			throw ERRORCODES::ERR_INTERPRET;
 		}
 	}
 }
@@ -58,7 +58,7 @@ void Interpreter::interpretFile(std::string fname)
 	if (file.fail())
 	{
 		std::cerr << "Error while opening file " << fname << std::endl;
-		throw ERR_INTERPRET;
+		throw ERRORCODES::ERR_INTERPRET;
 	}
 	std::string line;
 	while (std::getline(file, line))
@@ -126,7 +126,7 @@ void Interpreter::interpretFile(std::string fname)
 		catch (...)
 		{
 			std::cerr << "Unexpected Error occured while Parsing input text file" << std::endl;
-			throw ERR_INTERPRET;
+			throw ERRORCODES::ERR_INTERPRET;
 		}
 	}
 }
