@@ -5,8 +5,9 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 project(Interpreter)
 
-file(GLOB_RECURSE source src/*.cpp)
-include_directories(${CMAKE_SOURCE_DIR}/libs)
+file(GLOB_RECURSE source source/*.cpp)
+
+include_directories(${CMAKE_SOURCE_DIR}/libs ${CMAKE_SOURCE_DIR}/include)
 
 include(FetchContent)
 

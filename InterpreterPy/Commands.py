@@ -42,15 +42,16 @@ class Commands:
             result = ""
             try:
                 for key, bit in ibits.items():
-                    if "highlight" in bit and bit["highlight"] == True:
-                        result += "\x1B[31m"
+                    if "highlight" in bit:
+                        color = bit["highlight"]
+                        result += f"\x1B[{color}m\x1B[1m"
 
                     if bit["isfunc"] == True:
                         result += self.interpretFunction(bit) + "\n"
                     else:
                         result += self.interpretBits(bit) + "\n"
 
-                    result += "\x1B[37m"
+                    result += "\x1B[0m"
                 return result
             except KeyError:
                 raise utils.ERR_INTERPRET(
