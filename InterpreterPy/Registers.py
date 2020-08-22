@@ -15,7 +15,6 @@ class Registers:
                 return self.values[self.rNames.index(bitname)]
             if bitname in self.wNames:
                 return self.values[self.wNames.index(bitname)]
-            # TODO: hier ist eigentlich was im txt file kaputt
             raise utils.ERR_REGISTER(f"Error trying to read bit {bitname}")
 
         def writeRegister(self, byteString):
@@ -32,9 +31,7 @@ class Registers:
                 reg = self.Register(value["r"], value["w"], value["values"])
                 self.regMap.update({name: reg})
             except KeyError:
-                raise utils.ERR_JSONPARSER_REGISTER(
-                    "Error at parsing json file to create Registers Object"
-                )
+                raise utils.ERR_JSONPARSER_REGISTER(f"{value}")
 
     def readBit(self, registername, bitname):
         if registername not in self.regMap:

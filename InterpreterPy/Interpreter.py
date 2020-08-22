@@ -14,17 +14,21 @@ class Interpreter:
         except IOError:
             raise utils.ERR_FATAL(f"Error while opening JSON file {confFile}")
         except ValueError:
-            raise utils.ERR_FATAL("Error while decoding JSON file")
+            raise utils.ERR_FATAL(f"Error while parsing JSON file {confFile}")
 
         try:
             self.registers = Registers.Registers(self.jsonFile["registers"])
             self.commands = Commands.Commands(self.registers, self.jsonFile["commands"])
-        except utils.ERR_JSONPARSER_REGISTER:
-            raise utils.ERR_FATAL("Error while creating Registers from JSON file")
-        except utils.ERR_JSONPARSER_CMD:
-            raise utils.ERR_FATAL("Error while creating Commands from JSON file")
+        except KeyError as ex:
+            raise utils.ERR_FATAL(f"Error while parsing JSON file at key: {ex}")
+        except utils.ERR_JSONPARSER_REGISTER as ex:
+            raise utils.ERR_FATAL(
+                f"Error while creating Registers from JSON File: {ex}"
+            )
+        except utils.ERR_JSONPARSER_CMD as ex:
+            raise utils.ERR_FATAL(f"Error while creating Commands from JSON File: {ex}")
         except utils.Error:
-            raise utils.ERR_INTERPRET("")
+            raise
 
     def interpretFile(self, fname):
         try:

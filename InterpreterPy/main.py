@@ -37,8 +37,8 @@ def main():
         interpreter = Interpreter.Interpreter(args.config)
         for file in args.dataFile:
             interpreter.interpretFile(file)
-    except Exception as e:
-        print(e)
+    except Exception as ex:
+        print(f"An {type(ex).__name__} Exception occured:\n{ex}")
 
 
 if __name__ == "__main__":

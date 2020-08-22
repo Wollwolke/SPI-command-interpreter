@@ -20,9 +20,9 @@ class Commands:
             self.registername = registername
 
         def interpret(self, config):
-            config = config[self.registername]
             out = ""
             try:
+                config = config[self.registername]
                 if "ibits" in config:
                     out += self.interpretRegisters(config["ibits"])
                 else:
@@ -33,7 +33,7 @@ class Commands:
                 return out
             except KeyError:
                 raise utils.ERR_INTERPRET(
-                    f"Failed to load interpretation bits from JSON file - missing registername{self.registername}"
+                    f"Failed to load interpretation bits from JSON file - missing registername {self.registername}"
                 )
             except utils.Error:
                 raise
@@ -93,26 +93,41 @@ class Commands:
 
         def interpretFunction(self, ibit):
             symbols = {}
-            for key, value in ibit["iwith"].items():
-                symbols.update({key: self.intFromRegisters(value)})
+            try:
+                for key, value in ibit["iwith"].items():
+                    symbols.update({key: self.intFromRegisters(value)})
 
-            symbolTable = cexprtk.Symbol_Table(symbols, add_constants=True)
+                symbolTable = cexprtk.Symbol_Table(symbols, add_constants=True)
 
-            expression = cexprtk.Expression(ibit["func"], symbolTable)
+                try:
+                    expression = cexprtk.Expression(ibit["func"], symbolTable)
+                except cexprtk.ParseException:
+                    raise utils.ERR_INTERPRET(f"Error parsing Function in {ibit}")
 
-            return ibit["ipret"] + " " + str(expression())
+                return ibit["ipret"] + " " + str(expression())
+            except KeyError:
+                raise utils.ERR_INTERPRET(
+                    f"Error parsing intepretation in JSON File at {self.registername}"
+                )
+            except utils.Error:
+                raise
 
         def intFromRegisters(self, ibits):
             currentBitSeq = ""
 
             for bit in ibits:
                 pos = bit.find(":")
-                if pos is not -1:
-                    currentBitSeq += str(
-                        self.registers.readBit(bit[:pos], bit[pos + 1 :])
-                    )
-                else:
-                    currentBitSeq += str(self.registers.readBit(self.registername, bit))
+                try:
+                    if pos is not -1:
+                        currentBitSeq += str(
+                            self.registers.readBit(bit[:pos], bit[pos + 1 :])
+                        )
+                    else:
+                        currentBitSeq += str(
+                            self.registers.readBit(self.registername, bit)
+                        )
+                except utils.Error:
+                    raise
 
             return int(currentBitSeq, 2)
 
@@ -136,9 +151,7 @@ class Commands:
                     )
                 self.cmds[command["hex"]] = cmd
         except KeyError:
-            raise utils.ERR_JSONPARSER_CMD(
-                "Error while creating Command Objects from JSON File"
-            )
+            raise utils.ERR_JSONPARSER_CMD(f"{command}")
 
     def interpret(self, interpret, hexcmd):
         if hexcmd not in self.cmds:
