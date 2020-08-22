@@ -1,0 +1,2239 @@
+{
+    "registers": {
+        "Reg1": {
+            "name": "ADC",
+            "values": [1, 0, 0, 0, 1, 1, 0, 0],
+            "r": ["ADC7", "ADC6", "ADC5", "ADC4", "ADC3", "ADC2", "ADC1", "ADC0"],
+            "w": ["AVSEL1", "AVSEL0", "RADC", "FSARS", "MVSEL1", "MVSEL0", "XADS", "CDM"]
+        },
+        "Reg2": {
+            "name": "DELAY2",
+            "values": [0, 1, 0, 0, 0, -1, 0, 0],
+            "r": ["NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA"],
+            "w": ["WSEL2", "WSEL1", "WSEL0", "RGC1", "RGC0", "NA", "WOTS1", "WOTS0"]
+        },
+        "Reg3": {
+            "name": "MODE",
+            "values": [-1, -1, -1, -1, -1, -1, -1, -1],
+            "r": ["NA", "NA", "NA", "CER", "XER", "PLLER", "TRSR", "TRER"],
+            "w": ["RESETN", "RESETN", "RESETN", "RESETN", "RESETN", "RESETN", "RESETN", "RESETN"]
+        },
+        "Reg4": {
+            "name": "MODEC",
+            "values": [0, -1, -1, -1, 0, -1, 0, 0],
+            "r": ["DDPC", "NA", "NA", "SPSS", "WOTE", "NA", "FMS", "ADCM"],
+            "w": ["DDPC", "NA", "NA", "SPSS", "WOTE", "NA", "FMS", "ADCM"]
+        },
+        "Reg5": {
+            "name": "CALC",
+            "values": [-1, -1, -1, 0, 0, 0, -1, -1],
+            "r": ["NA", "NA", "NA", "VCC", "VBC", "VDC", "NA", "NA"],
+            "w": ["NA", "NA", "NA", "VCC", "VBC", "VDC", "NA", "NA"]
+        },
+        "Reg6": {
+            "name": "FIFO1",
+            "values": [0, 0, 1, 1, 1, 1, 1, 1],
+            "r": ["NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA"],
+            "w": ["FEP7", "FEP6", "FEP5", "FEP4", "FEP3", "FEP2", "FEP1", "FEP0"]
+        },
+        "Reg7": {
+            "name": "FIFO2",
+            "values": [0, 1, 0, 0, 0, 0, 0, 0],
+            "r": ["NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA"],
+            "w": ["FPM1", "FPM0", "PSA5", "PSA4", "PSA3", "PSA2", "PSA1", "PSA0"]
+        },
+        "Reg8": {
+            "name": "FIFOD",
+            "values": [0, 0, 0, 0, 0, 0, 0, 0],
+            "r": ["NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA"],
+            "w": ["FIFO7", "FIFO6", "FIFO5", "FIFO4", "FIFO3", "FIFO2", "FIFO1", "FIFO0"]
+        },
+        "Reg9": {
+            "name": "IDD",
+            "values": [0, 0, 0, 0, 0, 0, 0, 0],
+            "r": ["NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA"],
+            "w": ["ID7", "ID6", "ID5", "ID4", "ID3", "ID2", "ID1", "ID0"]
+        },
+        "Reg10": {
+            "name": "RCOSC1",
+            "values": [0, 0, 0, 0, 0, 0, 0, 0],
+            "r": ["NA", "RCOC6", "RCOC5", "RCOC4", "RCOC3", "RCOC2", "RCOC1", "RCOC0"],
+            "w": ["WOT_SL7", "WOT_SL6", "WOT_SL5", "WOT_SL4", "WOT_SL3", "WOT_SL2", "WOT_SL1", "WOT_SL0"]
+        },
+        "Reg11": {
+            "name": "RCOSC2",
+            "values": [0, 0, 0, 0, 0, 0, 0, 1],
+            "r": ["NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA"],
+            "w": ["WOT_SL9", "WOT_SL8", "WOT_AC5", "WOT_AC4", "WOT_AC3", "WOT_AC2", "WOT_AC1", "WOT_AC0"]
+        },
+        "Reg12": {
+            "name": "RCOSC3",
+            "values": [0, 0, 0, 1, 1, 1, 0, 1],
+            "r": ["NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA"],
+            "w": ["BBCKS1", "BBCKS0", "RCOT1", "RCOT0", "CALW", "RCOSC_E", "TSEL", "TWOT_E"]
+        },
+        "Reg13": {
+            "name": "CKO",
+            "values": [1, 0, 1, 1, 0, 0, 1, 0],
+            "r": ["NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA"],
+            "w": ["DDCKOE", "CKOS3", "CKOS2", "CKOS1", "CKOS0", "CKOI", "CKOE", "SCKI"]
+        },
+        "Reg14": {
+            "name": "GPIO1",
+            "values": [-1, -1, 0, 0, 0, 0, 0, 1],
+            "r": ["NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA"],
+            "w": ["NA", "NA", "GIO1S3", "GIO1S2", "GIO1S1", "GIO1S0", "GIO1I", "GIO1OE"]
+        },
+        "Reg15": {
+            "name": "CLOCK",
+            "values": [0, 1, 0, 1, 1, 1, 1, 1],
+            "r": ["IFS", "CSC", "GRC3", "GRC2", "GRC1", "GRC0", "CGS", "XS"],
+            "w": ["IFS", "CSC", "GRC3", "GRC2", "GRC1", "GRC0", "CGS", "XS"]
+        },
+        "Reg16": {
+            "name": "DR",
+            "values": [0, 0, 0, 0, 0, 0, 0, 0],
+            "r": ["SDR7", "SDR6", "SDR5", "SDR4", "SDR3", "SDR2", "SDR1", "SDR0"],
+            "w": ["SDR7", "SDR6", "SDR5", "SDR4", "SDR3", "SDR2", "SDR1", "SDR0"]
+        },
+        "Reg17": {
+            "name": "PLL1",
+            "values": [0, 0, 0, 0, 0, 0, 0, 0],
+            "r": ["CHN7", "CHN6", "CHN5", "CHN4", "CHN3", "CHN2", "CHN1", "CHN0"],
+            "w": ["CHN7", "CHN6", "CHN5", "CHN4", "CHN3", "CHN2", "CHN1", "CHN0"]
+        },
+        "Reg18": {
+            "name": "PLL2",
+            "values": [0, 0, 1, 0, 1, 1, 1, 0],
+            "r": ["DBL", "RRC1", "RRC0", "CHR3", "CHR2", "CHR1", "CHR0", "IP8"],
+            "w": ["DBL", "RRC1", "RRC0", "CHR3", "CHR2", "CHR1", "CHR0", "BIP8"]
+        },
+        "Reg19": {
+            "name": "PLL3",
+            "values": [1, 0, 0, 1, 0, 1, 0, 0],
+            "r": ["BIP7", "BIP6", "BIP5", "BIP4", "BIP3", "BIP2", "BIP1", "BIP0"],
+            "w": ["IP7", "IP6", "IP5", "IP4", "IP3", "IP2", "IP1", "IP0"]
+        },
+        "Reg20": {
+            "name": "PLL4",
+            "values": [0, 0, 0, 0, 0, 0, 0, 0],
+            "r": ["FP15", "FP14", "FP13", "FP12", "FP11", "FP10", "FP9", "FP8"],
+            "w": ["BFP15", "BFP14", "BFP13", "BFP12", "BFP11", "BFP10", "BFP9", "BFP8"]
+        },
+        "Reg21": {
+            "name": "PLL5",
+            "values": [0, 0, 0, 0, 0, 1, 0, 0],
+            "r": ["FP7", "FP6", "FP5", "FP4", "FP3", "FP2", "FP1", "FP0"],
+            "w": ["BFP7", "BFP6", "BFP5", "BFP4", "BFP3", "BFP2", "BFP1", "BFP0"]
+        },
+        "Reg22": {
+            "name": "CHG1",
+            "values": [0, 0, 1, 1, 1, 1, 0, 0],
+            "r": ["CHGL7", "CHGL6", "CHGL5", "CHGL4", "CHGL3", "CHGL2", "CHGL1", "CHGL0"],
+            "w": ["CHGL7", "CHGL6", "CHGL5", "CHGL4", "CHGL3", "CHGL2", "CHGL1", "CHGL0"]
+        },
+        "Reg23": {
+            "name": "CHG2",
+            "values": [0, 1, 1, 1, 1, 0, 0, 0],
+            "r": ["CHGH7", "CHGH6", "CHGH5", "CHGH4", "CHGH3", "CHGH2", "CHGH1", "CHGH0"],
+            "w": ["CHGH7", "CHGH6", "CHGH5", "CHGH4", "CHGH3", "CHGH2", "CHGH1", "CHGH0"]
+        },
+        "Reg24": {
+            "name": "TX1",
+            "values": [-1, 1, 0, 1, 0, 1, 1, 0],
+            "r": ["NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA"],
+            "w": ["NA", "TMDE", "TXDI", "TME", "FS", "FDP2", "FDP1", "FDP0"]
+        },
+        "Reg25": {
+            "name": "TX2",
+            "values": [1, 1, 0, 0, 0, 0, 0, 0],
+            "r": ["NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA"],
+            "w": ["FD7", "FD6", "FD5", "FD4", "FD3", "FD2", "FD1", "FD0"]
+        },
+        "Reg26": {
+            "name": "DELAY1",
+            "values": [0, 0, 0, 1, 0, 0, 1, 0],
+            "r": ["NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA"],
+            "w": ["DPR2", "DPR1", "DPR0", "TDL1", "TDL0", "PDL2", "PDL1", "PDL0"]
+        },
+        "Reg27": {
+            "name": "CODE1",
+            "values": [0, 0, 0, 0, 0, 1, 1, 1],
+            "r": ["NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA"],
+            "w": ["MCS", "WHTS", "FECS", "CRCS", "IDL1", "IDL0", "PML1", "PML0"]
+        },
+        "Reg28": {
+            "name": "CODE2",
+            "values": [-1, 0, 1, 0, 1, 0, 1, 0],
+            "r": ["NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA"],
+            "w": ["HWCKS", "WS6", "WS5", "WS4", "WS3", "WS2", "WS1", "WS0"]
+        },
+        "Reg29": {
+            "name": "VOCC",
+            "values": [-1, -1, 1, 0, 1, 1, 0, 0],
+            "r": ["NA", "NA", "NA", "VCCF", "VCB3", "VCB2", "VCB1", "VCB0"],
+            "w": ["NA", "NA", "VCCS", "MVCS", "VCOC3", "VCOC2", "VCOC1", "VCOC0"]
+        },
+        "Reg30": {
+            "name": "VCOBC1",
+            "values": [1, 1, 0, -1, 0, 1, 0, 0],
+            "r": ["NA", "NA", "NA", "NA", "VBCF", "VB2", "VB1", "VB0"],
+            "w": ["DCD1", "DCD0", "DAGS", "DMGS", "MVBS", "MVB2", "MVB1", "MVB0"]
+        },
+        "Reg31": {
+            "name": "VCOBC2",
+            "values": [1, 0, 0, 0, 0, 0, 0, 0],
+            "r": ["ADAG7", "ADAG6", "ADAG5", "ADAG4", "ADAG3", "ADAG2", "ADAG1", "ADAG0"],
+            "w": ["MDAG7", "MDAG6", "MDAG5", "MDAG4", "MDAG3", "MDAG2", "MDAG1", "MDAG0"]
+        },
+        "Reg32": {
+            "name": "VCODC1",
+            "values": [0, 1, 1, 1, 0, 0, 0, 0],
+            "r": ["DEVA7", "DEVA6", "DEVA5", "DEVA4", "DEVA3", "DEVA2", "DEVA1", "DEVA0"],
+            "w": ["DEVS3", "DEVS2", "DEVS1", "DEVS0", "DAMR_M", "VMTE_M", "VMS_M", "MSEL"]
+        },
+        "Reg33": {
+            "name": "VCODC2",
+            "values": [0, 0, 1, 0, 1, 0, 0, 0],
+            "r": ["ADEV7", "ADEV6", "ADEV5", "ADEV4", "ADEV3", "ADEV2", "ADEV1", "ADEV0"],
+            "w": ["MVDS", "MDEV6", "MDEV5", "MDEV4", "MDEV3", "MDEV2", "MDEV1", "MDEV0"]
+        },
+        "Reg34": {
+            "name": "VCODC3",
+            "values": [1, 0, 0, 0, 0, 0, 0, 0],
+            "r": ["VMG7", "VMG6", "VMG5", "VMG4", "VMG3", "VMG2", "VMG1", "VMG0"],
+            "w": ["VMG7", "VMG6", "VMG5", "VMG4", "VMG3", "VMG2", "VMG1", "VMG0"]
+        },
+        "Reg35": {
+            "name": "VCOMD",
+            "values": [0, 0, 0, 0, 0, 0, 0, 0],
+            "r": ["NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA"],
+            "w": ["MDEN", "CMV", "DEVFD2", "DEVFD1", "DEVFD0", "DEVD2", "DEVD1", "DEVD0"]
+        },
+        "Reg36": {
+            "name": "BD",
+            "values": [0, 1, 0, 0, 0, 1, 1, 0],
+            "r": ["RGS", "RGV1", "RGV0", "BDF", "BVT2", "BVT1", "BVT0", "BD_E"],
+            "w": ["RGS", "RGV1", "RGV0", "LVR", "BVT2", "BVT1", "BVT0", "BD_E"]
+        },
+        "Reg37": {
+            "name": "TXT",
+            "values": [0, 0, 0, 1, 0, 1, 1, 1],
+            "r": ["NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA"],
+            "w": ["TXSM1", "TXSM0", "TXCS", "PAC1", "PAC0", "TBG2", "TBG1", "TBG0"]
+        },
+        "Reg38": {
+            "name": "CPC",
+            "values": [1, 1, 1, 1, 1, 1, 1, 1],
+            "r": ["NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA"],
+            "w": ["CPM3", "CPM2", "CPM1", "CPM0", "CPT3", "CPT2", "CPT1", "CPT0"]
+        },
+        "Reg39": {
+            "name": "XTLT",
+            "values": [0, 0, 0, 0, 0, 1, 0, 1],
+            "r": ["NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA"],
+            "w": ["VRPL1", "VRPL0", "INTXC", "INTPRC", "DBD", "XCC", "XCP1", "XCP0"]
+        },
+        "Reg40": {
+            "name": "PLLT",
+            "values": [1, 1, 0, 0, 0, 1, 0, 1],
+            "r": ["NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA"],
+            "w": ["CPH", "CPS", "PRRC1", "PRRC0", "PRIC1", "PRIC0", "SDPW", "NSDO"]
+        },
+        "Reg41": {
+            "name": "VCOT",
+            "values": [0, 1, 0, 1, 1, 0, 0, 0],
+            "r": ["NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA"],
+            "w": ["OLM", "SDMS", "VTBS", "TLB1", "TLB0", "RSIS", "ROSCS", "VBHC"]
+        },
+        "Reg42": {
+            "name": "CHS",
+            "values": [-1, -1, -1, -1, 0, 1, 0, 0],
+            "r": ["NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA"],
+            "w": ["XADPS", "RFT2", "RFT1", "RFT0", "CHD3", "CHD2", "CHD1", "CHD0"]
+        },
+        "Reg43": {
+            "name": "VRB",
+            "values": [0, 0, 0, 0, 0, 0, 0, 0],
+            "r": ["NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA"],
+            "w": ["VTRB3", "VTRB2", "VTRB1", "VTRB0", "VMRB3", "VMRB2", "VMRB1", "VMRB0"]
+        },
+        "Reg44": {
+            "name": "RTX",
+            "values": [0, 0, 0, 0, 0, 0, 0, 0],
+            "r": ["NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA"],
+            "w": ["QDS", "TRT2", "TRT1", "TRT0", "ASMV2", "ASMV1", "ASMV0", "AMVS"]
+        },
+        "Reg45": {
+            "name": "INTS",
+            "values": [0, 0, 0, 1, 0, 0, 0, 0],
+            "r": ["NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA"],
+            "w": ["CELS", "PWORS", "STS", "IXTLS4", "IXTLS3", "IXTLS2", "IXTLS1", "IXTLS0"]
+        }
+    },
+    "commands": {
+        "cmd1": {
+            "hex": "0x80",
+            "isstrobe": true,
+            "logic": "Entered Sleep Mode"
+        },
+        "cmd2": {
+            "hex": "0x90",
+            "isstrobe": true,
+            "logic": "Entered Idle Mode"
+        },
+        "cmd3": {
+            "hex": "0xA0",
+            "isstrobe": true,
+            "logic": "Entered Standby Mode"
+        },
+        "cmd4": {
+            "hex": "0xB0",
+            "isstrobe": true,
+            "logic": "Entered PLL Mode"
+        },
+        "cmd5": {
+            "hex": "0xD0",
+            "isstrobe": true,
+            "logic": "Entered TX Mode"
+        },
+        "cmd6": {
+            "hex": "0xE0",
+            "isstrobe": true,
+            "logic": "FIFO Write pointer reset"
+        },
+        "cmd7": {
+            "hex": "0xF0",
+            "isstrobe": true,
+            "logic": "FIFO Read pointer reset"
+        },
+        "cmd8": {
+            "hex": "0x40",
+            "isstrobe": false,
+            "isread": true,
+            "registername": "MODE"
+        },
+        "cmd9": {
+            "hex": "0x00",
+            "isstrobe": false,
+            "isread": false,
+            "registername": "MODE"
+        },
+        "cmd10": {
+            "hex": "0x41",
+            "isstrobe": false,
+            "isread": true,
+            "registername": "MODEC"
+        },
+        "cmd11": {
+            "hex": "0x01",
+            "isstrobe": false,
+            "isread": false,
+            "registername": "MODEC"
+        },
+        "cmd12": {
+            "hex": "0x42",
+            "isstrobe": false,
+            "isread": true,
+            "registername": "CALC"
+        },
+        "cmd13": {
+            "hex": "0x02",
+            "isstrobe": false,
+            "isread": false,
+            "registername": "CALC"
+        },
+        "cmd15": {
+            "hex": "0x03",
+            "isstrobe": false,
+            "isread": false,
+            "registername": "FIFO1"
+        },
+        "cmd17": {
+            "hex": "0x04",
+            "isstrobe": false,
+            "isread": false,
+            "registername": "FIFO2"
+        },
+        "cmd19": {
+            "hex": "0x05",
+            "isstrobe": false,
+            "isread": false,
+            "registername": "FIFOD"
+        },
+        "cmd21": {
+            "hex": "0x06",
+            "isstrobe": false,
+            "isread": false,
+            "registername": "IDD"
+        },
+        "cmd22": {
+            "hex": "0x47",
+            "isstrobe": false,
+            "isread": true,
+            "registername": "RCOSC1"
+        },
+        "cmd23": {
+            "hex": "0x07",
+            "isstrobe": false,
+            "isread": false,
+            "registername": "RCOSC1"
+        },
+        "cmd25": {
+            "hex": "0x08",
+            "isstrobe": false,
+            "isread": false,
+            "registername": "RCOSC2"
+        },
+        "cmd27": {
+            "hex": "0x09",
+            "isstrobe": false,
+            "isread": false,
+            "registername": "RCOSC3"
+        },
+        "cmd29": {
+            "hex": "0x0A",
+            "isstrobe": false,
+            "isread": false,
+            "registername": "CKO"
+        },
+        "cmd31": {
+            "hex": "0x0B",
+            "isstrobe": false,
+            "isread": false,
+            "registername": "GPIO1"
+        },
+        "cmd32": {
+            "hex": "0x4C",
+            "isstrobe": false,
+            "isread": true,
+            "registername": "CLOCK"
+        },
+        "cmd33": {
+            "hex": "0x0C",
+            "isstrobe": false,
+            "isread": false,
+            "registername": "CLOCK"
+        },
+        "cmd34": {
+            "hex": "0x4D",
+            "isstrobe": false,
+            "isread": true,
+            "registername": "DR"
+        },
+        "cmd35": {
+            "hex": "0x0D",
+            "isstrobe": false,
+            "isread": false,
+            "registername": "DR"
+        },
+        "cmd36": {
+            "hex": "0x4E",
+            "isstrobe": false,
+            "isread": true,
+            "registername": "PLL1"
+        },
+        "cmd37": {
+            "hex": "0x0E",
+            "isstrobe": false,
+            "isread": false,
+            "registername": "PLL1"
+        },
+        "cmd38": {
+            "hex": "0x4F",
+            "isstrobe": false,
+            "isread": true,
+            "registername": "PLL2"
+        },
+        "cmd39": {
+            "hex": "0x0F",
+            "isstrobe": false,
+            "isread": false,
+            "registername": "PLL2"
+        },
+        "cmd40": {
+            "hex": "0x50",
+            "isstrobe": false,
+            "isread": true,
+            "registername": "PLL3"
+        },
+        "cmd41": {
+            "hex": "0x10",
+            "isstrobe": false,
+            "isread": false,
+            "registername": "PLL3"
+        },
+        "cmd42": {
+            "hex": "0x51",
+            "isstrobe": false,
+            "isread": true,
+            "registername": "PLL4"
+        },
+        "cmd43": {
+            "hex": "0x11",
+            "isstrobe": false,
+            "isread": false,
+            "registername": "PLL4"
+        },
+        "cmd44": {
+            "hex": "0x52",
+            "isstrobe": false,
+            "isread": true,
+            "registername": "PLL5"
+        },
+        "cmd45": {
+            "hex": "0x12",
+            "isstrobe": false,
+            "isread": false,
+            "registername": "PLL5"
+        },
+        "cmd46": {
+            "hex": "0x53",
+            "isstrobe": false,
+            "isread": true,
+            "registername": "CHG1"
+        },
+        "cmd47": {
+            "hex": "0x13",
+            "isstrobe": false,
+            "isread": false,
+            "registername": "CHG1"
+        },
+        "cmd48": {
+            "hex": "0x54",
+            "isstrobe": false,
+            "isread": true,
+            "registername": "CHG2"
+        },
+        "cmd49": {
+            "hex": "0x14",
+            "isstrobe": false,
+            "isread": false,
+            "registername": "CHG2"
+        },
+        "cmd51": {
+            "hex": "0x15",
+            "isstrobe": false,
+            "isread": false,
+            "registername": "TX1"
+        },
+        "cmd53": {
+            "hex": "0x16",
+            "isstrobe": false,
+            "isread": false,
+            "registername": "TX2"
+        },
+        "cmd55": {
+            "hex": "0x17",
+            "isstrobe": false,
+            "isread": false,
+            "registername": "DELAY1"
+        },
+        "cmd57": {
+            "hex": "0x18",
+            "isstrobe": false,
+            "isread": false,
+            "registername": "DELAY2"
+        },
+        "cmd58": {
+            "hex": "0x59",
+            "isstrobe": false,
+            "isread": true,
+            "registername": "ADC"
+        },
+        "cmd59": {
+            "hex": "0x19",
+            "isstrobe": false,
+            "isread": false,
+            "registername": "ADC"
+        },
+        "cmd61": {
+            "hex": "0x1A",
+            "isstrobe": false,
+            "isread": false,
+            "registername": "CODE1"
+        },
+        "cmd63": {
+            "hex": "0x1B",
+            "isstrobe": false,
+            "isread": false,
+            "registername": "CODE2"
+        },
+        "cmd64": {
+            "hex": "0x5C",
+            "isstrobe": false,
+            "isread": true,
+            "registername": "VOCC"
+        },
+        "cmd65": {
+            "hex": "0x1C",
+            "isstrobe": false,
+            "isread": false,
+            "registername": "VOCC"
+        },
+        "cmd66": {
+            "hex": "0x5D",
+            "isstrobe": false,
+            "isread": true,
+            "registername": "VCOBC1"
+        },
+        "cmd67": {
+            "hex": "0x1D",
+            "isstrobe": false,
+            "isread": false,
+            "registername": "VCOBC1"
+        },
+        "cmd68": {
+            "hex": "0x5E",
+            "isstrobe": false,
+            "isread": true,
+            "registername": "VCOBC2"
+        },
+        "cmd69": {
+            "hex": "0x1E",
+            "isstrobe": false,
+            "isread": false,
+            "registername": "VCOBC2"
+        },
+        "cmd70": {
+            "hex": "0x5F",
+            "isstrobe": false,
+            "isread": true,
+            "registername": "VCODC1"
+        },
+        "cmd71": {
+            "hex": "0x1F",
+            "isstrobe": false,
+            "isread": false,
+            "registername": "VCODC1"
+        },
+        "cmd72": {
+            "hex": "0x60",
+            "isstrobe": false,
+            "isread": true,
+            "registername": "VCODC2"
+        },
+        "cmd73": {
+            "hex": "0x20",
+            "isstrobe": false,
+            "isread": false,
+            "registername": "VCODC2"
+        },
+        "cmd74": {
+            "hex": "0x61",
+            "isstrobe": false,
+            "isread": true,
+            "registername": "VCODC3"
+        },
+        "cmd75": {
+            "hex": "0x21",
+            "isstrobe": false,
+            "isread": false,
+            "registername": "VCODC3"
+        },
+        "cmd77": {
+            "hex": "0x22",
+            "isstrobe": false,
+            "isread": false,
+            "registername": "VCOMD"
+        },
+        "cmd78": {
+            "hex": "0x63",
+            "isstrobe": false,
+            "isread": true,
+            "registername": "BD"
+        },
+        "cmd79": {
+            "hex": "0x23",
+            "isstrobe": false,
+            "isread": false,
+            "registername": "BD"
+        },
+        "cmd81": {
+            "hex": "0x24",
+            "isstrobe": false,
+            "isread": false,
+            "registername": "TXT"
+        },
+        "cmd83": {
+            "hex": "0x25",
+            "isstrobe": false,
+            "isread": false,
+            "registername": "CPC"
+        },
+        "cmd85": {
+            "hex": "0x26",
+            "isstrobe": false,
+            "isread": false,
+            "registername": "XTLT"
+        },
+        "cmd87": {
+            "hex": "0x27",
+            "isstrobe": false,
+            "isread": false,
+            "registername": "PLLT"
+        },
+        "cmd89": {
+            "hex": "0x28",
+            "isstrobe": false,
+            "isread": false,
+            "registername": "VCOT"
+        },
+        "cmd91": {
+            "hex": "0x29",
+            "isstrobe": false,
+            "isread": false,
+            "registername": "CHS"
+        },
+        "cmd93": {
+            "hex": "0x2A",
+            "isstrobe": false,
+            "isread": false,
+            "registername": "VRB"
+        },
+        "cmd95": {
+            "hex": "0x2B",
+            "isstrobe": false,
+            "isread": false,
+            "registername": "RTX"
+        },
+        "cmd97": {
+            "hex": "0x2C",
+            "isstrobe": false,
+            "isread": false,
+            "registername": "INTS"
+        }
+    },
+    "interpret": {
+        "MODE": {
+            "ibitsr": {
+                "CER": {
+                    "isfunc": false,
+                    "iwith": ["CER"],
+                    "ipret": {
+                        "0": "RF Chip is disabled",
+                        "1": "RF Chip is enabled"
+                    }
+                },
+                "XER": {
+                    "isfunc": false,
+                    "iwith": ["XER"],
+                    "ipret": {
+                        "0": "Internal Chrystal Oscillator is disabled",
+                        "1": "Internal Chrystal Oscillator is enabled"
+                    }
+                },
+                "PLLER": {
+                    "isfunc": false,
+                    "iwith": ["PLLER"],
+                    "ipret": {
+                        "0": "PLL is disabled",
+                        "1": "PLL is enabled"
+                    }
+                },
+                "TRSR": {
+                    "isfunc": false,
+                    "iwith": ["TRSR"],
+                    "ipret": {
+                        "0": "TRX status Register not in TX state",
+                        "1": "TRX status Register in TX state"
+                    }
+                },
+                "TRER": {
+                    "isfunc": false,
+                    "iwith": ["TRER"],
+                    "ipret": {
+                        "0": "TRX is disabled",
+                        "1": "TRX is enabled"
+                    }
+                }
+            },
+            "ibitsw": {
+                "RESETN": {
+                    "isfunc": false,
+                    "iwith": ["RESETN"],
+                    "ipret": {
+                        "0": "Reset Command sent",
+                        "1": "Undefined command for mode register"
+                    }
+                }
+            }
+        },
+        "MODEC": {
+            "ibits": {
+                "DDPC": {
+                    "isfunc": false,
+                    "iwith": ["DDPC"],
+                    "ipret": {
+                        "0": "Direct mode modem data can not be received via SDIO",
+                        "1": "Direct mode modem data can be received via SDIO"
+                    }
+                },
+                "WOTE": {
+                    "isfunc": false,
+                    "iwith": ["WOTE"],
+                    "ipret": {
+                        "0": "Wake on TX is disabled",
+                        "1": "Wake on TX is enabled"
+                    }
+                },
+                "FMS": {
+                    "isfunc": false,
+                    "iwith": ["FMS"],
+                    "ipret": {
+                        "0": "Direct Mode",
+                        "1": "FIFO mode"
+                    }
+                },
+                "ADCM": {
+                    "isfunc": false,
+                    "iwith": ["ADCM"],
+                    "ipret": {
+                        "0": "ADC measurment diabled or finished",
+                        "1": "ADC measurment enabled"
+                    }
+                }
+            }
+        },
+        "CALC": {
+            "ibits": {
+                "VCC": {
+                    "isfunc": false,
+                    "iwith": ["VCC"],
+                    "ipret": {
+                        "0": "VCO Current Calibration is disabled",
+                        "1": "VCO Current Calibration is enabled"
+                    }
+                },
+                "VBC": {
+                    "isfunc": false,
+                    "iwith": ["VBC"],
+                    "ipret": {
+                        "0": "VBC Bank calibration is disabled",
+                        "1": "VBC Bank calibration is enabled"
+                    }
+                },
+                "VDC": {
+                    "isfunc": false,
+                    "iwith": ["VDC"],
+                    "ipret": {
+                        "0": "VCO deviation calibration is disabled",
+                        "1": "VCO deviation calibration is enabled"
+                    }
+                }
+            }
+        },
+        "FIFO1": {
+            "ibitsw": {
+                "FEP7": {
+                    "isfunc": false,
+                    "iwith": ["FEP7", "FEP6", "FEP5", "FEP4", "FEP3", "FEP2", "FEP1", "FEP0"],
+                    "ipret": {
+                        "NA": "FIFO End Pointer for TX FIFO set to"
+                    }
+                }
+            }
+        },
+        "FIFO2": {
+            "ibitsw": {
+                "FPM1": {
+                    "isfunc": false,
+                    "iwith": ["FPM1", "FPM0"],
+                    "ipret": {
+                        "NA": "FIFO pointer margin set to"
+                    }
+                },
+                "PSA5": {
+                    "isfunc": true,
+                    "ipret": "Segmented FIFO length set to",
+                    "iwith": {
+                        "PSA": ["PSA5", "PSA4", "PSA3", "PSA2", "PSA1", "PSA0"],
+                        "FEP": ["FIFO1:FEP7", "FIFO1:FEP6", "FIFO1:FEP5", "FIFO1:FEP4", "FIFO1:FEP3", "FIFO1:FEP2", "FIFO1:FEP1", "FIFO1:FEP0"]
+                    },
+                    "func": "FEP-PSA+1"
+                }
+            }
+        },
+        "FIFOD": {
+            "ibitsw": {
+                "FIFO7": {
+                    "highlight": "36",
+                    "isfunc": false,
+                    "iwith": ["FIFO7", "FIFO6", "FIFO5", "FIFO4", "FIFO3", "FIFO2", "FIFO1", "FIFO0"],
+                    "ipret": {
+                        "NA": "Wrote to FIFO"
+                    }
+                }
+            }
+        },
+        "IDD": {
+            "ibitsw": {
+                "ID7": {
+                    "highlight": "33",
+                    "isfunc": false,
+                    "iwith": ["ID7", "ID6", "ID5", "ID4", "ID3", "ID2", "ID1", "ID0"],
+                    "ipret": {
+                        "NA": "Wrote Syncword (ID Code)"
+                    }
+                }
+            }
+        },
+        "RCOSC1": {
+            "ibitsw": {
+                "WOT_SL7": {
+                    "isfunc": false,
+                    "iwith": ["RCOSC2:WOT_SL9", "RCOSC2:WOT_SL8", "WOT_SL7", "WOT_SL6", "WOT_SL5", "WOT_SL4", "WOT_SL3", "WOT_SL2", "WOT_SL1", "WOT_SL0"],
+                    "ipret": {
+                        "NA": "Set WOT_SL Timer"
+                    }
+                }
+            },
+            "ibitsr": {
+                "RCOC6": {
+                    "isfunc": false,
+                    "iwith": ["RCOC6", "RCOC5", "RCOC4", "RCOC3", "RCOC2", "RCOC1", "RCOC0"],
+                    "ipret": {
+                        "NA": "Read RC Oscillator Calibration"
+                    }
+                }
+            }
+        },
+        "RCOSC2": {
+            "ibitsw": {
+                "WOT_SL9": {
+                    "isfunc": false,
+                    "iwith": ["WOT_SL9", "WOT_SL8", "RCOSC1:WOT_SL7", "RCOSC1:WOT_SL6", "RCOSC1:WOT_SL5", "RCOSC1:WOT_SL4", "RCOSC1:WOT_SL3", "RCOSC1:WOT_SL2", "RCOSC1:WOT_SL1", "RCOSC1:WOT_SL0"],
+                    "ipret": {
+                        "NA": "Set WOT_SL Timer"
+                    }
+                },
+                "WOT_AC5": {
+                    "isfunc": false,
+                    "iwith": ["WOT_AC5", "WOT_AC4", "WOT_AC3", "WOT_AC2", "WOT_AC1", "WOT_AC0"],
+                    "ipret": {
+                        "NA": "Set WOT_AC Timer"
+                    }
+                }
+            }
+        },
+        "RCOSC3": {
+            "ibitsw": {
+                "BBCKS1": {
+                    "isfunc": false,
+                    "iwith": ["BBCKS1", "BBCKS0"],
+                    "ipret": {
+                        "00": "Set Clock for digital block to F(SYCK)/1",
+                        "01": "Set Clock for digital block to F(SYCK)/2",
+                        "10": "Set Clock for digital block to F(SYCK)/4",
+                        "11": "Set Clock for digital block to F(SYCK)/8"
+                    }
+                },
+                "RCOT1": {
+                    "isfunc": false,
+                    "iwith": ["RCOT1", "RCOT0"],
+                    "ipret": {
+                        "NA": "RC Oscillator current selection"
+                    }
+                },
+                "CALW": {
+                    "isfunc": false,
+                    "iwith": ["CALW"],
+                    "ipret": {
+                        "0": "Disable RC Oscillator calibration",
+                        "1": "Enable RC Oscillator calibration"
+                    }
+                },
+                "RCOSC_E": {
+                    "isfunc": false,
+                    "iwith": ["RCOSC_E"],
+                    "ipret": {
+                        "0": "Disable RC Oscillator",
+                        "1": "Enable RC Oscillator"
+                    }
+                },
+                "TSEL": {
+                    "isfunc": false,
+                    "iwith": ["TSEL"],
+                    "ipret": {
+                        "0": "Use WOT_AC as timer",
+                        "1": "Use WOT_SL as timer"
+                    }
+                },
+                "TWOT_E": {
+                    "isfunc": false,
+                    "iwith": ["TWOT_E"],
+                    "ipret": {
+                        "0": "Disable TWOT",
+                        "1": "Enable TWOT"
+                    }
+                }
+            }
+        },
+        "CKO": {
+            "ibitsw": {
+                "DDCKOE": {
+                    "isfunc": false,
+                    "iwith": ["DDCKOE"],
+                    "ipret": {
+                        "0": "Disable External Clock Output for CKOS",
+                        "1": "Enable External Clock Output for CKOS"
+                    }
+                },
+                "CKOS3": {
+                    "isfunc": false,
+                    "iwith": ["CKOS3", "CKOS2", "CKOS1", "CKOS0"],
+                    "ipret": {
+                        "0000": "Set CKO pin output to: BCK (TX bit clock)",
+                        "0001": "Set CKO pin output to: MRCK (modulation rate)",
+                        "0010": "Set CKO pin output to: FPF (FIFO pointer flag)",
+                        "0011": "Set CKO pin output to: EOP, EOVBC, EOADC, EOVCC, OKADC (Internal usage only)",
+                        "0100": "Set CKO pin output to: External clock output= F(SYCK)/ 2",
+                        "0101": "Set CKO pin output to: External clock output / 2= F(SYCK)/ 4",
+                        "0110": "Set CKO pin output to: External clock output / 4= F(SYCK)/ 8",
+                        "0111": "Set CKO pin output to: External clock output / 8= F(SYCK)/ 16",
+                        "1000": "Set CKO pin output to: WOT clock",
+                        "1001": "Set CKO pin output to: 8 Mhz clock",
+                        "1010": "Set CKO pin output to: Internal ring OSC"
+                    }
+                },
+                "CKOI": {
+                    "isfunc": false,
+                    "iwith": ["CKOI"],
+                    "ipret": {
+                        "0": "Non-inverted CKO output signal",
+                        "1": "Inverted CKO output signal"
+                    }
+                },
+                "CKOE": {
+                    "isfunc": false,
+                    "iwith": ["CKOE"],
+                    "ipret": {
+                        "0": "Disable CKO output (High impedance)",
+                        "1": "Enable CKO output"
+                    }
+                },
+                "SCKI": {
+                    "isfunc": false,
+                    "iwith": ["SCKI"],
+                    "ipret": {
+                        "0": "Non-inverted SPI Clock input signal",
+                        "1": "Inverted SPI Clock input signal"
+                    }
+                }
+            }
+        },
+        "GPIO1": {
+            "ibitsw": {
+                "GIO1S3": {
+                    "isfunc": false,
+                    "iwith": ["GIO1S3", "GIO1S2", "GIO1S1", "GIO1S0"],
+                    "ipret": {
+                        "0000": "Set GPIO1 pin function: WTR (Wait until TX)",
+                        "0001": "Set GPIO1 pin function: EOAC(end of access code)",
+                        "0010": "Set GPIO1 pin function: TMEO(TX modulation enable)",
+                        "0011": "Set GPIO1 pin function: TMEOD (delta sigma TX modulation enable) output",
+                        "0100": "Set GPIO1 pin function: WAK (For TWOT only)",
+                        "0101": "Set GPIO1 pin function: Direct mode data input",
+                        "0110": "Set GPIO1 pin function: SDO (4 wires SPI data out)",
+                        "0111": "Set GPIO1 pin function: Direct mode data input",
+                        "1000": "Set GPIO1 pin function: Internal FPF output",
+                        "1001": "Set GPIO1 pin function: Internal PDN_TX",
+                        "1010": "Set GPIO1 pin function: Data rate output",
+                        "1011": "Set GPIO1 pin function: Reserved, for FIFO mode data output",
+                        "1100": "Set GPIO1 pin function: Reserved",
+                        "1101": "Set GPIO1 pin function: Reserved",
+                        "1110": "Set GPIO1 pin function: Reserved",
+                        "1111": "Set GPIO1 pin function: Reserved"
+                    }
+                },
+                "GIO1I": {
+                    "isfunc": false,
+                    "iwith": ["GIO1I"],
+                    "ipret": {
+                        "0": "Non-inverted GPIO1 output signal ",
+                        "1": "Inverted GPIO1 output signal"
+                    }
+                },
+                "GIO1OE": {
+                    "isfunc": false,
+                    "iwith": ["GIO1OE"],
+                    "ipret": {
+                        "0": "Disable GPIO1 output (High impedance)",
+                        "1": "Enable GPIO1 output"
+                    }
+                }
+            }
+        },
+        "CLOCK": {
+            "ibits": {
+                "IFS": {
+                    "isfunc": false,
+                    "iwith": ["IFS"],
+                    "ipret": {
+                        "0": "Set maximum data rate to 500K bps",
+                        "1": "Set maximum data rate to 2M bps"
+                    }
+                },
+                "CSC": {
+                    "isfunc": false,
+                    "iwith": ["CSC"],
+                    "ipret": {
+                        "0": "Set system clock divider F(CSCK)/1",
+                        "1": "Set system clock divider F(CSCK)/2"
+                    }
+                },
+                "GRC3": {
+                    "isfunc": false,
+                    "iwith": ["GRC3", "GRC2", "GRC1", "GRC0"],
+                    "ipret": {
+                        "NA": "Set Clock generation reference counter"
+                    }
+                },
+                "CGS": {
+                    "isfunc": false,
+                    "iwith": ["CGS"],
+                    "ipret": {
+                        "0": "Disable Clock generator",
+                        "1": "Enable Clock generator"
+                    }
+                },
+                "XS": {
+                    "isfunc": false,
+                    "iwith": ["XS"],
+                    "ipret": {
+                        "0": "Select crystal oscillator: Use external clock",
+                        "1": "Select crystal oscillator: Use internal crystal"
+                    }
+                }
+            }
+        },
+        "DR": {
+            "ibits": {
+                "SDR7": {
+                    "highlight": "32",
+                    "isfunc": true,
+                    "ipret": "Data rate in bps is",
+                    "iwith": {
+                        "IFS": ["CLOCK:IFS"],
+                        "SDR": ["SDR7", "SDR6", "SDR5", "SDR4", "SDR3", "SDR2", "SDR1", "SDR0"]
+                    },
+                    "func": "16000000/(8*(4-3*IFS)*(SDR+1))"
+                }
+            }
+        },
+        "PLL1": {
+            "ibits": {
+                "CHN7": {
+                    "highlight": "31",
+                    "isfunc": true,
+                    "ipret": "Frequency in MHz",
+                    "iwith": {
+                        "CHN": ["CHN7", "CHN6", "CHN5", "CHN4", "CHN3", "CHN2", "CHN1", "CHN0"],
+                        "CHR": ["PLL2:CHR3", "PLL2:CHR2", "PLL2:CHR1", "PLL2:CHR0"],
+                        "BIP": ["PLL2:BIP8", "PLL3:BIP7", "PLL3:BIP6", "PLL3:BIP5", "PLL3:BIP4", "PLL3:BIP3", "PLL3:BIP2", "PLL3:BIP1", "PLL3:BIP0"],
+                        "BFP": ["PLL4:BFP15", "PLL4:BFP14", "PLL4:BFP13", "PLL4:BFP12", "PLL4:BFP11", "PLL4:BFP10", "PLL4:BFP9", "PLL4:BFP8", "PLL5:BFP7", "PLL5:BFP6", "PLL5:BFP5", "PLL5:BFP4", "PLL5:BFP3", "PLL5:BFP2", "PLL5:BFP1", "PLL5:BFP0"],
+                        "DBL": ["PLL2:DBL"],
+                        "RRC": ["PLL2:RRC1", "PLL2:RRC0"]
+                    },
+                    "func": "((DBL+1)*16/(RRC+1)*(BIP+BFP/2^16))+CHN*16*(DBL+1)/4/(CHR+1)"
+                }
+            }
+        },
+        "PLL2": {
+            "ibitsw": {
+                "DBL": {
+                    "isfunc": false,
+                    "iwith": ["DBL"],
+                    "ipret": {
+                        "0": "Set XREF=XTAL",
+                        "1": "Set XREF=2*XTAL"
+                    }
+                },
+                "RRC1": {
+                    "isfunc": false,
+                    "iwith": ["RRC1", "RRC0"],
+                    "ipret": {
+                        "NA": "RF PLL counter setting set to"
+                    }
+                },
+                "CHR3": {
+                    "isfunc": false,
+                    "iwith": ["CHR3", "CHR2", "CHR1", "CHR0"],
+                    "ipret": {
+                        "NA": "PLL channel step setting set to"
+                    }
+                },
+                "BIP8": {
+                    "isfunc": false,
+                    "iwith": ["BIP8", "PLL3:BIP7", "PLL3:BIP6", "PLL3:BIP5", "PLL3:BIP4", "PLL3:BIP3", "PLL3:BIP2", "PLL3:BIP1", "PLL3:BIP0"],
+                    "ipret": {
+                        "NA": "LO base frequency integer part setting set to"
+                    }
+                }
+            },
+            "ibitsr": {
+                "DBL": {
+                    "isfunc": false,
+                    "iwith": ["DBL"],
+                    "ipret": {
+                        "0": "XREF=XTAL",
+                        "1": "XREF=2*XTAL"
+                    }
+                },
+                "RRC1": {
+                    "isfunc": false,
+                    "iwith": ["RRC1", "RRC0"],
+                    "ipret": {
+                        "NA": "RF PLL counter is"
+                    }
+                },
+                "CHR3": {
+                    "isfunc": false,
+                    "iwith": ["CHR3", "CHR2", "CHR1", "CHR0"],
+                    "ipret": {
+                        "NA": "PLL channel step is"
+                    }
+                },
+                "IP8": {
+                    "isfunc": false,
+                    "iwith": ["IP8", "PLL3:IP7", "PLL3:IP6", "PLL3:IP5", "PLL3:IP4", "PLL3:IP3", "PLL3:IP2", "PLL3:IP1", "PLL3:IP0"],
+                    "ipret": {
+                        "NA": "LO base frequency integer part value is"
+                    }
+                }
+            }
+        },
+        "PLL3": {
+            "ibitsw": {
+                "BIP7": {
+                    "isfunc": false,
+                    "iwith": ["PLL2:BIP8", "BIP7", "BIP6", "BIP5", "BIP4", "BIP3", "BIP2", "BIP1", "BIP0"],
+                    "ipret": {
+                        "NA": "LO base frequency integer part setting set to"
+                    }
+                }
+            },
+            "ibitsr": {
+                "IP7": {
+                    "isfunc": false,
+                    "iwith": ["PLL2:IP8", "IP7", "IP6", "IP5", "IP4", "IP3", "IP2", "IP1", "IP0"],
+                    "ipret": {
+                        "NA": "LO base frequency integer part value is"
+                    }
+                }
+            }
+        },
+        "PLL4": {
+            "ibitsw": {
+                "BFP15": {
+                    "isfunc": false,
+                    "iwith": ["BFP14", "BFP13", "BFP12", "BFP11", "BFP10", "BFP9", "BFP8", "PLL5:BFP7", "PLL5:BFP6", "PLL5:BFP5", "PLL5:BFP4", "PLL5:BFP3", "PLL5:BFP2", "PLL5:BFP1", "PLL5:BFP0"],
+                    "ipret": {
+                        "NA": "Low frequency fractional part setting set to"
+                    }
+                }
+            },
+            "ibitsr": {
+                "BFP15": {
+                    "isfunc": false,
+                    "iwith": ["FP14", "FP13", "FP12", "FP11", "FP10", "FP9", "FP8", "PLL5:FP7", "PLL5:FP6", "PLL5:FP5", "PLL5:FP4", "PLL5:FP3", "PLL5:FP2", "PLL5:FP1", "PLL5:FP0"],
+                    "ipret": {
+                        "NA": "Low frequency fractional part setting currently set to"
+                    }
+                }
+            }
+        },
+        "PLL5": {
+            "ibitsw": {
+                "BFP7": {
+                    "isfunc": false,
+                    "iwith": ["PLL4:BFP14", "PLL4:BFP13", "PLL4:BFP12", "PLL4:BFP11", "PLL4:BFP10", "PLL4:BFP9", "PLL4:BFP8", "BFP7", "BFP6", "BFP5", "BFP4", "BFP3", "BFP2", "BFP1", "BFP0"],
+                    "ipret": {
+                        "NA": "Low frequency fractional part setting set to"
+                    }
+                }
+            },
+            "ibitsr": {
+                "BFP15": {
+                    "isfunc": false,
+                    "iwith": ["PLL4:FP14", "PLL4:FP13", "PLL4:FP12", "PLL4:FP11", "PLL4:FP10", "PLL4:FP9", "PLL4:FP8", "FP7", "FP6", "FP5", "FP4", "FP3", "FP2", "FP1", "FP0"],
+                    "ipret": {
+                        "NA": "Low frequency fractional part setting currently set to"
+                    }
+                }
+            }
+        },
+        "CHG1": {
+            "ibits": {
+                "CHGL7": {
+                    "isfunc": false,
+                    "iwith": ["CHGL7", "CHGL6", "CHGL5", "CHGL4", "CHGL3", "CHGL2", "CHGL1", "CHGL0"],
+                    "ipret": {
+                        "NA": "Pll channel group low boundary setting"
+                    }
+                }
+            }
+        },
+        "CHG2": {
+            "ibits": {
+                "CHGH7": {
+                    "isfunc": false,
+                    "iwith": ["CHGH7", "CHGH6", "CHGH5", "CHGH4", "CHGH3", "CHGH2", "CHGH1", "CHGH0"],
+                    "ipret": {
+                        "NA": "Pll channel group high boundary setting"
+                    }
+                }
+            }
+        },
+        "TX1": {
+            "ibitsw": {
+                "TMDE": {
+                    "isfunc": false,
+                    "iwith": ["TMDE"],
+                    "ipret": {
+                        "0": "VCO modulation disabled",
+                        "1": "VCO modulation enabled"
+                    }
+                },
+                "TXDI": {
+                    "isfunc": false,
+                    "iwith": ["TXDI"],
+                    "ipret": {
+                        "0": "Non-inverted TX data",
+                        "1": "Inverted TX data"
+                    }
+                },
+                "TME": {
+                    "isfunc": false,
+                    "iwith": ["TME"],
+                    "ipret": {
+                        "0": "TX modulation disabled",
+                        "1": "TX modulation enabled"
+                    }
+                },
+                "FS": {
+                    "isfunc": false,
+                    "iwith": ["FS"],
+                    "ipret": {
+                        "0": "Gaussian Filter(BT=0.7) disabled",
+                        "1": "Gaussian Filter(BT=0.7) enabled"
+                    }
+                },
+                "FDP2": {
+                    "isfunc": false,
+                    "iwith": ["FDP2", "FDP1", "FDP0"],
+                    "ipret": {
+                        "NA": "Frequency deviation power setting"
+                    }
+                }
+            }
+        },
+        "TX2": {
+            "ibitsw": {
+                "FD7": {
+                    "isfunc": false,
+                    "iwith": ["FD7", "FD6", "FD5", "FD4", "FD3", "FD2", "FD1", "FD0"],
+                    "ipret": {
+                        "NA": "Frequency deviation setting"
+                    }
+                },
+                "FD6": {
+                    "isfunc": true,
+                    "ipret": "TX modulation Frequency(Mhz) is",
+                    "iwith": {
+                        "DBL": ["PLL2:DBL"],
+                        "RRC": ["PLL2:RRC1", "PLL2:RRC0"],
+                        "FDP": ["TX1:FDP2", "TX1:FDP1", "TX1:FDP0"],
+                        "FD": ["FD4", "FD3", "FD2", "FD1", "FD0"]
+                    },
+                    "func": "(16*(DBL+1)/(RRC+1))*127*2^FDP*(FD+1)/2^25"
+                }
+            }
+        },
+        "DELAY1": {
+            "ibitsw": {
+                "DPR2": {
+                    "isfunc": false,
+                    "iwith": ["DPR2", "DPR1", "DPR0"],
+                    "ipret": {
+                        "NA": "Delay scale set to"
+                    }
+                },
+                "TDL1": {
+                    "isfunc": true,
+                    "ipret": "TX delay in us set to",
+                    "iwith": {
+                        "TDL": ["TDL1", "TDL0"],
+                        "DPR": ["DPR2", "DPR1", "DPR0"]
+                    },
+                    "func": "20*(TDL+1)*(DPR+1)"
+                },
+                "PDL2": {
+                    "isfunc": true,
+                    "ipret": "TX delay for settling from PLL to WPLL in us is set to",
+                    "iwith": {
+                        "PDL": ["PDL2", "PDL1", "PDL0"],
+                        "DPR": ["DPR2", "DPR1", "DPR0"]
+                    },
+                    "func": "10+20*(PDL+1)*(DPR+1)"
+                }
+            }
+        },
+        "DELAY2": {
+            "ibitsw": {
+                "WSEL2": {
+                    "isfunc": false,
+                    "iwith": ["WSEL2", "WSEL1", "WSEL0"],
+                    "ipret": {
+                        "000": "XTAL settling delay set to 200us",
+                        "001": "XTAL settling delay set to 400us",
+                        "010": "XTAL settling delay set to 600us",
+                        "011": "XTAL settling delay set to 800us",
+                        "100": "XTAL settling delay set to 1ms",
+                        "101": "XTAL settling delay set to 1,5ms",
+                        "110": "XTAL settling delay set to 2ms",
+                        "111": "XTAL settling delay set to 2,5ms"
+                    }
+                },
+                "WOTS1": {
+                    "isfunc": false,
+                    "iwith": ["WOTS1", "WOTS0"],
+                    "ipret": {
+                        "00": "WOT repeat is set to no repeats",
+                        "01": "WOT repeat is set to one repeat",
+                        "10": "WOT repeat is set to two repeats",
+                        "11": "WOT repeat is set to four repeats"
+                    }
+                }
+            }
+        },
+        "CODE1": {
+            "ibitsw": {
+                "MCS": {
+                    "isfunc": false,
+                    "iwith": ["MCS"],
+                    "ipret": {
+                        "0": "Matches Code is disabled",
+                        "1": "Matches Code is enabled"
+                    }
+                },
+                "WHTS": {
+                    "highlight": "35",
+                    "isfunc": false,
+                    "iwith": ["WHTS"],
+                    "ipret": {
+                        "0": "Data whitening(data encryption) is disabled",
+                        "1": "Data whitening(data encryption) is enabled"
+                    }
+                },
+                "FECS": {
+                    "highlight": "35",
+                    "isfunc": false,
+                    "iwith": ["FECS"],
+                    "ipret": {
+                        "0": "FEC is disabled",
+                        "1": "FEC is enabled"
+                    }
+                },
+                "CRCS": {
+                    "isfunc": false,
+                    "iwith": ["CRCS"],
+                    "ipret": {
+                        "0": "CRC is disabled",
+                        "1": "CRC is enabled"
+                    }
+                },
+                "IDL1": {
+                    "isfunc": false,
+                    "iwith": ["IDL1", "IDL0"],
+                    "ipret": {
+                        "00": "ID code length is set to 1 byte",
+                        "01": "ID code length is set to 2 bytes",
+                        "10": "ID code length is set to 3 bytes",
+                        "11": "ID code length is set to 4 bytes"
+                    }
+                },
+                "PML1": {
+                    "isfunc": false,
+                    "iwith": ["PML1", "PML0"],
+                    "ipret": {
+                        "00": "Preamble length is set to 1 byte",
+                        "01": "Preamble length is set to 2 bytes",
+                        "10": "Preamble length is set to 3 bytes",
+                        "11": "Preamble length is set to 4 bytes"
+                    }
+                }
+            }
+        },
+        "CODE2": {
+            "ibitsw": {
+                "HWCKS": {
+                    "isfunc": false,
+                    "iwith": ["HWCKS"],
+                    "ipret": {
+                        "0": "WOT calibration reference clock is set to 4KHz",
+                        "1": "WOT calibration reference clock is set to 2KHz"
+                    }
+                },
+                "WS6": {
+                    "isfunc": false,
+                    "iwith": ["WS6", "WS5", "WS4", "WS3", "WS2", "WS1", "WS0"],
+                    "ipret": {
+                        "NA": "Data Whitening seed(data encryption key) is set to"
+                    }
+                }
+            }
+        },
+        "VOCC": {
+            "ibitsw": {
+                "MVCS": {
+                    "isfunc": false,
+                    "iwith": ["MVCS"],
+                    "ipret": {
+                        "0": "VCO current calibration set to auto calibration value",
+                        "1": "VCO current calibration set to manual calibration value"
+                    }
+                },
+                "VCOC3": {
+                    "isfunc": false,
+                    "iwith": ["VCOC3", "VCOC2", "VCOC1", "VCOC0"],
+                    "ipret": {
+                        "NA": "VCO current manual calibration value set to"
+                    }
+                }
+            },
+            "ibitsr": {
+                "VCCF": {
+                    "isfunc": false,
+                    "iwith": ["VCCF"],
+                    "ipret": {
+                        "0": "VCO current auto calibration passed",
+                        "1": "VCO current auto calibration failed"
+                    }
+                },
+                "VCB3": {
+                    "isfunc": false,
+                    "iwith": ["VCB3", "VCB2", "VCB1", "VCB0"],
+                    "ipret": {
+                        "NA": "VCO current calibration value is"
+                    }
+                }
+            }
+        },
+        "VCOBC1": {
+            "ibitsw": {
+                "DCD1": {
+                    "isfunc": true,
+                    "ipret": "VCO deviation calibration delay is set to",
+                    "iwith": {
+                        "DCD": ["DCD1", "DCD0"]
+                    },
+                    "func": "DCD+1"
+                },
+                "MVBS": {
+                    "isfunc": false,
+                    "iwith": ["MVBS"],
+                    "ipret": {
+                        "0": "VCO bank calibration is set to auto calibration",
+                        "1": "VCO bank calibration is set to manual calibration"
+                    }
+                },
+                "MVB2": {
+                    "isfunc": false,
+                    "iwith": ["MVB2", "MVB1", "MVB0"],
+                    "ipret": {
+                        "NA": "VCO band manual calibration value set to"
+                    }
+                }
+            },
+            "ibitsr": {
+                "VBCF": {
+                    "isfunc": false,
+                    "iwith": ["VBCF"],
+                    "ipret": {
+                        "0": "VCO bank auto calibration passed",
+                        "1": "VCO bank auto calibration failed"
+                    }
+                },
+                "VB2": {
+                    "isfunc": false,
+                    "iwith": ["VB2", "VB1", "VB0"],
+                    "ipret": {
+                        "NA": "VCO band manual calibration value set to"
+                    }
+                }
+            }
+        },
+        "VCOBC2": {
+            "ibitsw": {
+                "MDAG7": {
+                    "isfunc": false,
+                    "iwith": ["MDAG7", "MDAG6", "MDAG5", "MDAG4", "MDAG3", "MDAG2", "MDAG1", "MDAG0"],
+                    "ipret": {
+                        "NA": "DAG manual claibration value set to"
+                    }
+                }
+            },
+            "ibitsr": {
+                "ADAG7": {
+                    "isfunc": false,
+                    "iwith": ["ADAG7", "ADAG6", "ADAG5", "ADAG4", "ADAG3", "ADAG2", "ADAG1", "ADAG0"],
+                    "ipret": {
+                        "NA": "DAG auto claibration value is"
+                    }
+                }
+            }
+        },
+        "VCODC1": {
+            "ibitsw": {
+                "DEVS3": {
+                    "isfunc": false,
+                    "iwith": ["DEVS3", "DEVS2", "DEVS1", "DEVS0"],
+                    "ipret": {
+                        "NA": "Deviation output scaling set to"
+                    }
+                },
+                "DAMR_M": {
+                    "isfunc": false,
+                    "iwith": ["DAMR_M"],
+                    "ipret": {
+                        "0": "DAMR manual disabled",
+                        "1": "DAMR manual enabled"
+                    }
+                },
+                "VMTE_M": {
+                    "isfunc": false,
+                    "iwith": ["VMTE_M"],
+                    "ipret": {
+                        "0": "VMT manual disabled",
+                        "1": "VMT manual enabled"
+                    }
+                },
+                "VMS_M": {
+                    "isfunc": false,
+                    "iwith": ["VMS_M"],
+                    "ipret": {
+                        "0": "VM manual disabled",
+                        "1": "VM manual enabled"
+                    }
+                },
+                "MSEL": {
+                    "isfunc": false,
+                    "iwith": ["MSEL"],
+                    "ipret": {
+                        "0": "VMS, VMTE and DAMR control set to: Auto control",
+                        "1": "VMS, VMTE and DAMR control set to: Manual control"
+                    }
+                }
+            },
+            "ibitsr": {
+                "DEVA7": {
+                    "isfunc": true,
+                    "ipret": "Deviation output value is",
+                    "iwith": {
+                        "MVDS": ["VCODC2:MVDS"],
+                        "ADEV": ["VCODC2:ADEV7", "VCODC2:ADEV6", "VCODC2:ADEV5", "VCODC2:ADEV4", "VCODC2:ADEV3", "VCODC2:ADEV2", "VCODC2:ADEV1", "VCODC2:ADEV0"],
+                        "MDEV": ["VCODC2:MDEV6", "VCODC2:MDEV5", "VCODC2:MDEV4", "VCODC2:MDEV3", "VCODC2:MDEV2", "VCODC2:MDEV1", "VCODC2:MDEV0"],
+                        "DEVS": ["DEVS3", "DEVS2", "DEVS1", "DEVS0"]
+                    },
+                    "func": "if (MVDS == 1, MDEV, (ADEV/8)*(DEVS+1))"
+                }
+            }
+        },
+        "VCODC2": {
+            "ibitsw": {
+                "MVDS": {
+                    "isfunc": false,
+                    "iwith": ["MVDS"],
+                    "ipret": {
+                        "0": "VCO deviation calibration set to: Auto calibration mode",
+                        "1": "VCO deviation calibration set to: Manual calibration mode"
+                    }
+                },
+                "MDEV6": {
+                    "isfunc": false,
+                    "iwith": ["MDEV6", "MDEV5", "MDEV4", "MDEV3", "MDEV2", "MDEV1", "MDEV0"],
+                    "ipret": {
+                        "NA": "VCO deviation manual calibration value set to"
+                    }
+                }
+            },
+            "ibitsr": {
+                "ADEV7": {
+                    "isfunc": false,
+                    "iwith": ["ADEV7", "ADEV6", "ADEV5", "ADEV4", "ADEV3", "ADEV2", "ADEV1", "ADEV0"],
+                    "ipret": {
+                        "NA": "VCO deviation auto calibration value is"
+                    }
+                }
+            }
+        },
+        "VCODC3": {
+            "ibits": {
+                "VMG7": {
+                    "isfunc": false,
+                    "iwith": ["VMG7", "VMG6", "VMG5", "VMG4", "VMG3", "VMG2", "VMG1", "VMG0"],
+                    "ipret": {
+                        "NA": "Access to reserved Bits VCODC3:VMG[7:0]"
+                    }
+                }
+            }
+        },
+        "VCOMD": {
+            "ibitsw": {
+                "MDEN": {
+                    "isfunc": false,
+                    "iwith": ["MDEN"],
+                    "ipret": {
+                        "NA": "Wrote to reserved Bit VCOMD:MDEN"
+                    }
+                },
+                "CMV": {
+                    "isfunc": false,
+                    "iwith": ["CMV"],
+                    "ipret": {
+                        "0": "Modulation D/A scale set to 0.3V",
+                        "1": "Modulation D/A scale set to 0.15V"
+                    }
+                },
+                "DEVFD2": {
+                    "isfunc": false,
+                    "iwith": ["DEVFD2", "DEVFD1", "DEVFD0"],
+                    "ipret": {
+                        "NA": "Wrote to reserved Bits VCOMD:DEVFD[2:0]"
+                    }
+                },
+                "DEVD2": {
+                    "isfunc": false,
+                    "iwith": ["DEVD2", "DEVD1", "DEVD0"],
+                    "ipret": {
+                        "NA": "Wrote to reserved Bits VCOMD:DEVD[2:0]"
+                    }
+                }
+            }
+        },
+        "BD": {
+            "ibitsw": {
+                "RGS": {
+                    "isfunc": false,
+                    "iwith": ["RGS"],
+                    "ipret": {
+                        "NA": "VDD_D voltage setting in Sleep mode set to"
+                    }
+                },
+                "RGV1": {
+                    "isfunc": false,
+                    "iwith": ["RGV1", "RGV0"],
+                    "ipret": {
+                        "00": "VDD_D and VDD_A voltage setting in non-Sleep mode set to: 2.1V",
+                        "01": "VDD_D and VDD_A voltage setting in non-Sleep mode set to: 2.0V",
+                        "10": "VDD_D and VDD_A voltage setting in non-Sleep mode set to: 1.9V",
+                        "11": "VDD_D and VDD_A voltage setting in non-Sleep mode set to: 1.8V"
+                    }
+                },
+                "LVR": {
+                    "isfunc": false,
+                    "iwith": ["LVR"],
+                    "ipret": {
+                        "NA": "Wrote to reserved Bit BD:LVR"
+                    }
+                },
+                "BVT2": {
+                    "isfunc": false,
+                    "iwith": ["BVT2", "BVT1", "BVT0"],
+                    "ipret": {
+                        "000": "Battery voltage detect threshold set to 2.0V",
+                        "001": "Battery voltage detect threshold set to 2.1V",
+                        "010": "Battery voltage detect threshold set to 2.2V",
+                        "011": "Battery voltage detect threshold set to 2.3V",
+                        "100": "Battery voltage detect threshold set to 2.4V",
+                        "101": "Battery voltage detect threshold set to 2.5V",
+                        "110": "Battery voltage detect threshold set to 2.6V",
+                        "111": "Battery voltage detect threshold set to 2.7V"
+                    }
+                },
+                "BD_E": {
+                    "isfunc": false,
+                    "iwith": ["BD_E"],
+                    "ipret": {
+                        "0": "Battery detect disabled",
+                        "1": "Battery detect enable"
+                    }
+                }
+            },
+            "ibitsr": {
+                "RGS": {
+                    "isfunc": false,
+                    "iwith": ["RGS"],
+                    "ipret": {
+                        "NA": "VDD_D voltage setting in Sleep mode value is"
+                    }
+                },
+                "RGV1": {
+                    "isfunc": false,
+                    "iwith": ["RGV1", "RGV0"],
+                    "ipret": {
+                        "00": "VDD_D and VDD_A voltage setting in non-Sleep mode value is: 2.1V",
+                        "01": "VDD_D and VDD_A voltage setting in non-Sleep mode value is: 2.0V",
+                        "10": "VDD_D and VDD_A voltage setting in non-Sleep mode value is: 1.9V",
+                        "11": "VDD_D and VDD_A voltage setting in non-Sleep mode value is: 1.8V"
+                    }
+                },
+                "BDF": {
+                    "isfunc": false,
+                    "iwith": ["BDF"],
+                    "ipret": {
+                        "0": "Battery voltage less than threshold",
+                        "1": "Battery voltage greater than threshold"
+                    }
+                },
+                "BVT2": {
+                    "isfunc": false,
+                    "iwith": ["BVT2", "BVT1", "BVT0"],
+                    "ipret": {
+                        "000": "Battery voltage detect threshold value is 2.0V",
+                        "001": "Battery voltage detect threshold value is 2.1V",
+                        "010": "Battery voltage detect threshold value is 2.2V",
+                        "011": "Battery voltage detect threshold value is 2.3V",
+                        "100": "Battery voltage detect threshold value is 2.4V",
+                        "101": "Battery voltage detect threshold value is 2.5V",
+                        "110": "Battery voltage detect threshold value is 2.6V",
+                        "111": "Battery voltage detect threshold value is 2.7V"
+                    }
+                },
+                "BD_E": {
+                    "isfunc": false,
+                    "iwith": ["BD_E"],
+                    "ipret": {
+                        "0": "Battery detect is disabled",
+                        "1": "Battery detect is enable"
+                    }
+                }
+            }
+        },
+        "TXT": {
+            "ibitsw": {
+                "TXSM1": {
+                    "isfunc": false,
+                    "iwith": ["TXSM1", "TXSM0"],
+                    "ipret": {
+                        "00": "Moving average for non-filter select set to: No average",
+                        "01": "Moving average for non-filter select set to: 2 moving average",
+                        "10": "Moving average for non-filter select set to: 4 moving average",
+                        "11": "Moving average for non-filter select set to: 8 moving average"
+                    }
+                },
+                "TXCS": {
+                    "isfunc": false,
+                    "iwith": ["TXCS"],
+                    "ipret": {
+                        "NA": "TX Current setting set to"
+                    }
+                },
+                "PAC1": {
+                    "isfunc": false,
+                    "iwith": ["PAC1", "PAC0"],
+                    "ipret": {
+                        "NA": "PA Current setting set to"
+                    }
+                },
+                "TBG2": {
+                    "isfunc": false,
+                    "iwith": ["TBG2", "TBG1", "TBG0"],
+                    "ipret": {
+                        "NA": "TX Buffer setting set to"
+                    }
+                }
+            }
+        },
+        "CPC": {
+            "ibitsw": {
+                "CPM3": {
+                    "isfunc": true,
+                    "ipret": "Charge pump current (mA) for VM Loop set to",
+                    "iwith": {
+                        "CPM": ["CPM3", "CPM2", "CPM1", "CPM0"]
+                    },
+                    "func": "(CPM+1)/16"
+                },
+                "CPT3": {
+                    "isfunc": true,
+                    "ipret": "Charge pump current (mA) for VT Loop set to",
+                    "iwith": {
+                        "CPT": ["CPT3", "CPT2", "CPT1", "CPT0"]
+                    },
+                    "func": "(CPT+1)/16"
+                }
+            }
+        },
+        "XTLT": {
+            "ibitsw": {
+                "VRPL1": {
+                    "isfunc": false,
+                    "iwith": ["VRPL1", "VRPL0"],
+                    "ipret": {
+                        "00": "Internal PLL register select set to 500 ohm",
+                        "01": "Internal PLL register select set to 666 ohm",
+                        "10": "Internal PLL register select set to 1K ohm",
+                        "11": "Internal PLL register select set to 2K ohm"
+                    }
+                },
+                "INTXC": {
+                    "isfunc": false,
+                    "iwith": ["INTXC"],
+                    "ipret": {
+                        "0": "Internal crystal capacitor disabled",
+                        "1": "Internal crystal capacitor enable"
+                    }
+                },
+                "INTPRC": {
+                    "isfunc": false,
+                    "iwith": ["INTPRC"],
+                    "ipret": {
+                        "0": "Internal PLL capacitor and resistor disabled",
+                        "1": "Internal PLL capacitor and resistor enable"
+                    }
+                },
+                "DBD": {
+                    "isfunc": false,
+                    "iwith": ["DBD"],
+                    "ipret": {
+                        "NA": "Wrote to reserved Bit XTLT:DBD"
+                    }
+                },
+                "XCC": {
+                    "isfunc": false,
+                    "iwith": ["XCC"],
+                    "ipret": {
+                        "NA": "Wrote to reserved Bit XTLT:XCC"
+                    }
+                },
+                "XCP1": {
+                    "isfunc": false,
+                    "iwith": ["XCP1", "XCP0"],
+                    "ipret": {
+                        "NA": "Wrote to reserved Bits XTLT:XCP[1:0]"
+                    }
+                }
+            }
+        },
+        "PLLT": {
+            "ibitsw": {
+                "CPH": {
+                    "isfunc": false,
+                    "iwith": ["CPH"],
+                    "ipret": {
+                        "0": "High current mode of Charge pump disabled",
+                        "1": "High current mode of Charge pump enabled"
+                    }
+                },
+                "CPS": {
+                    "isfunc": false,
+                    "iwith": ["CPS"],
+                    "ipret": {
+                        "NA": "Wrote to reserved Bit PLLT:CPS"
+                    }
+                },
+                "PRRC1": {
+                    "isfunc": false,
+                    "iwith": ["PRRC1", "PRRC0"],
+                    "ipret": {
+                        "NA": "Wrote to reserved Bits PLLT:PRRC[1:0]"
+                    }
+                },
+                "PRIC1": {
+                    "isfunc": false,
+                    "iwith": ["PRIC1", "PRIC0"],
+                    "ipret": {
+                        "NA": "Wrote to reserved Bits PLLT:PRIC[1:0]"
+                    }
+                },
+                "SDPW": {
+                    "isfunc": false,
+                    "iwith": ["SDPW"],
+                    "ipret": {
+                        "NA": "Wrote to reserved Bit PLLT:SDPW"
+                    }
+                },
+                "NSDO": {
+                    "isfunc": false,
+                    "iwith": ["NSDO"],
+                    "ipret": {
+                        "NA": "Wrote to reserved Bit PLLT:NSDO"
+                    }
+                }
+            }
+        },
+        "VCOT": {
+            "ibitsw": {
+                "OLM": {
+                    "isfunc": false,
+                    "iwith": ["OLM"],
+                    "ipret": {
+                        "NA": "Wrote to reserved Bit VCOT:OLM"
+                    }
+                },
+                "SDMS": {
+                    "isfunc": false,
+                    "iwith": ["SDMS"],
+                    "ipret": {
+                        "NA": "Wrote to reserved Bit VCOT:SDMS"
+                    }
+                },
+                "VTBS": {
+                    "isfunc": false,
+                    "iwith": ["VTBS"],
+                    "ipret": {
+                        "NA": "Wrote to reserved Bit VCOT:VTBS"
+                    }
+                },
+                "TLB1": {
+                    "isfunc": false,
+                    "iwith": ["TLB1", "TLB0"],
+                    "ipret": {
+                        "NA": "Wrote to reserved Bits VCOT:TLB[1:0]"
+                    }
+                },
+                "RSIS": {
+                    "isfunc": false,
+                    "iwith": ["RSIS"],
+                    "ipret": {
+                        "NA": "Current bias selection for differential mode ring OSC set to"
+                    }
+                },
+                "ROSCS": {
+                    "isfunc": false,
+                    "iwith": ["ROSCS"],
+                    "ipret": {
+                        "0": "Ring Oscillation set to: Single mode",
+                        "1": "Ring Oscillation set to differential mode"
+                    }
+                },
+                "VBHC": {
+                    "isfunc": false,
+                    "iwith": ["VBHC"],
+                    "ipret": {
+                        "NA": "Wrote to reserved Bit VCOT:VBHC"
+                    }
+                }
+            }
+        },
+        "CHS": {
+            "ibitsw": {
+                "XADPS": {
+                    "isfunc": false,
+                    "iwith": ["XADPS"],
+                    "ipret": {
+                        "NA": "External ADC pin selection set to"
+                    }
+                },
+                "RFT2": {
+                    "isfunc": false,
+                    "iwith": ["XADPS", "RFT2", "RFT1", "RFT0"],
+                    "ipret": {
+                        "0000": "RF analog pin configuration connected to external AD input",
+                        "0001": "RF analog pin configuration connected to analog temperature voltage",
+                        "0010": "RF analog pin configuration connected to internal DA output",
+                        "0011": "RF analog pin configuration connected to low power current source",
+                        "1000": "RF analog pin configuration connected to external AD input",
+                        "1001": "RF analog pin configuration connected to external AD input",
+                        "1010": "RF analog pin configuration connected to external AD input",
+                        "1011": "RF analog pin configuration connected to external AD input"
+                    }
+                },
+                "CHD3": {
+                    "isfunc": true,
+                    "ipret": "Offset channel number for deviation calibration set to +/-",
+                    "iwith": {
+                        "CHD": ["CHD3", "CHD2", "CHD1", "CHD0"]
+                    },
+                    "func": "CHD+1"
+                }
+            }
+        },
+        "VRB": {
+            "ibitsw": {
+                "VTRB3": {
+                    "isfunc": false,
+                    "iwith": ["VTRB3", "VTRB2", "VTRB1", "VTRB0"],
+                    "ipret": {
+                        "NA": "Resistor bank for VT RC filtering set to"
+                    }
+                },
+                "VMRB3": {
+                    "isfunc": false,
+                    "iwith": ["VMRB3", "VMRB2", "VMRB1", "VMRB0"],
+                    "ipret": {
+                        "NA": "Resistor bank for VM RC filtering. set to"
+                    }
+                }
+            }
+        },
+        "ADC": {
+            "ibitsw": {
+                "AVSEL1": {
+                    "isfunc": false,
+                    "iwith": ["AVSEL1", "AVSEL0"],
+                    "ipret": {
+                        "00": "ADC average times (VCO calibration) Avg 8 times",
+                        "01": "ADC average times (VCO calibration) Avg 16 times",
+                        "10": "ADC average times (VCO calibration) Avg 32 times",
+                        "11": "ADC average times (VCO calibration) Avg 64 times"
+                    }
+                },
+                "RADC": {
+                    "isfunc": false,
+                    "iwith": ["RADC"],
+                    "ipret": {
+                        "0": "Reading of ADC average for MVSEL mode",
+                        "1": "Reading of ADC average for AVSEL mode"
+                    }
+                },
+                "FSARS": {
+                    "isfunc": false,
+                    "iwith": ["FSARS"],
+                    "ipret": {
+                        "0": "ADC clock select set to 4Mhz",
+                        "1": "ADC clock select set to 8Mhz"
+                    }
+                },
+                "MVSEL1": {
+                    "isfunc": false,
+                    "iwith": ["MVSEL1", "MVSEL0"],
+                    "ipret": {
+                        "00": "ADC average times set to no average",
+                        "01": "ADC average times set to Avg 2 times",
+                        "10": "ADC average times set to Avg 4 times",
+                        "11": "ADC average times set to Avg 8 times"
+                    }
+                },
+                "XADS": {
+                    "isfunc": false,
+                    "iwith": ["XADS"],
+                    "ipret": {
+                        "0": "ADC input signal select set to: Convert internal temperature",
+                        "1": "ADC input signal select set to: Convert external voltage"
+                    }
+                },
+                "CDM": {
+                    "isfunc": false,
+                    "iwith": ["CDM"],
+                    "ipret": {
+                        "0": "Continuous measurement mode set to: Single mode",
+                        "1": "Continuous measurement mode set to: Continuous mode"
+                    }
+                }
+            },
+            "ibitsr": {
+                "ADC7": {
+                    "isfunc": true,
+                    "ipret": "Temperature value / ADC Reading (V) [Depending on ADC:XADS]",
+                    "iwith": {
+                        "ADC": ["ADC7", "ADC6", "ADC5", "ADC4", "ADC3", "ADC2", "ADC1", "ADC0"],
+                        "XADS": ["XADS"]
+                    },
+                    "func": "if (XADS == 1, 0.3+1.2*ADC/256, ADC)"
+                }
+            }
+        },
+        "INTS": {
+            "ibitsw": {
+                "CELS": {
+                    "isfunc": false,
+                    "iwith": ["CELS"],
+                    "ipret": {
+                        "NA": "Wrote to reserved Bit INTS:CELS"
+                    }
+                },
+                "PWORS": {
+                    "isfunc": false,
+                    "iwith": ["PWORS"],
+                    "ipret": {
+                        "NA": "Wrote to reserved Bit INTS:PWORS"
+                    }
+                },
+                "STS": {
+                    "isfunc": false,
+                    "iwith": ["STS"],
+                    "ipret": {
+                        "NA": "Wrote to reserved Bit INTS:STS"
+                    }
+                },
+                "IXTLS4": {
+                    "isfunc": false,
+                    "iwith": ["IXTLS4", "IXTLS3", "IXTLS2", "IXTLS1", "IXTLS0"],
+                    "ipret": {
+                        "NA": "Internal crystal capacitor value set to"
+                    }
+                }
+            }
+        },
+        "RTX": {
+            "ibitsw": {
+                "QDS": {
+                    "isfunc": false,
+                    "iwith": ["QDS"],
+                    "ipret": {
+                        "NA": "Regulator quick charge select set to"
+                    }
+                },
+                "TRT2": {
+                    "isfunc": false,
+                    "iwith": ["TRT2", "TRT1", "TRT0"],
+                    "ipret": {
+                        "000": "TX ramping down time set to 4us",
+                        "001": "TX ramping down time set to 8us",
+                        "010": "TX ramping down time set to 12us",
+                        "011": "TX ramping down time set to 16us",
+                        "100": "TX ramping down time set to 20us",
+                        "101": "TX ramping down time set to 24us",
+                        "110": "TX ramping down time set to 28us",
+                        "111": "TX ramping down time set to 32us"
+                    }
+                },
+                "ASMV2": {
+                    "isfunc": false,
+                    "iwith": ["ASMV2", "ASMV1", "ASMV0"],
+                    "ipret": {
+                        "000": "TX ramping up time set to 4us",
+                        "001": "TX ramping up time set to 8us",
+                        "010": "TX ramping up time set to 12us",
+                        "011": "TX ramping up time set to 16us",
+                        "100": "TX ramping up time set to 20us",
+                        "101": "TX ramping up time set to 24us",
+                        "110": "TX ramping up time set to 28us",
+                        "111": "TX ramping up time set to 32us"
+                    }
+                },
+                "AMVS": {
+                    "isfunc": false,
+                    "iwith": ["AMVS"],
+                    "ipret": {
+                        "0": "TX Ramping set to Disabled",
+                        "1": "TX Ramping set to Enabled"
+                    }
+                }
+            }
+        },
+        "TEMPLATE": {
+            "ibits": {
+                "BIT1": {
+                    "isfunc": false,
+                    "iwith": ["BIT1", "OTHERREG:BIT2"],
+                    "ipret": {
+                        "0": "",
+                        "1": ""
+                    }
+                },
+                "BIT2": {
+                    "isfunc": true,
+                    "ipret": "",
+                    "iwith": {
+                        "VAR": ["BIT1", "OTHERREG:BIT2"]
+                    },
+                    "func": "3*VAR"
+                }
+            }
+        }
+    }
+}

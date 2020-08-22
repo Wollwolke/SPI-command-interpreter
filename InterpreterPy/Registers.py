@@ -26,7 +26,7 @@ class Registers:
 
     def __init__(self, registers):
         self.regMap = {}
-        for key, value in registers.items():
+        for _, value in registers.items():
             try:
                 name = value["name"]
                 reg = self.Register(value["r"], value["w"], value["values"])

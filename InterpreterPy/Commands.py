@@ -41,7 +41,7 @@ class Commands:
         def interpretRegisters(self, ibits):
             result = ""
             try:
-                for key, bit in ibits.items():
+                for _, bit in ibits.items():
                     if "highlight" in bit:
                         color = bit["highlight"]
                         result += f"\x1B[{color}m\x1B[1m"
@@ -127,8 +127,7 @@ class Commands:
     def __init__(self, registers, commands):
         self.cmds = {}
         try:
-            for key in commands:
-                command = commands[key]
+            for _, command in commands.items():
                 if command["isstrobe"]:
                     cmd = self.StrobeCommand(command["logic"], registers)
                 else:
