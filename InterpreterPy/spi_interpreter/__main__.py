@@ -1,17 +1,8 @@
 #! /usr/bin/python
 
-import Interpreter
+from spi_interpreter import Interpreter
 import os
 import argparse
-
-# Fix ANSI Escape Sequences on old Windows Terminal
-from platform import system
-
-if "win" in system().lower():
-    from ctypes import windll
-
-    k = windll.kernel32
-    k.SetConsoleMode(k.GetStdHandle(-11), 7)
 
 
 def main():
@@ -42,4 +33,14 @@ def main():
 
 
 if __name__ == "__main__":
+
+    # Fix ANSI Escape Sequences on old Windows Terminal
+    from platform import system
+
+    if "win" in system().lower():
+        from ctypes import windll
+
+        k = windll.kernel32
+        k.SetConsoleMode(k.GetStdHandle(-11), 7)
+
     main()

@@ -1,6 +1,6 @@
 #! /usr/bin/python
 
-import utils
+from spi_interpreter import utils
 
 
 class Registers:

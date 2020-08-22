@@ -1,9 +1,9 @@
 #! /bin/usr/python
 
 import json
-import Registers
-import Commands
-import utils
+from spi_interpreter import Registers
+from spi_interpreter import Commands
+from spi_interpreter import utils
 
 
 class Interpreter:
