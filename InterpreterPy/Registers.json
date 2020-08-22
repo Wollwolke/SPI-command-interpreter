@@ -1447,10 +1447,10 @@
                     "isfunc": false,
                     "iwith": ["IDL1", "IDL0"],
                     "ipret": {
-                        "00": "ID code length is set to 1 byte",
-                        "01": "ID code length is set to 2 bytes",
-                        "10": "ID code length is set to 3 bytes",
-                        "11": "ID code length is set to 4 bytes"
+                        "00": "ID code length is set to 2 byte",
+                        "01": "ID code length is set to 4 bytes",
+                        "10": "ID code length is set to 6 bytes",
+                        "11": "ID code length is set to 8 bytes"
                     }
                 },
                 "PML1": {
