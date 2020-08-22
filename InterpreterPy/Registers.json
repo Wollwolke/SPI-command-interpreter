@@ -875,6 +875,21 @@
                     "ipret": {
                         "NA": "Wrote Syncword (ID Code)"
                     }
+                },
+                "ID6": {
+                    "highlight": "33",
+                    "isfunc": false,
+                    "iwith": ["ID7", "CODE1:PML1", "CODE1:PML0"],
+                    "ipret": {
+                        "000": "Preamble: 01010101 [ONLY FIRST OUTPUT IS VALID]",
+                        "001": "Preamble: 0101010101010101 [ONLY FIRST OUTPUT IS VALID]",
+                        "010": "Preamble: 010101010101010101010101 [ONLY FIRST OUTPUT IS VALID]",
+                        "011": "Preamble: 01010101010101010101010101010101 [ONLY FIRST OUTPUT IS VALID]",
+                        "100": "Preamble: 10101010 [ONLY FIRST OUTPUT IS VALID]",
+                        "101": "Preamble: 1010101010101010 [ONLY FIRST OUTPUT IS VALID]",
+                        "110": "Preamble: 101010101010101010101010 [ONLY FIRST OUTPUT IS VALID]",
+                        "111": "Preamble: 10101010101010101010101010101010 [ONLY FIRST OUTPUT IS VALID]"
+                    }
                 }
             }
         },
