@@ -51,7 +51,7 @@ class Registers:
         try:
             byte = bytes.fromhex(hexString[2:])
             bits = bin(ord(byte))[2:].rjust(8, "0")
-        except ValueError as e:
+        except (ValueError, TypeError):
             raise utils.ERR_INTERPRET(
                 f"Error reading hex string from input file: {hexString}"
             )
