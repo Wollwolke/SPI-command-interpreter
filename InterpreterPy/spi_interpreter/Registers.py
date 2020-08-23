@@ -1,6 +1,6 @@
 #! /usr/bin/python
 
-import utils
+from spi_interpreter import utils
 
 
 class Registers:
@@ -15,7 +15,6 @@ class Registers:
                 return self.values[self.rNames.index(bitname)]
             if bitname in self.wNames:
                 return self.values[self.wNames.index(bitname)]
-            # TODO: hier ist eigentlich was im txt file kaputt
             raise utils.ERR_REGISTER(f"Error trying to read bit {bitname}")
 
         def writeRegister(self, byteString):
@@ -26,15 +25,13 @@ class Registers:
 
     def __init__(self, registers):
         self.regMap = {}
-        for key, value in registers.items():
+        for _, value in registers.items():
             try:
                 name = value["name"]
                 reg = self.Register(value["r"], value["w"], value["values"])
                 self.regMap.update({name: reg})
             except KeyError:
-                raise utils.ERR_JSONPARSER_REGISTER(
-                    "Error at parsing json file to create Registers Object"
-                )
+                raise utils.ERR_JSONPARSER_REGISTER(f"{value}")
 
     def readBit(self, registername, bitname):
         if registername not in self.regMap:
@@ -51,7 +48,13 @@ class Registers:
             raise utils.ERR_EXECUTE_CMD(
                 f"Tried to write non-existing byte at {registername}"
             )
-        byte = bytes.fromhex(hexString[2:])
-        bits = bin(ord(byte))[2:].rjust(8, "0")
+        try:
+            byte = bytes.fromhex(hexString[2:])
+            bits = bin(ord(byte))[2:].rjust(8, "0")
+        except ValueError as e:
+            raise utils.ERR_INTERPRET(
+                f"Error reading hex string from input file: {hexString}"
+            )
+
         self.regMap[registername].writeRegister(bits)
 
