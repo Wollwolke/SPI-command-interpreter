@@ -84,7 +84,7 @@ void Interpreter::interpretFile(std::string fname)
 				}
 				else
 				{
-					//std::cout << "\n" << line << "\n";
+					std::cout << "\n" << line << "\n";
 					size_t pos = 0;
 					while ((pos = line.find(" ")) != std::string::npos)
 					{
@@ -103,7 +103,7 @@ void Interpreter::interpretFile(std::string fname)
 					bytes.push_back(line);
 					//std::cout << line << "\n";
 					// TODO: remove "\" when "\\"
-					std::cout << "\n" << line << "\n";
+					//std::cout << "\n" << line << "\n";
 					if (bytes.size() > 1)
 					{
 						for (size_t i = 1; i < bytes.size(); i++)
