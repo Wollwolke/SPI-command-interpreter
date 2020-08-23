@@ -40,7 +40,7 @@ class Interpreter:
         try:
             for line in lines:
                 readBytes = []
-                line = line.rstrip("\n").rstrip("\r\n")
+                line = line.rstrip("\n").rstrip("\r\n").rstrip()
                 print("\x1B[90m", line, "\x1B[0m", sep="")
                 if not line == "" and not line[0] == "#":
                     splits = line.split(" ")
