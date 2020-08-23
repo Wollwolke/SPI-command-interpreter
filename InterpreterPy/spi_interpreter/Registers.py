@@ -48,7 +48,13 @@ class Registers:
             raise utils.ERR_EXECUTE_CMD(
                 f"Tried to write non-existing byte at {registername}"
             )
-        byte = bytes.fromhex(hexString[2:])
-        bits = bin(ord(byte))[2:].rjust(8, "0")
+        try:
+            byte = bytes.fromhex(hexString[2:])
+            bits = bin(ord(byte))[2:].rjust(8, "0")
+        except ValueError as e:
+            raise utils.ERR_INTERPRET(
+                f"Error reading hex string from input file: {hexString}"
+            )
+
         self.regMap[registername].writeRegister(bits)
 
