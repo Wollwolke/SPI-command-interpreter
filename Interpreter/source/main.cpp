@@ -11,6 +11,7 @@ int main(int argc, char* argv[])
 		auto interpreter = Interpreter("./data/Registers.json");
 		for (auto& iterator : std::filesystem::recursive_directory_iterator("data")) {
 			if (iterator.path().extension() == ".txt") {
+				std::cout << "\nInterpreting FIle: " << iterator.path().filename() << std::endl;
 				interpreter.interpretFile(iterator.path().string());
 			}
 		}
@@ -20,6 +21,7 @@ int main(int argc, char* argv[])
 		try {
 			for (int i = 1; i < argc; i++)
 			{
+				std::cout << "\nInterpreting File: " << argv[i] << std::endl;
 				interpreter.interpretFile(argv[i]);
 			}
 		}
