@@ -1,7 +1,7 @@
 from setuptools import setup
 
 setup(
-    name="SPI-command-interpreter",
+    name="spi_interpreter",
     version="0.1",
     packages=["spi_interpreter"],
     python_requires=">=3.6",
