@@ -43,7 +43,7 @@ class Commands:
             try:
                 for _, bit in ibits.items():
                     if "highlight" in bit:
-                        color = bit["highlight"]
+                        color = str(bit["highlight"])
                         result += f"\x1B[{color}m\x1B[1m"
 
                     if bit["isfunc"] == True:
